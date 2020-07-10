@@ -1,0 +1,12 @@
+// import the library
+import { library } from '@fortawesome/fontawesome-svg-core'
+// import individual icons
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faFileAlt, faPaperPlane } from "@fortawesome/free-solid-svg-icons";
+
+library.add(
+    faGithub,
+    faLinkedin,
+    faFileAlt,
+    faPaperPlane,
+);
