@@ -3,6 +3,9 @@ import React from 'react';
 import './App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
+import registerIcons from './fontawesome.js';
+registerIcons();
+
 function App() {
 	return (
 		<div className="App">
