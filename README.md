@@ -2,7 +2,7 @@
 
 Personal website built in React. 
 
-Simple. Lean. Powerful.
+Simple. Lean. Accessible.
 
 ---
 
