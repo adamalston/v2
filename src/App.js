@@ -12,21 +12,40 @@ function App() {
 			<header className="App-header">
 				{/* <img src={logo} className="App-logo" alt="logo" /> */}
 				<h4>Adam Alston</h4>
-				{/* <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">Learn React</a> */}
+
 				<div>
-					<a title="GitHub" href="https://github.com/adamalston" target="_blank " rel="noopener noreferrer">
-						<FontAwesomeIcon icon={['fab', 'github']} />
-					</a>
-					<a title="LinkedIn" href="https://www.linkedin.com/in/adammalston/" target="_blank " rel="noopener noreferrer">
-						<FontAwesomeIcon icon={['fab', 'linkedin']} />
-					</a>
-					<a title="Resume" href="resume.pdf" target="_blank " rel="noopener noreferrer">
-						<FontAwesomeIcon icon={['fas', 'file-alt']} />
-					</a>
-					<a title="Email" href="mailto:aalston9@gmail.com" target="_blank " rel="noopener noreferrer">
-						<FontAwesomeIcon icon={['fa', 'paper-plane']} />
-					</a>
+					<span className="bubble">
+						<a href="https://github.com/adamalston" target="_blank " rel="noopener noreferrer">
+							<FontAwesomeIcon className="icon" icon={['fab', 'github']} size="2x"/>
+							<span className="icon_title">Github</span>
+						</a>
+					</span>
+
+					<span className="bubble">
+						<a href="https://www.linkedin.com/in/adammalston/" target="_blank " rel="noopener noreferrer">
+							<FontAwesomeIcon className="icon" icon={['fab', 'linkedin']} size="2x"/>
+							<span className="icon_title">LinkedIn</span>
+						</a>
+					</span>
+
+					<span className="bubble">
+						<a href="resume.pdf" target="_blank " rel="noopener noreferrer">
+							<FontAwesomeIcon className="icon" icon={['fas', 'file-alt']} size="2x"/>
+							<span className="icon_title">Resume</span>
+						</a>
+					</span>
+
+					<span className="bubble">
+						<a href="mailto:aalston9@gmail.com" target="_blank " rel="noopener noreferrer">
+							<div className="temp">
+								<FontAwesomeIcon className="icon" icon={['fas', 'envelope']} size="2x"/>
+								<span className="icon_title">Email</span>
+							</div>
+						</a>
+					</span>
+
 				</div>
+
 			</header>
 		</div>
 	);

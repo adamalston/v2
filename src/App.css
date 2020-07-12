@@ -26,17 +26,44 @@ html, body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(48px + 2vmin);
+  font-size: calc(64px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+h4 {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: normal;
+}
+
+.bubble {
+  display: inline-block;
+  background-color: transparent;
+  border: 3px solid gray;
+  margin: 1vw;
+  border-radius: 50%;
 }
 
 a {
   color: white;
-  border: #61dafb;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  height: 100px;
+  width: 100px;
+  text-decoration: none;
+  font-size: calc(6px + 2vmin);
+}
+
+.bubble .icon_title {
+  display: none;
+}
+
+.bubble:hover .icon_title {
+  display: initial;
+}
+
+.bubble:hover .icon {
+  display: none;
 }
 
 /* @keyframes App-logo-spin {
