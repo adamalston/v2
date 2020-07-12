@@ -21,4 +21,4 @@ yarn-debug.log*
 yarn-error.log*
 
 react.md
-package.json
+# package.json
