@@ -21,7 +21,4 @@ yarn-debug.log*
 yarn-error.log*
 
 react.md
-# package.json
-
-# Local Netlify folder
-.netlify
+package-lock.json
