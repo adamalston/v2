@@ -2,7 +2,6 @@
   adamalston.com
 </h1>
 
-
 <p align="left">
   <a href="https://app.netlify.com/sites/adamalston/deploys" target="_blank">
     <img src="https://api.netlify.com/api/v1/badges/332bbd91-59b7-4091-8781-6f41330399b4/deploy-status" alt="Netlify Status" />
@@ -18,7 +17,7 @@
   <a href="https://github.com/adamalston/v1" target="_blank">v1</a>
 </p>
 
-The goal is for this website to be simple, lean, andaccessible.
+This website was built to be simple, lean, and accessible
 
 ## Preview
 
