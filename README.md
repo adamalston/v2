@@ -14,22 +14,22 @@ Previous iteration: [v1](https://github.com/adamalston/v1)
 
 <p align="center">
 	<a href="https://www.adamalston.com/" target="_blank">
-		<img src="src/preview.png" alt="Website Preview" />
+		<img src="preview.png" alt="Website Preview" />
 	</a>
 </p>
 
-This website is built to be simple, lean, and accessible. The background is designed with the [`particles.js`](https://github.com/VincentGarreau/particles.js/) library for creating particles. My intention is for the website to be both interactive and inviting. Large are used to enhance readability.
+This website is built to be simple, lean, and accessible. The background is designed with the [`particles.js`](https://github.com/VincentGarreau/particles.js/) library for creating particles. My intention is for the website to be both interactive and visually inviting. Large fonts are used to enhance readability.
 
-## <img src="flag-solid.svg" width="24px"> Icons
+## 🇦🇶 Icons
 
-[<img src="flag-solid.svg" width="16px"> Font Awesome](https://fontawesome.com/) icons
+[Font Awesome](https://fontawesome.com/) icons
 
-| Name     | Icon                  |
-| -------- | --------------------- |
-| GitHub   | `['fal', 'github']`   |
-| LinkedIn | `['fab', 'linkedin'`  |
-| Resume   | `['fas', 'file-alt']` |
-| Email    | `['fas', 'envelope']` |
+| Name          | Icon                  |
+| ------------- | --------------------- |
+| GitHub        | `['fal', 'github']`   |
+| LinkedIn      | `['fab', 'linkedin'`  |
+| File (Resume) | `['fas', 'file-alt']` |
+| Email         | `['fas', 'envelope']` |
 
 ## 🎨 Color Reference
 
@@ -42,5 +42,5 @@ Colors meet a color contrast ratio of 4.5:1 against the background of the websit
 | Light Green | ![#b8e986](https://via.placeholder.com/10/b8e986?text=+) `#b8e986` |
 | Turquoise   | ![#4dc9ff](https://via.placeholder.com/10/4dc9ff?text=+) `#4dc9ff` |
 | Gold        | ![#ffd300](https://via.placeholder.com/10/ffd300?text=+) `#ffd300` |
-| Light Red   | ![#FF7E79](https://via.placeholder.com/10/FF7E79?text=+) `#FF7E79` |
+| Light Red   | ![#ff7e79](https://via.placeholder.com/10/ff7e79?text=+) `#ff7e79` |
 | Black       | ![#000000](https://via.placeholder.com/10/000000?text=+) `#000000` |
