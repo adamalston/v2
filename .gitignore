@@ -22,3 +22,6 @@ yarn-error.log*
 
 react.md
 package-lock.json
+
+# Local Netlify folder
+.netlify
