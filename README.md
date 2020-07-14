@@ -12,8 +12,6 @@ The second iteration of [adamalston.com](https://www.adamalston.com/) built with
 
 Previous iteration: [v1](https://github.com/adamalston/v1)
 
----
-
 <p align="center">
 	<a href="https://www.adamalston.com/" target="_blank">
 		<img src="src/preview.png" alt="Website Preview" />
@@ -22,20 +20,16 @@ Previous iteration: [v1](https://github.com/adamalston/v1)
 
 This website is built to be simple, lean, and accessible. The background is designed with the [`particles.js`](https://github.com/VincentGarreau/particles.js/) library for creating particles. My intention is for the website to be both interactive and inviting. Large are used to enhance readability.
 
----
+## <img src="flag-solid.svg" width="24px"> Icons
 
-## <i class="fa fa-cog fa-spin"></i> Icons
+[<img src="flag-solid.svg" width="16px"> Font Awesome](https://fontawesome.com/) icons
 
-[<i class="far fa-flag fa-fw"></i> Font Awesome](https://fontawesome.com/) icons
-
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
-
-| Name     | Icon                                                                                              |
-| -------- | ------------------------------------------------------------------------------------------------- |
-| GitHub   | <i class="fab fa-github fa-3x fa-fw" style="vertical-align: middle;"></i> `['fal', 'github']`     |
-| LinkedIn | <i class="fab fa-linkedin fa-3x fa-fw" style="vertical-align: middle;"></i> `['fab', 'linkedin'`  |
-| Resume   | <i class="fas fa-file-alt fa-3x fa-fw" style="vertical-align: middle;"></i> `['fas', 'file-alt']` |
-| Email    | <i class="fas fa-envelope fa-3x fa-fw" style="vertical-align: middle;"></i> `['fas', 'envelope']` |
+| Name     | Icon                  |
+| -------- | --------------------- |
+| GitHub   | `['fal', 'github']`   |
+| LinkedIn | `['fab', 'linkedin'`  |
+| Resume   | `['fas', 'file-alt']` |
+| Email    | `['fas', 'envelope']` |
 
 ## 🎨 Color Reference
 
