@@ -1,12 +1,6 @@
-<h1 align="center">
-	adamalston.com
-</h1>
+# adamalston<span></span>.com
 
-<p align="center">
-	<a href="https://app.netlify.com/sites/adamalston/deploys" target="_blank">
-		<img src="https://api.netlify.com/api/v1/badges/332bbd91-59b7-4091-8781-6f41330399b4/deploy-status" alt="Netlify Status" />
-	</a>
-</p>
+[![Netlify Status](https://api.netlify.com/api/v1/badges/332bbd91-59b7-4091-8781-6f41330399b4/deploy-status)](https://app.netlify.com/sites/adamalston/deploys)
 
 The second iteration of [adamalston.com](https://www.adamalston.com/) built with [React](https://reactjs.org/) and hosted with [Netlify](https://www.netlify.com/).
 
@@ -14,22 +8,22 @@ Previous iteration: [v1](https://github.com/adamalston/v1)
 
 <p align="center">
 	<a href="https://www.adamalston.com/" target="_blank">
-		<img src="preview.png" alt="Website Preview" />
+		<img src="src/assets/preview.png" alt="Website Preview" />
 	</a>
 </p>
 
-This website is built to be simple, lean, and accessible. The background is designed with the [`particles.js`](https://github.com/VincentGarreau/particles.js/) library for creating particles. My intention is for the website to be both interactive and visually inviting. Large fonts are used to enhance readability.
+This website is built to be simple and accessible. The [`particles.js`](https://github.com/VincentGarreau/particles.js/) library creates dynamic particles making the website both interactive and visually inviting. Large fonts are used to enhance readability.
 
-## 🇦🇶 Icons
+## ![Flag Icon](https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Flag_font_awesome.svg/24px-Flag_font_awesome.svg.png) Icons
 
 [Font Awesome](https://fontawesome.com/) icons
 
-| Name          | Icon                  |
-| ------------- | --------------------- |
-| GitHub        | `['fal', 'github']`   |
-| LinkedIn      | `['fab', 'linkedin'`  |
-| File (Resume) | `['fas', 'file-alt']` |
-| Email         | `['fas', 'envelope']` |
+| Name     | Icon                                                                                                                                                                            |
+| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| GitHub   | ![GitHub Icon](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/GitHub_font_awesome.svg/16px-GitHub_font_awesome.svg.png) `['fal', 'github']`                          |
+| LinkedIn | ![LinkedIn Icon](https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Font_Awesome_5_brands_linkedin.svg/16px-Font_Awesome_5_brands_linkedin.svg.png) `['fab', 'linkedin'` |
+| Resume   | ![GitHub Icon](https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Font_Awesome_5_solid_file-alt.svg/16px-Font_Awesome_5_solid_file-alt.svg.png) `['fas', 'file-alt']`    |
+| Email    | ![GitHub Icon](https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Envelope_alt_font_awesome.svg/16px-Envelope_alt_font_awesome.svg.png) `['fas', 'envelope']`            |
 
 ## 🎨 Color Reference
 
