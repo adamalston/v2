@@ -14,63 +14,111 @@
 } */
 
 html, body {
-  margin: 0;
-  height: 100%;
-  overflow: hidden
+	margin: 0;
+	height: 100vh;
+	overflow: hidden;
+	background-color: #000;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(64px + 2vmin);
-  color: white;
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
 }
 
-h4 {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-weight: normal;
+h1, h2 {
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	font-weight: normal;
+	z-index: 1;
+	background-color: #000;
 }
 
-.bubble {
-  display: inline-block;
-  background-color: transparent;
-  border: 3px solid gray;
-  margin: 1vw;
-  border-radius: 50%;
+/* Name */
+
+h1 {
+	font-size: calc(80px + 2vmin);
+	margin-top: 0vh;
+	margin-bottom: 2.5vh;
+	color: white;
 }
+
+/* Title */
+
+h2 {
+	font-size: calc(40px + 2vmin);
+	margin-top: 2.5vh;
+	margin-bottom: 5vh;
+	color: lightgray;
+}
+
+/* Icons */
 
 a {
-  color: white;
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
-  height: 100px;
-  width: 100px;
-  text-decoration: none;
-  font-size: calc(6px + 2vmin);
+	height: 100px;
+	width: 100px;
+	color: white;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	text-decoration: none;
+	font-size: calc(10px + 2vmin);
+	position: relative;
+	z-index: 1;
 }
 
-.bubble .icon_title {
-  display: none;
+a:hover {
+	background-color: #000;
 }
 
-.bubble:hover .icon_title {
-  display: initial;
+.button {
+	display: inline-block;
+	background-color: transparent;
+	margin: .5vw;
+	margin-bottom: 0;
+	/* border: 2px solid lightslategray;
+	border-radius: 50%; */
 }
 
-.bubble:hover .icon {
-  display: none;
+.button .icon_title {
+	display: none;
 }
 
-/* @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
+.button:hover .icon_title {
+	display: initial;
+}
+
+.button:hover .icon {
+	display: none;
+}
+
+/* Particles */
+
+#particles-js {
+	position: absolute;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+}
+
+/* Mobile CSS */
+
+@media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+	h1 {
+		font-size: calc(60px + 2vmin);
+	}
+	h2 {
+		font-size: calc(20px + 2vmin);
+	}
+	.button {
+		margin: .1vw;
+	}
+	a {
+		height: 75px;
+		width: 75px;
+		font-size: calc(10px + 2vmin);
+	}
+}
