@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Buttons from './Buttons';
+import Buttons from './Buttons.js';
 // import logo from './profile.png';
 
 class Header extends Component {
