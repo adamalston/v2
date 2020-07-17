@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import registerIcons from './fontawesome.js';
+import registerIcons from './FontAwesome.js';
 import resume from './assets/resume.pdf';
 
 registerIcons();
