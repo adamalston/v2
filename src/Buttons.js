@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import registerIcons from './FontAwesome';
+import registerIcons from './FontAwesome.js';
 import resume from './assets/resume.pdf';
 
 registerIcons();
@@ -83,8 +83,8 @@ class Buttons extends Component {
     render() {
         return (
             <div>
-                {DATA.map(props => (
-                    <Icon {...props} key={props.label}/>
+                {DATA.map((props, i) => (
+                    <Icon {...props} key={i} />
                 ))}
             </div>
         );
