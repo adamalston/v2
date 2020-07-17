@@ -5,10 +5,10 @@ import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { faFileAlt, faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 
 export default function registerIcons() {
-	library.add(
-		faGithub,
-		faLinkedin,
-		faFileAlt,
-		faPaperPlane
-	);
+    library.add(
+        faGithub,
+        faLinkedin,
+        faFileAlt,
+        faPaperPlane
+    );
 }
