@@ -1,10 +1,14 @@
 <h1 align="left">adamalston<span></span>.com</h1>
 
 <p align="left">
-  <a href="https://app.netlify.com/sites/adamalston/deploys">
-    <img src="https://api.netlify.com/api/v1/badges/332bbd91-59b7-4091-8781-6f41330399b4/deploy-status" alt-text="Netlify Status" role="status" aria-label="badge that displays the operational status of my website"/>
-  </a>
+        <a href="https://app.circleci.com/pipelines/github/adamalston/v2">
+        <img src="https://circleci.com/gh/adamalston/v2.svg?style=shield" alt-text="Build Status" role="status" aria-label="badge that displays the build status of my website from CircleCI"/>
+    </a>
+    <a href="https://app.netlify.com/sites/adamalston/deploys">
+        <img src="https://api.netlify.com/api/v1/badges/332bbd91-59b7-4091-8781-6f41330399b4/deploy-status" alt-text="Netlify Status" role="status" aria-label="badge that displays the operational status of my website"/>
+    </a>
 </p>
+
 
 <p align="left"> The second iteration of 
     <a href="https://www.adamalston.com" role="link" aria-label="visit my website">adamalston.com</a> built with 
@@ -20,7 +24,7 @@
     <img src="src/assets/preview.png" alt="Website Preview" role="img" aria-label="screenshot of the website" />
 </p>
 
-This website is built to be simple and accessible. The <a href="https://github.com/VincentGarreau/particles.js/" role="link" aria-label="visit the particles repository to learn more about the javascript library">`particles.js`</a> library creates dynamic particles making the website both interactive and visually inviting. Large fonts are used to enhance readability.
+This website is built to be simple and accessible. The `Particles.js` library creates dynamic particles making the website both interactive and visually inviting. Large fonts are used to enhance readability.
 
 ## <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Flag_font_awesome.svg/32px-Flag_font_awesome.svg.png" alt="Flag Icon" role="img" aria-label="icon representing a flag" /> Icons
 
@@ -39,11 +43,11 @@ Colors meet a color contrast ratio of 4.5:1 against the background of the websit
 
 | Color       | Hex                                                                |
 | ----------- | ------------------------------------------------------------------ |
-| Light Gray  | ![#eeeeee](https://via.placeholder.com/16/eeeeee?text=+) `#eeeeee` |
-| Silver      | ![#bbbbbb](https://via.placeholder.com/16/bbbbbb?text=+) `#bbbbbb` |
-| Light Red   | ![#ff7e79](https://via.placeholder.com/16/ff7e79?text=+) `#ff7e79` |
-| Gold        | ![#ffd300](https://via.placeholder.com/16/ffd300?text=+) `#ffd300` |
-| Light Green | ![#b8e986](https://via.placeholder.com/16/b8e986?text=+) `#b8e986` |
-| Turquoise   | ![#4dc9ff](https://via.placeholder.com/16/4dc9ff?text=+) `#4dc9ff` |
-| Purple      | ![#c311e7](https://via.placeholder.com/16/c311e7?text=+) `#c311e7` |
-| Dark Gray   | ![#333333](https://via.placeholder.com/16/333333?text=+) `#333333` |
+| Light Gray  | ![#eeeeee](https://via.placeholder.com/12/eeeeee?text=+) `#eeeeee` |
+| Silver      | ![#bbbbbb](https://via.placeholder.com/12/bbbbbb?text=+) `#bbbbbb` |
+| Light Red   | ![#ff7e79](https://via.placeholder.com/12/ff7e79?text=+) `#ff7e79` |
+| Gold        | ![#ffd300](https://via.placeholder.com/12/ffd300?text=+) `#ffd300` |
+| Light Green | ![#b8e986](https://via.placeholder.com/12/b8e986?text=+) `#b8e986` |
+| Turquoise   | ![#4dc9ff](https://via.placeholder.com/12/4dc9ff?text=+) `#4dc9ff` |
+| Purple      | ![#c311e7](https://via.placeholder.com/12/c311e7?text=+) `#c311e7` |
+| Dark Gray   | ![#333333](https://via.placeholder.com/12/333333?text=+) `#333333` |
