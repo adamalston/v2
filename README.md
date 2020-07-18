@@ -1,13 +1,12 @@
-<h1 align="left">adamalston<span></span>.com</h1>
-
-<p align="left">
-        <a href="https://app.circleci.com/pipelines/github/adamalston/v2">
-        <img src="https://circleci.com/gh/adamalston/v2.svg?style=shield" alt-text="Build Status" role="status" aria-label="badge that displays the build status of my website from CircleCI"/>
+<h1 align="left">adamalston<span></span>.com 
+    &middot;
+    <a href="https://app.circleci.com/pipelines/github/adamalston/v2">
+        <img src="https://img.shields.io/circleci/build/gh/adamalston/v2?label=build" alt-text="Build Status" role="status" aria-label="badge that displays the build status of my website from CircleCI"/>
     </a>
     <a href="https://app.netlify.com/sites/adamalston/deploys">
-        <img src="https://api.netlify.com/api/v1/badges/332bbd91-59b7-4091-8781-6f41330399b4/deploy-status" alt-text="Netlify Status" role="status" aria-label="badge that displays the operational status of my website"/>
+            <img src="https://img.shields.io/netlify/332bbd91-59b7-4091-8781-6f41330399b4" alt-text="Netlify Status" role="status" aria-label="badge that displays the operational status of my website from Netlify"/>
     </a>
-</p>
+</h1>
 
 
 <p align="left"> The second iteration of 
@@ -26,16 +25,16 @@
 
 This website is built to be simple and accessible. The `Particles.js` library creates dynamic particles making the website both interactive and visually inviting. Large fonts are used to enhance readability.
 
-## <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Flag_font_awesome.svg/32px-Flag_font_awesome.svg.png" alt="Flag Icon" role="img" aria-label="icon representing a flag" /> Icons
+## <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Flag_font_awesome.svg/24px-Flag_font_awesome.svg.png" alt="Flag Icon" role="img" aria-label="icon representing a flag" /> Icons
 
 <a href="https://fontawesome.com/" role="link" aria-label="visit the Font Awesome website to learn more about the icon library">Font Awesome</a> icons
 
 | Use      | Icon                                                                                                                                                                                       |
 | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| GitHub   | ![GitHub Icon](https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Font_Awesome_5_brands_github.svg/32px-Font_Awesome_5_brands_github.svg.png) `['fab', 'github']`                   |
-| LinkedIn | ![LinkedIn Icon](https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Font_Awesome_5_brands_linkedin.svg/32px-Font_Awesome_5_brands_linkedin.svg.png) `['fab', 'linkedin'`            |
-| Resume   | ![File Icon](https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Font_Awesome_5_solid_file-alt.svg/32px-Font_Awesome_5_solid_file-alt.svg.png) `['fas', 'file-alt']`                 |
-| Email    | ![Paper Plane Icon](https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Font_Awesome_5_solid_paper-plane.svg/32px-Font_Awesome_5_solid_paper-plane.svg.png) `['fas', 'paper-plane']` |
+| GitHub   | ![GitHub Icon](https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Font_Awesome_5_brands_github.svg/24px-Font_Awesome_5_brands_github.svg.png) `['fab', 'github']`                   |
+| LinkedIn | ![LinkedIn Icon](https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Font_Awesome_5_brands_linkedin.svg/24px-Font_Awesome_5_brands_linkedin.svg.png) `['fab', 'linkedin'`            |
+| Resume   | ![File Icon](https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Font_Awesome_5_solid_file-alt.svg/24px-Font_Awesome_5_solid_file-alt.svg.png) `['fas', 'file-alt']`                 |
+| Email    | ![Paper Plane Icon](https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Font_Awesome_5_solid_paper-plane.svg/24px-Font_Awesome_5_solid_paper-plane.svg.png) `['fas', 'paper-plane']` |
 
 ## 🎨 Color Reference
 
