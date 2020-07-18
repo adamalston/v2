@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Particles from 'react-particles-js';
 
-let params = {
+const PARAMS = {
     "particles": {
         "number": {
             "value": 40,
@@ -124,7 +124,7 @@ class Particle extends Component {
     render() {
         return (
             <div id="particles-js">
-                <Particles width='100vw' height="100vh" params={params} />
+                <Particles width='100vw' height="100vh" params={PARAMS} />
             </div>
         )
     }
