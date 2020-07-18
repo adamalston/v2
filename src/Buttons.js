@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import registerIcons from './FontAwesome.js';
-import resume from './assets/resume.pdf';
 
 registerIcons();
 
@@ -17,7 +16,7 @@ const DATA = [
         label: "LinkedIn",
     },
     {
-        href: resume,
+        href: "https://drive.google.com/file/d/1Wwq38qObAhk4pcoRhSuxfx_uSdS0utch/view?usp=sharing",
         icon: ["fas", "file-alt"],
         label: "Resume",
     },
