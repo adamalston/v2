@@ -8,7 +8,6 @@
     </a>
 </h1>
 
-
 <p align="left"> The second iteration of 
     <a href="https://www.adamalston.com" role="link" aria-label="visit my website">adamalston.com</a> built with 
     <a href="https://reactjs.org/" role="link" aria-label="visit the React website to learn more about the javascript library">React</a> and hosted with 
@@ -49,4 +48,4 @@ Colors meet a color contrast ratio of 4.5:1 against the background of the websit
 | Light Green | ![#b8e986](https://via.placeholder.com/12/b8e986?text=+) `#b8e986` |
 | Turquoise   | ![#4dc9ff](https://via.placeholder.com/12/4dc9ff?text=+) `#4dc9ff` |
 | Purple      | ![#c311e7](https://via.placeholder.com/12/c311e7?text=+) `#c311e7` |
-| Dark Gray   | ![#333333](https://via.placeholder.com/12/333333?text=+) `#333333` |
+| Black       | ![#000000](https://via.placeholder.com/12/000000?text=+) `#000000` |
