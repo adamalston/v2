@@ -4,7 +4,7 @@ import Particles from 'react-particles-js';
 const PARAMS = {
     "particles": {
         "number": {
-            "value": 40,
+            "value": 75,
             "density": {
                 "enable": true,
                 "value_area": 800
@@ -45,7 +45,7 @@ const PARAMS = {
             }
         },
         "size": {
-            "value": 8,
+            "value": 4,
             "random": true,
             "anim": {
                 "enable": false,
