@@ -1,20 +1,20 @@
-<h1 align="left">adamalston<span></span>.com 
+<h1 align="left">adamalston<span></span>.com
     &middot;
     <a href="https://app.circleci.com/pipelines/github/adamalston/v2">
         <img src="https://img.shields.io/circleci/build/gh/adamalston/v2?label=build" alt-text="Build Status" role="status" aria-label="badge that displays the build status of my website from CircleCI"/>
     </a>
     <a href="https://app.netlify.com/sites/adamalston/deploys">
-            <img src="https://img.shields.io/netlify/332bbd91-59b7-4091-8781-6f41330399b4" alt-text="Netlify Status" role="status" aria-label="badge that displays the operational status of my website from Netlify"/>
+        <img src="https://img.shields.io/netlify/332bbd91-59b7-4091-8781-6f41330399b4" alt-text="Netlify Status" role="status" aria-label="badge that displays the operational status of my website from Netlify"/>
     </a>
 </h1>
 
-<p align="left"> The second iteration of 
-    <a href="https://www.adamalston.com" role="link" aria-label="visit my website">adamalston.com</a> built with 
-    <a href="https://reactjs.org/" role="link" aria-label="visit the React website to learn more about the javascript library">React</a> and hosted with 
+<p align="left"> The second iteration of
+    <a href="https://www.adamalston.com" role="link" aria-label="visit my website">adamalston.com</a> built with
+    <a href="https://reactjs.org/" role="link" aria-label="visit the React website to learn more about the javascript library">React</a> and hosted with
     <a href="https://www.netlify.com/" role="link" aria-label="visit the Netlify website to learn more about the host service">Netlify</a>.
 </p>
 
-<p align="left">Previous iteration: 
+<p align="left">Previous iteration:
     <a href="https://github.com/adamalston/v1" role="link" aria-label="visit the repository for the previous iteration of my website to learn more">v1</a>
 </p>
 
@@ -41,11 +41,11 @@ Colors meet a color contrast ratio of 4.5:1 against the background of the websit
 
 | Color       | Hex                                                                |
 | ----------- | ------------------------------------------------------------------ |
-| Light Gray  | ![#eeeeee](https://via.placeholder.com/12/eeeeee?text=+) `#eeeeee` |
-| Silver      | ![#bbbbbb](https://via.placeholder.com/12/bbbbbb?text=+) `#bbbbbb` |
-| Light Red   | ![#ff7e79](https://via.placeholder.com/12/ff7e79?text=+) `#ff7e79` |
-| Gold        | ![#ffd300](https://via.placeholder.com/12/ffd300?text=+) `#ffd300` |
-| Light Green | ![#b8e986](https://via.placeholder.com/12/b8e986?text=+) `#b8e986` |
-| Turquoise   | ![#4dc9ff](https://via.placeholder.com/12/4dc9ff?text=+) `#4dc9ff` |
-| Purple      | ![#c311e7](https://via.placeholder.com/12/c311e7?text=+) `#c311e7` |
 | Black       | ![#000000](https://via.placeholder.com/12/000000?text=+) `#000000` |
+| Purple      | ![#c311e7](https://via.placeholder.com/12/c311e7?text=+) `#c311e7` |
+| Turquoise   | ![#4dc9ff](https://via.placeholder.com/12/4dc9ff?text=+) `#4dc9ff` |
+| Light Green | ![#90ee90](https://via.placeholder.com/12/90ee90?text=+) `#90ee90` |
+| Gold        | ![#ffd300](https://via.placeholder.com/12/ffd300?text=+) `#ffd300` |
+| Light Red   | ![#ff6961](https://via.placeholder.com/12/ff6961?text=+) `#ff6961` |
+| Silver      | ![#bbbbbb](https://via.placeholder.com/12/bbbbbb?text=+) `#bbbbbb` |
+| Light Gray  | ![#eeeeee](https://via.placeholder.com/12/eeeeee?text=+) `#eeeeee` |
