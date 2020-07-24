@@ -16,7 +16,7 @@ const DATA = [
         label: "LinkedIn",
     },
     {
-        href: "https://drive.google.com/file/d/1Wwq38qObAhk4pcoRhSuxfx_uSdS0utch/view?usp=sharing",
+        href: "https://drive.google.com/file/d/1qILY8J1i6CIpHz833eCbZqb-MEvf2sSu/view?usp=sharing",
         icon: ["fas", "file-alt"],
         label: "Resume",
     },
