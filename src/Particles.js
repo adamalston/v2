@@ -4,7 +4,7 @@ import Particles from 'react-particles-js';
 const PARAMS = {
     "particles": {
         "number": {
-            "value": 75,
+            "value": 60,
             "density": {
                 "enable": true,
                 "value_area": 800
@@ -13,10 +13,10 @@ const PARAMS = {
         "color": {
             "value": [
                 "#c311e7",
-                "#b8e986",
+                "#90ee90",
                 "#4dc9ff",
                 "#ffd300",
-                "#ff7e79"
+                "#ff6961"
             ]
         },
         "shape": {
@@ -51,14 +51,14 @@ const PARAMS = {
                 "enable": false,
                 "speed": 30,
                 "size_min": 0.1,
-                "sync": false
+                "sync": true
             }
         },
         "line_linked": {
             "enable": true,
             "distance": 100,
-            "color": "#ffffff",
-            "opacity": 0.5,
+            "color": "#eeeeee",
+            "opacity": 0.4,
             "width": 1
         },
         "move": {
