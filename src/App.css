@@ -1,28 +1,16 @@
-/* .App {
-  text-align: center;
-} */
+html {
+    overflow: hidden;
+}
 
-/* .App-logo {
-  height: 20vmin;
-  pointer-events: none;
-} */
-
-/* @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-} */
-
-html, body {
+.App {
     margin: 0;
     height: 100vh;
     overflow: hidden;
     background-color: #000000;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", sans-serif;
 }
 
-.App-header {
+.container {
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -32,17 +20,20 @@ html, body {
     position: absolute;
 }
 
-h1, h2 {
+.name, .title {
     font-weight: normal;
     z-index: 1;
-    background-color: #000000;
-    border-radius: 30px;
+    padding: 5px;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, .7);
+    /* box-shadow: 0 0 10px 10px rgba(150, 150, 150, .1); */
 }
 
 /* Name */
 
-h1 {
+.name {
     font-size: calc(80px + 2vmin);
+    padding-top: 0;
     margin-top: 0vh;
     margin-bottom: 2.5vh;
     color: #eeeeee;
@@ -50,7 +41,7 @@ h1 {
 
 /* Title */
 
-h2 {
+.title {
     font-size: calc(40px + 2vmin);
     margin-top: 2.5vh;
     margin-bottom: 5vh;
@@ -70,11 +61,12 @@ a {
     font-size: calc(10px + 2vmin);
     position: relative;
     z-index: 1;
-	border-radius: 50%;
+    border-radius: 50%;
 }
 
 a:hover {
-    background-color: #000000;
+    background-color: rgba(0, 0, 0, .5);
+    box-shadow: 0 0 10px 10px rgba(150, 150, 150, .2);
 }
 
 .button {
@@ -85,8 +77,7 @@ a:hover {
     height: 100px;
     width: 100px;
     /* border: 2px solid lightslategray;
-	border-radius: 50%; */
-
+    border-radius: 50%; */
 }
 
 .button .icon_title {
@@ -113,11 +104,11 @@ a:hover {
 /* Mobile CSS */
 
 @media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-    h1 {
+    .name {
         font-size: calc(60px + 2vmin);
     }
-    h2 {
-        font-size: calc(20px + 2vmin);
+    .title {
+        font-size: calc(30px + 2vmin);
     }
     a {
         height: 75px;
