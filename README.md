@@ -22,7 +22,7 @@
     <img src="src/assets/preview.png" alt="Website Preview" role="img" aria-label="screenshot of the website" />
 </p>
 
-This website is built to be simple and accessible. The `Particles.js` library creates dynamic particles making the website both interactive and visually inviting. Large fonts are used to enhance readability.
+This website is designed to be simple and accessible. The `Particles.js` library creates dynamic particles making the website both interactive and visually inviting. Large fonts are used to enhance readability.
 
 ## <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Flag_font_awesome.svg/24px-Flag_font_awesome.svg.png" alt="Flag Icon" role="img" aria-label="icon representing a flag" /> Icons
 
@@ -35,7 +35,7 @@ This website is built to be simple and accessible. The `Particles.js` library cr
 | Resume   | ![File Icon](https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Font_Awesome_5_solid_file-alt.svg/24px-Font_Awesome_5_solid_file-alt.svg.png) `['fas', 'file-alt']`                 |
 | Email    | ![Paper Plane Icon](https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Font_Awesome_5_solid_paper-plane.svg/24px-Font_Awesome_5_solid_paper-plane.svg.png) `['fas', 'paper-plane']` |
 
-## 🎨 Color Reference
+## :art: Color Reference
 
 Colors meet a color contrast ratio of 4.5:1 against the background of the website, conforming with <a href="https://www.w3.org/TR/WCAG20/" role="link" aria-label="visit the Web Content Accessibility Guidelines 2.0 website to learn more about the accessibility standard">WCAG 2.0</a> Section 1.4.3.
 
@@ -49,3 +49,9 @@ Colors meet a color contrast ratio of 4.5:1 against the background of the websit
 | Light Red   | ![#ff6961](https://via.placeholder.com/12/ff6961?text=+) `#ff6961` |
 | Silver      | ![#bbbbbb](https://via.placeholder.com/12/bbbbbb?text=+) `#bbbbbb` |
 | Light Gray  | ![#eeeeee](https://via.placeholder.com/12/eeeeee?text=+) `#eeeeee` |
+
+## :key: Open Source
+
+I made this website open source under the assumption that others would use the code to create their own websites. I only ask that you use this code with attribution as I have spent a significant amount of time writing it.
+
+If you have any questions, open an issue and I will try to respond accordingly.
