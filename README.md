@@ -6,6 +6,9 @@
     <a href="https://app.netlify.com/sites/adamalston/deploys">
         <img src="https://img.shields.io/netlify/332bbd91-59b7-4091-8781-6f41330399b4" alt-text="Netlify Status" role="status" aria-label="badge that displays the operational status of my website from Netlify"/>
     </a>
+    <a href="">
+        <img src="https://img.shields.io/badge/⭐️-if&#160;useful-4dc9ff" alt-text="Star if useful" role="Status" aria-label="Star this repository if you found it useful"/>
+    </a>
 </h1>
 
 <p align="left"> The second iteration of
@@ -24,6 +27,12 @@
 
 This website is designed to be simple and accessible. The `Particles.js` library creates dynamic particles making the website both interactive and visually inviting. Large fonts are used to enhance readability.
 
+## :key: Open Source
+
+I made this website open source under the assumption that others would use the code to create their own websites. I only ask that you use this code with attribution as I have spent a significant amount of time writing it.
+
+If you have any questions, open an issue and I will respond accordingly.
+
 ## <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Flag_font_awesome.svg/24px-Flag_font_awesome.svg.png" alt="Flag Icon" role="img" aria-label="icon representing a flag" /> Icons
 
 <a href="https://fontawesome.com/" role="link" aria-label="visit the Font Awesome website to learn more about the icon library">Font Awesome</a> icons
@@ -37,7 +46,7 @@ This website is designed to be simple and accessible. The `Particles.js` library
 
 ## :art: Color Reference
 
-Colors meet a color contrast ratio of 4.5:1 against the background of the website, conforming with <a href="https://www.w3.org/TR/WCAG20/" role="link" aria-label="visit the Web Content Accessibility Guidelines 2.0 website to learn more about the accessibility standard">WCAG 2.0</a> Section 1.4.3.
+Colors meet a color contrast ratio of 4.5:1 against the background of the website, conforming with <a href="https://www.w3.org/TR/WCAG21/" role="link" aria-label="visit the Web Content Accessibility Guidelines 2.1 website to learn more about the accessibility standard">WCAG 2.1</a> Section 1.4.3.
 
 | Color       | Hex                                                                |
 | ----------- | ------------------------------------------------------------------ |
@@ -49,9 +58,3 @@ Colors meet a color contrast ratio of 4.5:1 against the background of the websit
 | Light Red   | ![#ff6961](https://via.placeholder.com/12/ff6961?text=+) `#ff6961` |
 | Silver      | ![#bbbbbb](https://via.placeholder.com/12/bbbbbb?text=+) `#bbbbbb` |
 | Light Gray  | ![#eeeeee](https://via.placeholder.com/12/eeeeee?text=+) `#eeeeee` |
-
-## :key: Open Source
-
-I made this website open source under the assumption that others would use the code to create their own websites. I only ask that you use this code with attribution as I have spent a significant amount of time writing it.
-
-If you have any questions, open an issue and I will try to respond accordingly.
