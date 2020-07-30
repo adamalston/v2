@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Buttons from './Buttons';
 // import logo from './profile.png';
 
-class Header extends Component {
+class Content extends Component {
     render() {
         return (
             <div className="container">
@@ -19,4 +19,4 @@ class Header extends Component {
     }
 }
 
-export default Header;
+export default Content;
