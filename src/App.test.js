@@ -1,8 +1,8 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import App from './App';
-import Buttons from './Buttons'
-import registerIcons from './FontAwesome';
+import Buttons from './components/Buttons'
+import registerIcons from './components/FontAwesome';
 
 test('renders name', () => {
     const { getByText } = render(<App />);
@@ -10,7 +10,7 @@ test('renders name', () => {
     expect(linkElement).toBeInTheDocument();
 });
 
-jest.mock('./FontAwesome.js', () => ({
+jest.mock('./components/FontAwesome', () => ({
     __esModule: true,
     default: jest.fn()
 }));
