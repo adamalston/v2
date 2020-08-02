@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import Content from './Content.js'
-import Particle from './Particles.js';
+import Content from './components/Content'
+import Particle from './components/Particles';
 
 function App() {
     return (
