@@ -9,24 +9,3 @@
     justify-content: center;
     text-align: center;
 }
-
-/* Mobile CSS */
-
-@media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-    .name {
-        font-size: calc(60px + 2vmin);
-    }
-    .title {
-        font-size: calc(30px + 2vmin);
-    }
-    a {
-        height: 75px;
-        width: 75px;
-        font-size: calc(10px + 2vmin);
-    }
-    .button {
-        margin: .1vw;
-        height: 75px;
-        width: 75px;
-    }
-}

@@ -1,0 +1,55 @@
+/* Icons */
+
+a {
+    height: 100px;
+    width: 100px;
+    color: var(--primaryTextColor);
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    font-size: calc(10px + 2vmin);
+    position: relative;
+    z-index: 1;
+    border-radius: 50%;
+}
+
+a:hover {
+    background-color: var(--shadowColor);
+    box-shadow: 0 0 10px 10px rgba(150, 150, 150, 0.2);
+}
+
+.button {
+    display: inline-block;
+    margin: 0.8vw;
+    margin-bottom: 0;
+    height: 100px;
+    width: 100px;
+}
+
+.button .icon_title {
+    display: none;
+}
+
+.button:hover .icon_title {
+    display: initial;
+}
+
+.button:hover .icon {
+    display: none;
+}
+
+/* Mobile CSS: iPhone X */
+
+@media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+    a {
+        height: 75px;
+        width: 75px;
+        font-size: calc(10px + 2vmin);
+    }
+    .button {
+        margin: 0.1vw;
+        height: 75px;
+        width: 75px;
+    }
+}

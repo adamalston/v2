@@ -1,0 +1,65 @@
+/* default: dark mode */
+
+html {
+    overflow: hidden;
+    --primaryTextColor: #EEEEEE;
+    --primaryBackgroundColor: #000000;
+    --secondaryTextColor: #BBBBBB;
+    --shadowColor: rgba(0, 0, 0, 0.5);
+}
+
+/* light mode */
+
+html.other {
+    overflow: hidden;
+    --primaryTextColor: #000000;
+    --primaryBackgroundColor: #EEEEEE;
+    --secondaryTextColor: #000000;
+    --shadowColor: rgba(255, 255, 255, 0.5);
+}
+
+/* toggle */
+
+.toggle.react-toggle {
+    position: fixed;
+    z-index: 10;
+    top: 20px;
+    right: 20px;
+
+    .react-toggle-thumb {
+        border: none;
+        background: var(--primaryBackgroundColor);
+    }
+
+    &.react-toggle--focus .react-toggle-thumb,
+    &.react-toggle:active:not(.react-toggle--disabled) .react-toggle-thumb {
+        box-shadow: none;
+    }
+
+    .react-toggle-track,
+    &.react-toggle--checked .react-toggle-track,
+    &.react-toggle--checked:hover:not(.react-toggle--disabled)
+        .react-toggle-track,
+    &.react-toggle:hover:not(.react-toggle--disabled) .react-toggle-track {
+        background: #777777;
+        position: relative;
+    }
+
+    .react-toggle-track-check {
+        left: 6px;
+        bottom: 4px;
+    }
+
+    .react-toggle-track-x {
+        right: 12px;
+        bottom: 4px;
+    }
+
+    .react-toggle-track-check,
+    .react-toggle-track-x {
+        font-size: 15px;
+        vertical-align: middle;
+        text-align: center;
+        color: transparent;
+    }
+}

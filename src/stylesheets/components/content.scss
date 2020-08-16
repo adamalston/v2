@@ -1,0 +1,39 @@
+.name,
+.title {
+    font-weight: normal;
+    border-radius: 20px;
+    padding: 3vh;
+    padding-top: 0;
+    position: relative;
+    z-index: 1;
+}
+
+/* Name */
+
+.name {
+    font-size: calc(80px + 2vmin);
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 2vh;
+    color: var(--primaryTextColor);
+}
+
+/* Title */
+
+.title {
+    font-size: calc(40px + 2vmin);
+    margin-top: 3vh;
+    margin-bottom: 2vh;
+    color: var(--secondaryTextColor);
+}
+
+/* Mobile CSS: iPhone X */
+
+@media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+    .name {
+        font-size: calc(50px + 2vmin);
+    }
+    .title {
+        font-size: calc(25px + 2vmin);
+    }
+}
