@@ -3,7 +3,7 @@ import Toggle from "react-toggle";
 import "react-toggle/style.css";
 // import { useMediaQuery } from "react-responsive";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import usePersistantState from '../hooks/PersistantState';
+import usePersistentState from '../hooks/PersistentState';
 import registerIcons from './FontAwesome';
 
 registerIcons();
@@ -22,7 +22,7 @@ const DarkToggle = () => {
     // );
     // const [isDark, setIsDark] = useState(systemPrefersDark);
 
-    const [isDark, setIsDark] = usePersistantState('theme', undefined);
+    const [isDark, setIsDark] = usePersistentState('theme', undefined);
 
     useEffect(() => {
         if (isDark) {
@@ -42,7 +42,7 @@ const DarkToggle = () => {
                     checked: <FontAwesomeIcon icon={["far", "sun"]} style={{ color: "#F39C12" }} />,
                     unchecked: <FontAwesomeIcon icon={["far", "moon"]} style={{ color: "#F1C40F" }} />
                 }}
-                aria-label="Dark mode"
+                aria-label="Theme toggle"
             />
         </div>
     );
