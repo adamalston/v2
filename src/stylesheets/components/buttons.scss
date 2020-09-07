@@ -1,55 +1,83 @@
 /* Icons */
 
-a {
-    height: 100px;
-    width: 100px;
+a, a:active, a:hover {
+    outline: 0;
+}
+
+.button-container {
+    display: inline-block;
+    height: 7rem;
+    width: 7rem;
+    margin: 0 1.75rem;
+}
+
+.button {
+    transition: color .5s linear;
+    height: 7rem;
+    width: 7rem;
     color: var(--primaryTextColor);
     display: table-cell;
     vertical-align: middle;
     text-align: center;
     text-decoration: none;
-    font-size: calc(10px + 2vmin);
     position: relative;
     z-index: 1;
-    border-radius: 50%;
+    border-radius: 25%;
 }
 
-a:hover {
+.icon {
+    height: 5rem;
+    width: 5rem;
+    padding: 1rem;
+}
+
+.icon_title {
+    font-size: 1.75rem;
+}
+
+.button:hover {
     background-color: var(--shadowColor);
-    box-shadow: 0 0 10px 10px rgba(150, 150, 150, 0.2);
+    box-shadow: 0 0 .75rem .75rem rgba(128, 128, 128, 0.2);
 }
 
-.button {
-    display: inline-block;
-    margin: 0.8vw;
-    margin-bottom: 0;
-    height: 100px;
-    width: 100px;
+.button:active {
+    -webkit-transform: scale(.90);
+    transform: scale(.90);
 }
 
-.button .icon_title {
+.button-container .icon_title {
     display: none;
 }
 
-.button:hover .icon_title {
+.button-container:hover .icon_title {
     display: initial;
 }
 
-.button:hover .icon {
+.button-container:hover .icon {
     display: none;
 }
 
-/* Mobile CSS: iPhone X */
+/* Mobile Devices */
 
-@media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
-    a {
-        height: 75px;
-        width: 75px;
-        font-size: calc(10px + 2vmin);
+@media only screen and (max-device-width: 820px) and (-webkit-min-device-pixel-ratio: 2) {
+    .button-container {
+        height: 5rem;
+        width: 5rem;
+        margin: 0 .8rem;
     }
+
     .button {
-        margin: 0.1vw;
-        height: 75px;
-        width: 75px;
+        height: 5rem;
+        width: 5rem;
+    }
+
+    .icon {
+        height: 4rem;
+        width: 4rem;
+        padding: .5rem;
+    }
+
+    .icon_title {
+        font-size: 1.3rem;
     }
 }

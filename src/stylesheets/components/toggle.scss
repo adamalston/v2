@@ -1,65 +1,58 @@
-/* default: dark mode */
+/* light mode */
 
 html {
+    overflow: hidden;
+    --primaryTextColor: #000000;
+    --primaryBackgroundColor: #EEEEEE;
+    --secondaryTextColor: #333333;
+    --shadowColor: rgba(255, 255, 255, 0.5);
+    --tertiaryTextColor: #777777;
+}
+
+/* default: dark mode */
+
+html.other {
     overflow: hidden;
     --primaryTextColor: #EEEEEE;
     --primaryBackgroundColor: #000000;
     --secondaryTextColor: #BBBBBB;
     --shadowColor: rgba(0, 0, 0, 0.5);
-}
-
-/* light mode */
-
-html.other {
-    overflow: hidden;
-    --primaryTextColor: #000000;
-    --primaryBackgroundColor: #EEEEEE;
-    --secondaryTextColor: #000000;
-    --shadowColor: rgba(255, 255, 255, 0.5);
+    --tertiaryTextColor: #999999;
 }
 
 /* toggle */
 
-.toggle.react-toggle {
+main {
     position: fixed;
-    z-index: 10;
-    top: 20px;
-    right: 20px;
+    z-index: 1;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
 
-    .react-toggle-thumb {
-        border: none;
-        background: var(--primaryBackgroundColor);
-    }
+main:active {
+    -webkit-transform: scale(.90);
+    transform: scale(.90);
+}
 
-    &.react-toggle--focus .react-toggle-thumb,
-    &.react-toggle:active:not(.react-toggle--disabled) .react-toggle-thumb {
-        box-shadow: none;
-    }
+#toggle {
+    display: none;
+}
 
-    .react-toggle-track,
-    &.react-toggle--checked .react-toggle-track,
-    &.react-toggle--checked:hover:not(.react-toggle--disabled)
-        .react-toggle-track,
-    &.react-toggle:hover:not(.react-toggle--disabled) .react-toggle-track {
-        background: #777777;
-        position: relative;
-    }
-
-    .react-toggle-track-check {
-        left: 6px;
-        bottom: 4px;
-    }
-
-    .react-toggle-track-x {
-        right: 12px;
-        bottom: 4px;
-    }
-
-    .react-toggle-track-check,
-    .react-toggle-track-x {
-        font-size: 15px;
-        vertical-align: middle;
-        text-align: center;
-        color: transparent;
-    }
+.switch {
+    cursor: pointer;
+    display: flex;
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: .75rem;
+    background-color: var(--shadowColor);
+    border-radius: 25%;
+    box-shadow: 0 0 .25rem .25rem rgba(128, 128, 128, 0.2);
+    align-items: center;
+    justify-content: center;
+    transition: background-color .5s linear;
+    font-size: .5rem;
 }
