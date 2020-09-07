@@ -12,11 +12,11 @@ const PARAMS = {
         },
         "color": {
             "value": [
-                "#c311e7",
-                "#90ee90",
-                "#4dc9ff",
-                "#ffd300",
-                "#ff6961"
+                "#FF6961",
+                "#FFD300",
+                "#90EE90",
+                "#4DC9FF",
+                "#C311E7"
             ]
         },
         "shape": {
@@ -57,7 +57,7 @@ const PARAMS = {
         "line_linked": {
             "enable": true,
             "distance": 100,
-            "color": "#eeeeee",
+            "color": "#777777",
             "opacity": 0.4,
             "width": 1
         },
@@ -116,9 +116,8 @@ const PARAMS = {
         }
     },
     "retina_detect": true
-    // *EE^WDte@VPnyi&o9vE5X@WbWNe*k5ka
+    // 3m@62^K^88745%
 }
-
 
 class Particle extends Component {
     render() {

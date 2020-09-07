@@ -1,41 +1,42 @@
 import React, { Component } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import registerIcons from './FontAwesome';
 
-registerIcons();
+import GitHub from './../assets/icons/GitHub'
+import LinkedIn from './../assets/icons/LinkedIn'
+import File from './../assets/icons/File'
+import Email from './../assets/icons/Email'
 
 const DATA = [
     {
         href: "https://github.com/adamalston",
-        aria: "Visit my GitHub profile to learn more about the open source projects I have contributed to",
-        icon: ["fab", "github"],
+        aria: "Visit my GitHub profile to learn more about the projects I have created and contributed to",
+        icon: <GitHub />,
         label: "Github",
     },
     {
         href: "https://www.linkedin.com/in/adammalston/",
         aria: "Visit my LinkedIn profile to learn more about my education and work experience",
-        icon: ["fab", "linkedin"],
+        icon: <LinkedIn />,
         label: "LinkedIn",
     },
     {
         href: "https://drive.google.com/drive/folders/10k8NWflSYQ5laPzuWtK3bzUKzuOeas8i?usp=sharing",
         aria: "Visit Google Drive to view and download a copy of my resume",
-        icon: ["fas", "file-alt"],
+        icon: <File />,
         label: "Resume",
     },
     {
         href: "mailto:aalston9@gmail.com",
         aria: "Open a pre-addressed email prompt to me that you can fill out",
-        icon: ["fas", "paper-plane"],
-        label: "Email me",
+        icon: <Email />,
+        label: "Email",
     }
 ];
 
-const Icon = ({ href, aria, icon, label }) => {
+const Button = ({ href, aria, icon, label }) => {
     return (
-        <span className="button">
-            <a href={href} target="_self" aria-label={aria} rel="noopener noreferrer">
-                <FontAwesomeIcon className="icon" icon={icon} size="3x" />
+        <span className="button-container">
+            <a className="button" href={href} target="_self" aria-label={aria} rel="noopener noreferrer">
+                <div className="icon">{icon}</div>
                 <span className="icon_title">{label}</span>
             </a>
         </span>
@@ -47,7 +48,7 @@ class Buttons extends Component {
         return (
             <div>
                 {DATA.map((props, i) => (
-                    <Icon {...props} key={i} />
+                    <Button {...props} key={i} />
                 ))}
             </div>
         );

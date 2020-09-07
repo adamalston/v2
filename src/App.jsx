@@ -4,6 +4,7 @@ import ThemeToggle from './components/Toggle'
 import Content from './components/Content'
 import Buttons from './components/Buttons';
 import Particle from './components/Particles';
+import Footer from './components/Footer';
 
 function App() {
     return (
@@ -12,6 +13,7 @@ function App() {
             <Content />
             <Buttons />
             <Particle />
+            <Footer />
         </div>
     );
 }

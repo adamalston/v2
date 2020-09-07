@@ -1,0 +1,18 @@
+.footer-container {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: .75rem; 
+    padding-right: 1rem;
+}
+
+.footer-text {
+    transition: color .5s linear;
+    color: var(--tertiaryTextColor);
+}
+
+.footer-link {
+    transition: color .5s linear;
+    text-decoration: none;
+    color: var(--secondaryTextColor);
+}
