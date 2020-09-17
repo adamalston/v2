@@ -1,7 +1,7 @@
 /* Particles */
 
-#particles-js {
-    transition: background-color .5s linear;
+.particles {
+    transition: background-color 0.5s linear;
     position: absolute;
     background-color: var(--primaryBackgroundColor);
     background-repeat: no-repeat;

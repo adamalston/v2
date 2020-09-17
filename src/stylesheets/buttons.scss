@@ -1,4 +1,4 @@
-/* Icons */
+/* Buttons */
 
 a, a:active, a:hover {
     outline: 0;
@@ -12,7 +12,7 @@ a, a:active, a:hover {
 }
 
 .button {
-    transition: color .5s linear;
+    transition: color 0.5s linear;
     height: 7rem;
     width: 7rem;
     color: var(--primaryTextColor);
@@ -37,12 +37,12 @@ a, a:active, a:hover {
 
 .button:hover {
     background-color: var(--shadowColor);
-    box-shadow: 0 0 .75rem .75rem rgba(128, 128, 128, 0.2);
+    box-shadow: 0 0 0.75rem 0.75rem rgba(128, 128, 128, 0.2);
 }
 
 .button:active {
-    -webkit-transform: scale(.90);
-    transform: scale(.90);
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
 }
 
 .button-container .icon_title {
@@ -63,7 +63,7 @@ a, a:active, a:hover {
     .button-container {
         height: 5rem;
         width: 5rem;
-        margin: 0 .8rem;
+        margin: 0 0.8rem;
     }
 
     .button {
@@ -74,7 +74,7 @@ a, a:active, a:hover {
     .icon {
         height: 4rem;
         width: 4rem;
-        padding: .5rem;
+        padding: 0.5rem;
     }
 
     .icon_title {

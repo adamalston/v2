@@ -1,6 +1,1 @@
-@import 'app';
-@import './components/toggle';
-@import './components/content';
-@import './components/buttons';
-@import './components/particles';
-@import './components/footer';
+@import "app", "toggle", "content", "buttons", "footer", "particles";
