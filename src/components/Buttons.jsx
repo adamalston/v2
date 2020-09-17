@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
-
-import GitHub from './../assets/icons/GitHub'
-import LinkedIn from './../assets/icons/LinkedIn'
-import File from './../assets/icons/File'
-import Email from './../assets/icons/Email'
+import { GitHub, LinkedIn, Resume, Email } from './../assets/icons'
 
 const DATA = [
     {
@@ -21,7 +17,7 @@ const DATA = [
     {
         href: "https://drive.google.com/drive/folders/10k8NWflSYQ5laPzuWtK3bzUKzuOeas8i?usp=sharing",
         aria: "Visit Google Drive to view and download a copy of my resume",
-        icon: <File />,
+        icon: <Resume />,
         label: "Resume",
     },
     {
@@ -34,10 +30,10 @@ const DATA = [
 
 const Button = ({ href, aria, icon, label }) => {
     return (
-        <span className="button-container">
-            <a className="button" href={href} target="_self" aria-label={aria} rel="noopener noreferrer">
-                <div className="icon">{icon}</div>
-                <span className="icon_title">{label}</span>
+        <span className='button-container'>
+            <a className='button' href={href} target='_self' aria-label={aria} rel='noopener noreferrer'>
+                <div className='icon'>{icon}</div>
+                <span className='icon_title'>{label}</span>
             </a>
         </span>
     );

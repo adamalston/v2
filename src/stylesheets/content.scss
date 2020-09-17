@@ -1,6 +1,7 @@
-.name,
-.title {
-    transition: color .5s linear;
+/* Content */
+
+.name, .title {
+    transition: color 0.5s linear;
     font-weight: normal;
     position: relative;
     z-index: 1;

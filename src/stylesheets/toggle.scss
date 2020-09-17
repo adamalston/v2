@@ -3,7 +3,7 @@
 html {
     overflow: hidden;
     --primaryTextColor: #000000;
-    --primaryBackgroundColor: #EEEEEE;
+    --primaryBackgroundColor: #eeeeee;
     --secondaryTextColor: #333333;
     --shadowColor: rgba(255, 255, 255, 0.5);
     --tertiaryTextColor: #777777;
@@ -13,14 +13,14 @@ html {
 
 html.other {
     overflow: hidden;
-    --primaryTextColor: #EEEEEE;
+    --primaryTextColor: #eeeeee;
     --primaryBackgroundColor: #000000;
-    --secondaryTextColor: #BBBBBB;
+    --secondaryTextColor: #bbbbbb;
     --shadowColor: rgba(0, 0, 0, 0.5);
     --tertiaryTextColor: #999999;
 }
 
-/* toggle */
+/* Toggle */
 
 main {
     position: fixed;
@@ -34,8 +34,8 @@ main {
 }
 
 main:active {
-    -webkit-transform: scale(.90);
-    transform: scale(.90);
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
 }
 
 #toggle {
@@ -47,12 +47,12 @@ main:active {
     display: flex;
     width: 1.5rem;
     height: 1.5rem;
-    padding: .75rem;
+    padding: 0.75rem;
     background-color: var(--shadowColor);
     border-radius: 25%;
-    box-shadow: 0 0 .25rem .25rem rgba(128, 128, 128, 0.2);
+    box-shadow: 0 0 0.25rem 0.25rem rgba(128, 128, 128, 0.2);
     align-items: center;
     justify-content: center;
-    transition: background-color .5s linear;
-    font-size: .5rem;
+    transition: background-color 0.5s linear;
+    font-size: 0.5rem;
 }

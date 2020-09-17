@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Particles from 'react-particles-js';
+import { Particles as ReactParticles } from 'react-particles-js';
 
 const PARAMS = {
     "particles": {
@@ -12,18 +12,18 @@ const PARAMS = {
         },
         "color": {
             "value": [
-                "#FF6961",
-                "#FFD300",
-                "#90EE90",
-                "#4DC9FF",
-                "#C311E7"
+                "C311E7",
+                "00BFFF",
+                "90EE90",
+                "E6BF00",
+                "FF6347",
             ]
         },
         "shape": {
             "type": "circle",
             "stroke": {
                 "width": 0,
-                "color": "#000000"
+                "color": "000000"
             },
             "polygon": {
                 "nb_sides": 5
@@ -46,7 +46,10 @@ const PARAMS = {
         },
         "size": {
             "value": 4,
-            "random": true,
+            "random": {
+                "enable": true,
+                "minimumValue": 2
+            },
             "anim": {
                 "enable": false,
                 "speed": 30,
@@ -57,9 +60,11 @@ const PARAMS = {
         "line_linked": {
             "enable": true,
             "distance": 100,
-            "color": "#777777",
-            "opacity": 0.4,
-            "width": 1
+            "color": "777777",
+            "opacity": 0.6,
+            "width": 1,
+            "consent": false,
+            "blink": false
         },
         "move": {
             "enable": true,
@@ -90,11 +95,10 @@ const PARAMS = {
             "resize": true
         },
         "modes": {
-            "grab": {
-                "distance": 400,
-                "line_linked": {
-                    "opacity": 1
-                }
+            "attract": {
+                "distance": 100,
+                "duration": 1,
+                "speed": 5
             },
             "bubble": {
                 "distance": 400,
@@ -103,15 +107,21 @@ const PARAMS = {
                 "opacity": 8,
                 "speed": 3
             },
-            "repulse": {
-                "distance": 100,
-                "duration": 1
+            "grab": {
+                "distance": 400,
+                "line_linked": {
+                    "opacity": 1
+                }
             },
             "push": {
                 "particles_nb": 3
             },
             "remove": {
                 "particles_nb": 2
+            },
+            "repulse": {
+                "distance": 100,
+                "duration": 1
             }
         }
     },
@@ -119,14 +129,14 @@ const PARAMS = {
     // 3m@62^K^88745%
 }
 
-class Particle extends Component {
+class Particles extends Component {
     render() {
         return (
-            <div id="particles-js">
-                <Particles width='100vw' height="100vh" params={PARAMS} />
+            <div className='particles'>
+                <ReactParticles width='100vw' height='100vh' params={PARAMS} />
             </div>
         )
     }
 }
 
-export default Particle;
+export default Particles;
