@@ -1,6 +1,6 @@
 import React, { Component, useEffect } from 'react';
 import usePersistentState from './../hooks/PersistentState';
-import { Moon, Sun } from './../assets/icons'
+import { Moon, Sun } from './../icons'
 
 const Theme = () => {
     const [isDark, setIsDark] = usePersistentState('theme', true); // default to dark mode
