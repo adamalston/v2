@@ -42,18 +42,20 @@ Font Awesome icons
 
 ## <img src="https://git.io/JUnT0" height="18px"> Color Reference
 
-Text and icons meet a color contrast ratio of 4.5:1 against the background of the website, conforming with [WCAG 2.1](https://www.w3.org/TR/WCAG21/) Section 1.4.3.
+Text and icons meet a color contrast ratio of 7:1 against the background of the website, conforming with [WCAG 2.1](https://www.w3.org/TR/WCAG21/) Section 1.4.6.
 
-| Name   |                          Color                           | Hex       |
-| ------ | :------------------------------------------------------: | --------- |
-| Black  | ![#000000](https://via.placeholder.com/16/000000?text=+) | `#000000` |
-| Purple | ![#C311E7](https://via.placeholder.com/16/C311E7?text=+) | `#C311E7` |
-| Blue   | ![#00BFFF](https://via.placeholder.com/16/00BFFF?text=+) | `#00BFFF` |
-| Green  | ![#90EE90](https://via.placeholder.com/16/90EE90?text=+) | `#90EE90` |
-| Gold   | ![#E6BF00](https://via.placeholder.com/16/E6BF00?text=+) | `#E6BF00` |
-| Red    | ![#FF6347](https://via.placeholder.com/16/FF6347?text=+) | `#FF6347` |
-| Silver | ![#BBBBBB](https://via.placeholder.com/16/BBBBBB?text=+) | `#BBBBBB` |
-| Smoke  | ![#EEEEEE](https://via.placeholder.com/16/EEEEEE?text=+) | `#EEEEEE` |
+| Name   |                          Color                          | Hex      |
+| ------ | :-----------------------------------------------------: | -------- |
+| Black  | ![000000](https://via.placeholder.com/16/000000?text=+) | `000000` |
+| Slate  | ![333333](https://via.placeholder.com/16/333333?text=+) | `333333` |
+| Purple | ![C912ED](https://via.placeholder.com/16/C912ED?text=+) | `C912ED` |
+| Blue   | ![00BFFF](https://via.placeholder.com/16/00BFFF?text=+) | `00BFFF` |
+| Green  | ![22DD22](https://via.placeholder.com/16/22DD22?text=+) | `22DD22` |
+| Gold   | ![FFD500](https://via.placeholder.com/16/FFD500?text=+) | `FFD500` |
+| Orange | ![FF8000](https://via.placeholder.com/16/FF8000?text=+) | `FF8000` |
+| Red    | ![FF2600](https://via.placeholder.com/16/FF2600?text=+) | `FF2600` |
+| Silver | ![CCCCCC](https://via.placeholder.com/16/CCCCCC?text=+) | `CCCCCC` |
+| White  | ![FFFFFF](https://via.placeholder.com/16/FFFFFF?text=+) | `FFFFFF` |
 
 ---
 
