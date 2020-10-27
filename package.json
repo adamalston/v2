@@ -1,18 +1,18 @@
 {
     "homepage": "https://www.adamalston.com/",
     "name": "v2",
-    "version": "1.4.0",
+    "version": "1.6.0",
     "private": true,
     "dependencies": {
         "@testing-library/jest-dom": "^4.2.4",
         "@testing-library/react": "^9.3.2",
         "@testing-library/user-event": "^7.1.2",
-        "jest-canvas-mock": "^2.2.0",
+        "jest-canvas-mock": "^2.3.0",
         "node-sass": "^4.14.1",
-        "react": "^16.13.1",
-        "react-dom": "^16.13.1",
-        "react-particles-js": "^3.3.0",
-        "react-scripts": "^3.4.3"
+        "react": "^16.14.0",
+        "react-dom": "^16.14.0",
+        "react-particles-js": "^3.4.0",
+        "react-scripts": "^3.4.4"
     },
     "scripts": {
         "start": "react-scripts start",
