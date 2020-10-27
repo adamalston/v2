@@ -2,22 +2,22 @@
 
 html {
     overflow: hidden;
-    --primaryTextColor: #000000;
-    --primaryBackgroundColor: #eeeeee;
-    --secondaryTextColor: #333333;
+    --primaryTextColor: #000;
+    --primaryBackgroundColor: #FFF;
+    --secondaryTextColor: #333;
     --shadowColor: rgba(255, 255, 255, 0.5);
-    --tertiaryTextColor: #777777;
+    --tertiaryTextColor: #777;
 }
 
 /* default: dark mode */
 
 html.other {
     overflow: hidden;
-    --primaryTextColor: #eeeeee;
-    --primaryBackgroundColor: #000000;
-    --secondaryTextColor: #bbbbbb;
+    --primaryTextColor: #FFF;
+    --primaryBackgroundColor: #000;
+    --secondaryTextColor: #CCC;
     --shadowColor: rgba(0, 0, 0, 0.5);
-    --tertiaryTextColor: #999999;
+    --tertiaryTextColor: #999;
 }
 
 /* Toggle */

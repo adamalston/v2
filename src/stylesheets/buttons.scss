@@ -6,15 +6,15 @@ a, a:active, a:hover {
 
 .button-container {
     display: inline-block;
-    height: 7rem;
-    width: 7rem;
+    height: 6rem;
+    width: 6rem;
     margin: 0 1.75rem;
 }
 
 .button {
     transition: color 0.5s linear;
-    height: 7rem;
-    width: 7rem;
+    height: 6rem;
+    width: 6rem;
     color: var(--primaryTextColor);
     display: table-cell;
     vertical-align: middle;
@@ -26,13 +26,13 @@ a, a:active, a:hover {
 }
 
 .icon {
-    height: 5rem;
-    width: 5rem;
+    height: 4.5rem;
+    width: 4.5rem;
     padding: 1rem;
 }
 
 .icon_title {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
 }
 
 .button:hover {

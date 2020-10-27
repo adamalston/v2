@@ -12,11 +12,12 @@ const PARAMS = {
         },
         "color": {
             "value": [
-                "C311E7",
+                "C912ED",
                 "00BFFF",
-                "90EE90",
-                "E6BF00",
-                "FF6347",
+                "22DD22",
+                "FFD500",
+                "FF8000",
+                "FF2600",
             ]
         },
         "shape": {

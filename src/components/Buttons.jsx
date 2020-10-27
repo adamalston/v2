@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { GitHub, LinkedIn, Resume, Email } from './../assets/icons'
+import { GitHub, LinkedIn, Resume, Email } from './../icons'
 
 const DATA = [
     {
