@@ -4,10 +4,10 @@ import { Particles as ReactParticles } from 'react-particles-js';
 const PARAMS = {
     "particles": {
         "number": {
-            "value": 60,
+            "value": 100,
             "density": {
                 "enable": true,
-                "value_area": 800
+                "area": 800
             }
         },
         "color": {
@@ -58,9 +58,9 @@ const PARAMS = {
                 "sync": true
             }
         },
-        "line_linked": {
+        "links": {
             "enable": true,
-            "distance": 100,
+            "distance": 75,
             "color": "777777",
             "opacity": 0.6,
             "width": 1,
@@ -69,7 +69,7 @@ const PARAMS = {
         },
         "move": {
             "enable": true,
-            "speed": 3,
+            "speed": 4,
             "direction": "none",
             "random": false,
             "straight": false,

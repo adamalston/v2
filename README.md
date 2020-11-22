@@ -4,9 +4,11 @@ The second iteration of [adamalston.com](https://www.adamalston.com) built with 
 
 Previous iteration: [v1](https://github.com/adamalston/v1)
 
-<img float="left" height="370px" src="src/assets/desktop.png" alt="Website Preview" role="img" aria-label="Screenshot of the website"> <img align="right" height="370px" src="src/assets/mobile.png" alt="Website Preview" role="img" aria-label="Screenshot of the website">
+<img float="left" height="370px" src="src/assets/desktop.png" alt="Desktop Preview" role="img" aria-label="screenshot of the desktop site"> <img align="right" height="370px" src="src/assets/mobile.png" alt="Mobile Preview" role="img" aria-label="screenshot of the mobile site">
 
-This website is designed to be simple and accessible. The dynamic particles make it both interactive and visually inviting. The website defaults to dark mode and can be toggled to light mode. Once toggled, the theme should persist between tabs, windows, and page reloads.
+This website's design is both simple and accessible. Dynamic particles create an experience that is interactive and visually inviting. The site offers two themes via a toggle, dark mode (default) and light mode. Once toggled, the selected theme should persist between tabs, windows, and page reloads. 
+
+Mobile support for the site ranges from 4 in. displays through 6.7 in. all the way up to 13 in. tablets.
 
 ## <img src="https://git.io/JUnUc" height="18px"> Open Source
 
@@ -23,7 +25,7 @@ I made this website open source under the assumption that others would use the c
 **Building and Deployment**
 
 1. Create a production build of the website: `npm run build`
-2. Deployment: The [React/deployment](https://create-react-app.dev/docs/deployment/) docs detail how to deploy to `gh-pages`, Netlify, and many other services
+2. Deployment: The [React/Deployment](https://create-react-app.dev/docs/deployment/) docs detail how to deploy to `gh-pages`, Netlify, and many other services
 
 </details>
 
@@ -42,7 +44,7 @@ Font Awesome icons
 
 ## <img src="https://git.io/JUnT0" height="18px"> Color Reference
 
-Text and icons meet a color contrast ratio of 7:1 against the background of the website, conforming with [WCAG 2.1](https://www.w3.org/TR/WCAG21/) Section 1.4.6.
+Text and icons meet a color contrast ratio of 7:1 against the background of the website, conforming with [WCAG 2.1](https://www.w3.org/TR/WCAG21/) Section 1.4.6
 
 | Name   |                          Color                          | Hex      |
 | ------ | :-----------------------------------------------------: | -------- |
