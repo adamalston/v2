@@ -6,45 +6,45 @@ Previous iteration: [v1](https://github.com/adamalston/v1)
 
 <img float="left" height="370px" src="src/assets/desktop.png" alt="Desktop Preview" role="img" aria-label="screenshot of the desktop site"> <img align="right" height="370px" src="src/assets/mobile.png" alt="Mobile Preview" role="img" aria-label="screenshot of the mobile site">
 
-This website's design is both simple and accessible. Dynamic particles create an experience that is interactive and visually inviting. The site offers two themes via a toggle, dark mode (default) and light mode. Once toggled, the selected theme should persist between tabs, windows, and page reloads. 
+This website's design is both simple and accessible. Dynamic particles create an experience that is interactive and visually inviting. The site offers two themes via a toggle, dark mode (default) and light mode. Once toggled, the selected theme should persist between tabs, windows, and page reloads.
 
 Mobile support for the site ranges from 4 in. displays through 6.7 in. all the way up to 13 in. tablets.
 
 ## <img src="https://git.io/JUnUc" height="18px"> Open Source
 
-I made this website open source under the assumption that others would use the code to create their own websites. I only ask that this code be used with attribution as a significant amount of time has been spent writing and optimizing it. Please give proper credit by linking back to [adamalston.com](https://www.adamalston.com/). Thanks!
+I made this website open source under the assumption that others would use the code to create their own websites. I only ask that this code be used with attribution as a significant amount of time was spent writing and optimizing it. Please give proper credit by linking back to [adamalston.com](https://www.adamalston.com/). Thanks!
 
 <details>
-    <summary><b>Installation and Setup</b></summary>
+    <summary><b>Installation &amp; Setup</b></summary>
 
 1. Clone this repository
 2. Install packages/dependencies: `npm install`
 3. Start the development server: `npm start`
 4. Feel free to change anything like icons or particle colors
 
-**Building and Deployment**
+**Building &amp; Deployment**
 
 1. Create a production build of the website: `npm run build`
-2. Deployment: The [React/Deployment](https://create-react-app.dev/docs/deployment/) docs detail how to deploy to `gh-pages`, Netlify, and many other services
+2. The [React/Deployment](https://create-react-app.dev/docs/deployment/) docs detail how to deploy to `gh-pages`, Netlify, and many other services
 
 </details>
 
 ## <img src="https://git.io/JUnJT" height="18px"> Icons
 
-Font Awesome icons
+Font Awesome Icons
 
 | Use        |                      Icon                      | Short-Code        |
 | ---------- | :--------------------------------------------: | ----------------- |
 | Dark Mode  | <img src="https://git.io/JUcJr" height="20px"> | `fas moon`        |
 | Light Mode | <img src="https://git.io/JUcJB" height="20px"> | `fas sun`         |
-| GitHub     | <img src="https://git.io/JUZjU" height="20px"> | `fab github`      |
-| LinkedIn   | <img src="https://git.io/JUZjk" height="20px"> | `fab linkedin`    |
-| Resume     | <img src="https://git.io/JUZjI" height="20px"> | `fas file-alt`    |
-| Email      | <img src="https://git.io/JUZjt" height="20px"> | `fas paper-plane` |
+| GitHub     | <img src="https://git.io/JLu7a" height="20px"> | `fab github`      |
+| LinkedIn   | <img src="https://git.io/JLu7m" height="20px"> | `fab linkedin`    |
+| Resume     | <img src="https://git.io/JLuQD" height="20px"> | `fas file-alt`    |
+| Email      | <img src="https://git.io/JLu7u" height="20px"> | `fas paper-plane` |
 
 ## <img src="https://git.io/JUnT0" height="18px"> Color Reference
 
-Text and icons meet a color contrast ratio of 7:1 against the background of the website, conforming with [WCAG 2.1](https://www.w3.org/TR/WCAG21/) Section 1.4.6
+Text and icons have a color contrast ratio greater than 7:1 satisfying [WCAG 2.1 Section 1.4.6](https://www.w3.org/TR/WCAG21/#contrast-enhanced)
 
 | Name   |                          Color                          | Hex      |
 | ------ | :-----------------------------------------------------: | -------- |
