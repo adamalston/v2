@@ -61,8 +61,8 @@ const PARAMS = {
         "links": {
             "enable": true,
             "distance": 75,
-            "color": "777777",
-            "opacity": 0.6,
+            "color": "808080",
+            "opacity": 0.9,
             "width": 1,
             "consent": false,
             "blink": false
