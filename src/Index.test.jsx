@@ -11,7 +11,7 @@ test('renders name: Adam Alston', () => {
 
 test('renders title: Software Engineer', () => {
     const { getByText } = render(<Content />);
-    const linkElement = getByText('Software Engineer');
+    const linkElement = getByText('Happy Holidays!');
     expect(linkElement).toBeInTheDocument();
 });
 
