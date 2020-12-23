@@ -50,12 +50,7 @@ Text and icons have a color contrast ratio greater than 7:1 satisfying [WCAG 2.1
 | ------ | :-----------------------------------------------------: | -------- |
 | Black  | ![000000](https://via.placeholder.com/16/000000?text=+) | `000000` |
 | Slate  | ![333333](https://via.placeholder.com/16/333333?text=+) | `333333` |
-| Purple | ![C912ED](https://via.placeholder.com/16/C912ED?text=+) | `C912ED` |
-| Blue   | ![00BFFF](https://via.placeholder.com/16/00BFFF?text=+) | `00BFFF` |
-| Green  | ![22DD22](https://via.placeholder.com/16/22DD22?text=+) | `22DD22` |
-| Gold   | ![FFD500](https://via.placeholder.com/16/FFD500?text=+) | `FFD500` |
-| Orange | ![FF8000](https://via.placeholder.com/16/FF8000?text=+) | `FF8000` |
-| Red    | ![FF2600](https://via.placeholder.com/16/FF2600?text=+) | `FF2600` |
+| Blue   | ![0099FF](https://via.placeholder.com/16/0099FF?text=+) | `0099FF` |
 | Silver | ![CCCCCC](https://via.placeholder.com/16/CCCCCC?text=+) | `CCCCCC` |
 | White  | ![FFFFFF](https://via.placeholder.com/16/FFFFFF?text=+) | `FFFFFF` |
 
