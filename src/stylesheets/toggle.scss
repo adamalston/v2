@@ -1,23 +1,23 @@
 /* light mode */
 
-html {
+html.other {
     overflow: hidden;
     --primaryTextColor: #000;
-    --primaryBackgroundColor: #FFF;
-    --secondaryTextColor: #333;
+    --primaryBackgroundColor: #188145;
+    --secondaryTextColor: #111;
     --shadowColor: rgba(255, 255, 255, 0.5);
-    --tertiaryTextColor: #777;
+    --tertiaryTextColor: #222;
 }
 
 /* default: dark mode */
 
-html.other {
+html {
     overflow: hidden;
-    --primaryTextColor: #FFF;
-    --primaryBackgroundColor: #000;
-    --secondaryTextColor: #CCC;
-    --shadowColor: rgba(0, 0, 0, 0.5);
-    --tertiaryTextColor: #888;
+    --primaryTextColor: #fff;
+    --primaryBackgroundColor: #951d1f;
+    --secondaryTextColor: #ddd;
+    --shadowColor: rgba(255, 255, 255, 0.5);
+    --tertiaryTextColor: #bbb;
 }
 
 /* Toggle */

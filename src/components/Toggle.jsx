@@ -1,12 +1,12 @@
 import React, { Component, useEffect } from 'react';
 import usePersistentState from './../hooks/PersistentState';
-import { Moon, Sun } from './../icons'
+import { Tree, CandyCane } from './../icons'
 
 const Theme = () => {
-    const [isDark, setIsDark] = usePersistentState('theme', true); // default to dark mode
+    const [isTree, setIsTree] = usePersistentState('theme', true); // default to Tree mode
 
     useEffect(() => {
-        isDark ?
+        isTree ?
             document.documentElement.classList.add('other') :
             document.documentElement.classList.remove('other')
     });
@@ -14,9 +14,9 @@ const Theme = () => {
     return (
         <div>
             <main>
-                <input id='toggle' name='toggle' type='checkbox' checked={isDark} onChange={event => setIsDark(event.target.checked)} />
+                <input id='toggle' name='toggle' type='checkbox' checked={isTree} onChange={event => setIsTree(event.target.checked)} />
                 <label htmlFor='toggle' className='switch' id='switch'>
-                    {isDark ? <Moon /> : <Sun />}
+                    {isTree ? <CandyCane /> : <Tree />}
                 </label>
             </main>
         </div>
