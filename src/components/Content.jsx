@@ -5,7 +5,7 @@ class Content extends Component {
         return (
             <div className='container'>
                 <h1 className='name' aria-label='My name is Adam Alston'>Adam Alston</h1>
-                <h2 className='title' aria-label='Happy Holidays!'>Happy Holidays!</h2>
+                <h2 className='title' aria-label='Let It Snow!'>Let It Snow!</h2>
             </div>
         )
     }
