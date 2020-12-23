@@ -49,14 +49,10 @@ Text and icons have a color contrast ratio greater than 7:1 satisfying [WCAG 2.1
 | Name   |                          Color                          | Hex      |
 | ------ | :-----------------------------------------------------: | -------- |
 | Black  | ![000000](https://via.placeholder.com/16/000000?text=+) | `000000` |
-| Slate  | ![333333](https://via.placeholder.com/16/333333?text=+) | `333333` |
-| Purple | ![C912ED](https://via.placeholder.com/16/C912ED?text=+) | `C912ED` |
-| Blue   | ![00BFFF](https://via.placeholder.com/16/00BFFF?text=+) | `00BFFF` |
-| Green  | ![22DD22](https://via.placeholder.com/16/22DD22?text=+) | `22DD22` |
-| Gold   | ![FFD500](https://via.placeholder.com/16/FFD500?text=+) | `FFD500` |
-| Orange | ![FF8000](https://via.placeholder.com/16/FF8000?text=+) | `FF8000` |
-| Red    | ![FF2600](https://via.placeholder.com/16/FF2600?text=+) | `FF2600` |
-| Silver | ![CCCCCC](https://via.placeholder.com/16/CCCCCC?text=+) | `CCCCCC` |
+| Slate  | ![222222](https://via.placeholder.com/16/222222?text=+) | `222222` |
+| Green  | ![188145](https://via.placeholder.com/16/188145?text=+) | `188145` |
+| Red    | ![951D1F](https://via.placeholder.com/16/951D1F?text=+) | `951D1F` |
+| Silver | ![DDDDDD](https://via.placeholder.com/16/DDDDDD?text=+) | `DDDDDD` |
 | White  | ![FFFFFF](https://via.placeholder.com/16/FFFFFF?text=+) | `FFFFFF` |
 
 ---
