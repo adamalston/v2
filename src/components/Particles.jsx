@@ -2,14 +2,7 @@ import React, { Component } from 'react';
 import { Particles as ReactParticles } from 'react-particles-js';
 
 const PARAMS = {
-    "particles": {
-        "number": {
-            "value": 100,
-            "density": {
-                "enable": true,
-                "area": 800
-            }
-        },
+    particles: {
         "color": {
             "value": [
                 "C912ED",
@@ -20,113 +13,119 @@ const PARAMS = {
                 "FF2600",
             ]
         },
-        "shape": {
-            "type": "circle",
-            "stroke": {
-                "width": 0,
-                "color": "000000"
+        number: {
+            value: 0
+        },
+        collisions: {
+            enable: false
+        },
+        shape: {
+            type: "circle"
+        },
+        opacity: {
+            value: .75,
+            random: false,
+            animation: {
+                enable: true,
+                speed: 1,
+                minimumValue: 0.1,
+                sync: true
+            }
+        },
+        size: {
+            value: 5,
+            random: {
+                enable: true,
+                minimumValue: 3
             },
-            "polygon": {
-                "nb_sides": 5
+            animation: {
+                enable: false,
+                speed: 10,
+                minimumValue: 0.1,
+                sync: true
+            }
+        },
+        links: {
+            enable: false
+        },
+        life: {
+            duration: {
+                sync: true,
+                value: 4
             },
-            "image": {
-                "src": "img/github.svg",
-                "width": 100,
-                "height": 100
-            }
+            count: 1
         },
-        "opacity": {
-            "value": .9,
-            "random": false,
-            "anim": {
-                "enable": false,
-                "speed": 1,
-                "opacity_min": .5,
-                "sync": false
-            }
-        },
-        "size": {
-            "value": 4,
-            "random": {
-                "enable": true,
-                "minimumValue": 2
+        move: {
+            enable: true,
+            gravity: {
+                enable: true
             },
-            "anim": {
-                "enable": false,
-                "speed": 30,
-                "size_min": 0.1,
-                "sync": true
-            }
-        },
-        "links": {
-            "enable": true,
-            "distance": 75,
-            "color": "808080",
-            "opacity": 0.9,
-            "width": 1,
-            "consent": false,
-            "blink": false
-        },
-        "move": {
-            "enable": true,
-            "speed": 4,
-            "direction": "none",
-            "random": false,
-            "straight": false,
-            "out_mode": "bounce",
-            "bounce": false,
-            "attract": {
-                "enable": false,
-                "rotateX": 600,
-                "rotateY": 1200
-            }
+            speed: 10,
+            direction: "none",
+            random: false,
+            straight: false,
+            outMode: "destroy"
         }
     },
-    "interactivity": {
-        "detect_on": "canvas",
-        "events": {
-            "onhover": {
-                "enable": true,
-                "mode": "repulse"
-            },
-            "onclick": {
-                "enable": true,
-                "mode": "push"
-            },
-            "resize": true
-        },
-        "modes": {
-            "attract": {
-                "distance": 100,
-                "duration": 1,
-                "speed": 5
-            },
-            "bubble": {
-                "distance": 400,
-                "size": 40,
-                "duration": 2,
-                "opacity": 8,
-                "speed": 3
-            },
-            "grab": {
-                "distance": 400,
-                "line_linked": {
-                    "opacity": 1
+    interactivity: {
+        detect_on: "canvas",
+        events: {
+            onHover: {
+                enable: false,
+                mode: "repulse",
+                parallax: {
+                    enable: false,
+                    force: 60,
+                    smooth: 10
                 }
             },
-            "push": {
-                "particles_nb": 3
+            onClick: {
+                enable: true,
+                mode: "push"
             },
-            "remove": {
-                "particles_nb": 2
+            resize: true
+        },
+        modes: {
+            grab: {
+                distance: 400,
+                line_linked: {
+                    opacity: 1
+                }
             },
-            "repulse": {
-                "distance": 100,
-                "duration": 1
+            bubble: {
+                distance: 400,
+                size: 40,
+                duration: 2,
+                opacity: 0.8
+            },
+            repulse: {
+                distance: 400
+            },
+            push: {
+                particles_nb: 100
+            },
+            remove: {
+                particles_nb: 2
             }
         }
     },
-    "retina_detect": true
+    detectRetina: true,
+    emitters: {
+        direction: "none",
+        life: {
+            count: 0,
+            duration: 0.25,
+            delay: 0.75
+        },
+        rate: {
+            delay: 0.1,
+            quantity: 100
+        },
+        size: {
+            width: 0,
+            height: 0
+        }
+    },
     // 3m@62^K^88745%
 }
 
