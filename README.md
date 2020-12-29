@@ -50,7 +50,8 @@ Text and icons have a color contrast ratio greater than 7:1 satisfying [WCAG 2.1
 | ------ | :-----------------------------------------------------: | -------- |
 | Black  | ![000000](https://via.placeholder.com/16/000000?text=+) | `000000` |
 | Slate  | ![333333](https://via.placeholder.com/16/333333?text=+) | `333333` |
-| Blue   | ![0099FF](https://via.placeholder.com/16/0099FF?text=+) | `0099FF` |
+| Dark Blue   | ![000439](https://via.placeholder.com/16/000439?text=+) | `000439` |
+| Light Blue   | ![0184CB](https://via.placeholder.com/16/0184CB?text=+) | `0184CB` |
 | Silver | ![CCCCCC](https://via.placeholder.com/16/CCCCCC?text=+) | `CCCCCC` |
 | White  | ![FFFFFF](https://via.placeholder.com/16/FFFFFF?text=+) | `FFFFFF` |
 

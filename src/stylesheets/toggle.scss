@@ -2,11 +2,11 @@
 
 html {
     overflow: hidden;
-    --primaryTextColor: #000;
-    --primaryBackgroundColor: #FFF;
-    --secondaryTextColor: #333;
-    --shadowColor: rgba(255, 255, 255, 0.5);
-    --tertiaryTextColor: #777;
+    --primaryTextColor: #FFF;
+    --primaryBackgroundColor: #0184cb;
+    --secondaryTextColor: #DDD;
+    --shadowColor: rgba(1, 116, 178, 0.5);
+    --tertiaryTextColor: #BBB;
 }
 
 /* default: dark mode */
@@ -14,7 +14,7 @@ html {
 html.other {
     overflow: hidden;
     --primaryTextColor: #FFF;
-    --primaryBackgroundColor: #000;
+    --primaryBackgroundColor: #000439;
     --secondaryTextColor: #CCC;
     --shadowColor: rgba(0, 0, 0, 0.5);
     --tertiaryTextColor: #888;
