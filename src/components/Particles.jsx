@@ -3,64 +3,49 @@ import { Particles as ReactParticles } from 'react-particles-js';
 
 const PARAMS = {
     particles: {
-        "color": {
-            "value": [
-                "C912ED",
-                "00BFFF",
-                "22DD22",
-                "FFD500",
-                "FF8000",
-                "FF2600",
-            ]
+        color: {
+            value: "#fff"
         },
         number: {
-            value: 0
+            density: {
+                enable: true,
+                area: 1080
+            },
+            limit: 0,
+            value: 400
         },
-        collisions: {
-            enable: false
+        opacity: {
+            animation: {
+                enable: true,
+                minimumValue: 0.05,
+                speed: 0.25,
+                sync: false
+            },
+            random: {
+                enable: true,
+                minimumValue: 0.05
+            },
+            value: 1
         },
         shape: {
             type: "circle"
         },
-        opacity: {
-            value: .75,
-            random: false,
-            animation: {
-                enable: true,
-                speed: 1,
-                minimumValue: 0.1,
-                sync: true
-            }
-        },
-        size: {
-            value: 5,
-            random: {
-                enable: true,
-                minimumValue: 3
-            },
-            animation: {
-                enable: false,
-                speed: 10,
-                minimumValue: 0.1,
-                sync: true
-            }
-        },
         links: {
             enable: false
         },
-        life: {
-            duration: {
-                sync: true,
-                value: 4
+        size: {
+            random: {
+                enable: true,
+                minimumValue: 0.5
             },
-            count: 1
+            value: 1
         },
         move: {
             enable: true,
             gravity: {
-                enable: true
+                enable: false
             },
-            speed: 10,
+            speed: .5,
             direction: "none",
             random: false,
             straight: false,
@@ -99,10 +84,10 @@ const PARAMS = {
                 opacity: 0.8
             },
             repulse: {
-                distance: 400
+                distance: 200
             },
             push: {
-                particles_nb: 100
+                particles_nb: 4
             },
             remove: {
                 particles_nb: 2
@@ -114,8 +99,8 @@ const PARAMS = {
         direction: "none",
         life: {
             count: 0,
-            duration: 0.25,
-            delay: 0.75
+            duration: 0.1,
+            delay: 0.1
         },
         rate: {
             delay: 0.1,
@@ -124,8 +109,73 @@ const PARAMS = {
         size: {
             width: 0,
             height: 0
+        },
+        particles: {
+            color: {
+                value: [
+                    "C912ED",
+                    "00BFFF",
+                    "22DD22",
+                    "FFD500",
+                    "FF8000",
+                    "FF2600",
+                ]
+            },
+            number: {
+                value: 0
+            },
+            collisions: {
+                enable: false
+            },
+            shape: {
+                type: "circle"
+            },
+            opacity: {
+                value: .75,
+                random: false,
+                animation: {
+                    enable: true,
+                    speed: 1,
+                    minimumValue: 0.1,
+                    sync: true
+                }
+            },
+            size: {
+                value: 5,
+                random: {
+                    enable: true,
+                    minimumValue: 3
+                },
+                animation: {
+                    enable: false,
+                    speed: 10,
+                    minimumValue: 0.1,
+                    sync: true
+                }
+            },
+            links: {
+                enable: false
+            },
+            life: {
+                duration: {
+                    sync: true,
+                    value: 0.5
+                },
+                count: 1
+            },
+            move: {
+                enable: true,
+                gravity: {
+                    enable: false
+                },
+                speed: 25,
+                direction: "none",
+                random: false,
+                straight: false,
+                outMode: "destroy"
+            }
         }
-    },
+    }
     // 3m@62^K^88745%
 }
 
