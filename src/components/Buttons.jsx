@@ -3,26 +3,26 @@ import { GitHub, LinkedIn, Resume, Email } from './../icons'
 
 const DATA = [
     {
-        href: "https://github.com/adamalston",
-        aria: "Visit my GitHub profile to learn more about the projects I have created and contributed to",
+        href: "https://github.com/adamalston/",
+        aria: "Visit my GitHub profile",
         icon: <GitHub />,
         label: "Github",
     },
     {
-        href: "https://www.linkedin.com/in/adammalston/",
-        aria: "Visit my LinkedIn profile to learn more about my education and work experience",
+        href: "https://www.linkedin.com/in/adam-alston/",
+        aria: "Visit my LinkedIn profile",
         icon: <LinkedIn />,
         label: "LinkedIn",
     },
     {
-        href: "https://drive.google.com/drive/folders/10k8NWflSYQ5laPzuWtK3bzUKzuOeas8i?usp=sharing",
-        aria: "Visit Google Drive to view and download a copy of my resume",
+        href: "https://drive.google.com/drive/folders/10k8NWflSYQ5laPzuWtK3bzUKzuOeas8i/",
+        aria: "Visit Google Drive to view and download my resume",
         icon: <Resume />,
         label: "Resume",
     },
     {
         href: "mailto:aalston9@gmail.com",
-        aria: "Open a pre-addressed email prompt to me that you can fill out",
+        aria: "Send me an email with this template",
         icon: <Email />,
         label: "Email",
     }
