@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function usePersistentState(key, defaultValue) {
+const usePersistentState = (key, defaultValue) => {
   const [state, setState] = React.useState(() => {
     const persistentState = localStorage.getItem(key);
 
@@ -11,4 +11,6 @@ export default function usePersistentState(key, defaultValue) {
     window.localStorage.setItem(key, JSON.stringify(state));
   }, [state, key]);
   return [state, setState];
-}
+};
+
+export default usePersistentState;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Particles as ReactParticles } from 'react-tsparticles';
 
-export const Particles = () => {
+export const Particles = ({ isDark }) => {
   const OPTIONS = {
     particles: {
       number: {
@@ -12,7 +12,7 @@ export const Particles = () => {
         },
       },
       color: {
-        value: ['C912ED', '00BFFF', '22DD22', 'FFD500', 'FF8000', 'FF2600'],
+        value: ['c912ed', '00bfff', '22dd22', 'ffd500', 'ff8000', 'ff2600'],
       },
       shape: {
         type: 'circle',
@@ -55,7 +55,7 @@ export const Particles = () => {
       links: {
         enable: true,
         distance: 75,
-        color: '808080',
+        color: isDark ? 'bbb' : '444',
         opacity: 0.9,
         width: 1,
         consent: false,

@@ -1,10 +1,7 @@
 import React, { useEffect } from 'react';
-import usePersistentState from '../hooks/PersistentState';
 import { Moon, Sun } from '../icons';
 
-export const Toggle = () => {
-  const [isDark, setIsDark] = usePersistentState('theme', true);
-
+export const Toggle = ({ isDark, setIsDark }) => {
   useEffect(() => {
     isDark ? document.documentElement.classList.remove('other') : document.documentElement.classList.add('other');
   });
