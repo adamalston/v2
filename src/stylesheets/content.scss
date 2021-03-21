@@ -1,35 +1,27 @@
-/* Content */
-
 .name, .title {
-    transition: color 0.5s linear;
-    font-weight: normal;
-    position: relative;
-    z-index: 1;
+  transition: color 0.5s linear;
+  font-weight: normal;
+  position: relative;
+  z-index: 1;
 }
-
-/* Name */
 
 .name {
-    font-size: 6rem;
-    margin: 0 0 3.5rem;
-    color: var(--primaryTextColor);
+  font-size: 6rem;
+  margin: 0 0 3.5rem;
+  color: var(--primaryTextColor);
 }
-
-/* Title */
 
 .title {
-    font-size: 3.5rem;
-    margin: 4rem 0;
-    color: var(--secondaryTextColor);
+  font-size: 3.5rem;
+  margin: 4rem 0;
+  color: var(--secondaryTextColor);
 }
 
-/* Mobile Devices */
-
 @media only screen and (max-device-width: 820px) and (-webkit-min-device-pixel-ratio: 2) {
-    .name {
-        font-size: 4.5rem;
-    }
-    .title {
-        font-size: 2.5rem;
-    }
+  .name {
+    font-size: 4.5rem;
+  }
+  .title {
+    font-size: 2.5rem;
+  }
 }

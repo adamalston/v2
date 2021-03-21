@@ -4,7 +4,7 @@ The second iteration of [adamalston.com](https://www.adamalston.com) built with 
 
 Previous iteration: [v1](https://github.com/adamalston/v1)
 
-<img float="left" height="370" src="src/assets/desktop.png" alt="Desktop Preview" role="img" aria-label="desktop screenshot"> <img align="right" height="370" src="src/assets/mobile.png" alt="Mobile Preview" role="img" aria-label="mobile screenshot">
+<img float="left" height="370" src="images/desktop.png" alt="Desktop Preview" role="img" aria-label="desktop screenshot"> <img align="right" height="370" src="images/mobile.png" alt="Mobile Preview" role="img" aria-label="mobile screenshot">
 
 This website's design is both simple and accessible. Dynamic particles create an experience that is interactive and visually inviting. The site offers two themes via a toggle, dark mode (default) and light mode. Once toggled, the selected theme should persist between tabs, windows, and page reloads.
 
