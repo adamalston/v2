@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled, { css } from 'styled-components';
+
+import { AppContext } from './../App/AppContext';
 
 const sharedStyles = css`
   transition: color 0.5s linear;
@@ -29,7 +31,9 @@ const C = {
   `,
 };
 
-export const Content = ({ isDark }) => {
+export const Content = () => {
+  const { isDark } = useContext(AppContext);
+
   return (
     <div>
       <C.Name isDark={isDark} aria-label='My name is Adam Alston'>Adam Alston</C.Name>

@@ -1,21 +1,20 @@
 import React from 'react';
-import usePersistentState from './../hooks/PersistentState';
+
+import { ThemeProvider } from './AppContext';
 import { Toggle, Content, Buttons, Footer, Particles } from './../components';
 import './app.scss';
 
 const App = () => {
-  const [isDark, setIsDark] = usePersistentState('theme', true);
-
   return (
-    <React.StrictMode>
+    <ThemeProvider>
       <div className='app'>
-        <Toggle isDark={isDark} setIsDark={setIsDark} />
-        <Content isDark={isDark} />
-        <Buttons isDark={isDark} />
-        <Footer isDark={isDark} />
-        <Particles isDark={isDark} />
+        <Toggle />
+        <Content />
+        <Buttons />
+        <Footer />
+        <Particles />
       </div>
-    </React.StrictMode>
+    </ThemeProvider>
   );
 };
 

@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
+
+import { AppContext } from './../App/AppContext';
 import { GitHub, LinkedIn, Resume, Email } from './../icons';
 
 const Container = styled.div`
@@ -37,7 +39,7 @@ const Container = styled.div`
   }
 
   .icon_title {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 
   .button:hover {
@@ -81,12 +83,14 @@ const Container = styled.div`
     }
 
     .icon_title {
-      font-size: 1.3rem;
+      font-size: 1rem;
     }
   }
 `;
 
-export const Buttons = ({ isDark }) => {
+export const Buttons = () => {
+  const { isDark } = useContext(AppContext);
+
   const DATA = [
     {
       href: 'https://github.com/adamalston/',

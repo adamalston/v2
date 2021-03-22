@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { Particles as ReactParticles } from 'react-tsparticles';
+
+import { AppContext } from './../App/AppContext';
 
 const P = {
   Container: styled.div`
@@ -14,7 +16,9 @@ const P = {
   `,
 };
 
-export const Particles = ({ isDark }) => {
+export const Particles = () => {
+  const { isDark } = useContext(AppContext);
+
   const OPTIONS = {
     particles: {
       number: {

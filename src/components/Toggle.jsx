@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
-import { Moon, Sun } from '../icons';
+
+import { AppContext } from './../App/AppContext';
+import { Moon, Sun } from './../icons';
 
 const T = {
   Container: styled.main`
@@ -37,7 +39,9 @@ const T = {
   `,
 };
 
-export const Toggle = ({ isDark, setIsDark }) => {
+export const Toggle = () => {
+  const { isDark, setIsDark } = useContext(AppContext);
+
   return (
     <T.Container>
       <T.Toggle id='toggle' name='toggle' type='checkbox' checked={isDark} onChange={(e) => setIsDark(e.target.checked)} />
