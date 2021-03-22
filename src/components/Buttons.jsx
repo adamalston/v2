@@ -1,7 +1,92 @@
 import React from 'react';
+import styled from 'styled-components';
 import { GitHub, LinkedIn, Resume, Email } from './../icons';
 
-export const Buttons = () => {
+const Container = styled.div`
+  a,
+  a:active,
+  a:hover {
+    outline: 0;
+  }
+
+  .button-container {
+    display: inline-block;
+    height: 6rem;
+    width: 6rem;
+    margin: 0 1.75rem;
+  }
+
+  .button {
+    transition: color 0.5s linear;
+    height: 6rem;
+    width: 6rem;
+    color: ${(props) => (props.isDark ? '#fff' : '#000')};
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+    border-radius: 25%;
+  }
+
+  .icon {
+    height: 4.5rem;
+    width: 4.5rem;
+    padding: 1rem;
+  }
+
+  .icon_title {
+    font-size: 1.5rem;
+  }
+
+  .button:hover {
+    background-color: ${(props) => (props.isDark ? 'rgba(0, 0, 0, 0.5)' : 'rgba(255, 255, 255, 0.5)')};
+    box-shadow: 0 0 0.75rem 0.75rem rgba(128, 128, 128, 0.2);
+  }
+
+  .button:active {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  .button-container .icon_title {
+    display: none;
+  }
+
+  .button-container:hover .icon_title {
+    display: initial;
+  }
+
+  .button-container:hover .icon {
+    display: none;
+  }
+
+  @media only screen and (max-device-width: 820px) and (-webkit-min-device-pixel-ratio: 2) {
+    .button-container {
+      height: 5rem;
+      width: 5rem;
+      margin: 0 0.8rem;
+    }
+
+    .button {
+      height: 5rem;
+      width: 5rem;
+    }
+
+    .icon {
+      height: 4rem;
+      width: 4rem;
+      padding: 0.5rem;
+    }
+
+    .icon_title {
+      font-size: 1.3rem;
+    }
+  }
+`;
+
+export const Buttons = ({ isDark }) => {
   const DATA = [
     {
       href: 'https://github.com/adamalston/',
@@ -30,7 +115,7 @@ export const Buttons = () => {
   ];
 
   return (
-    <div>
+    <Container isDark={isDark}>
       {DATA.map(({ href, aria, icon, label }, i) => (
         <span className='button-container' key={i}>
           <a className='button' href={href} target='_self' aria-label={aria} rel='noopener noreferrer'>
@@ -39,6 +124,6 @@ export const Buttons = () => {
           </a>
         </span>
       ))}
-    </div>
+    </Container>
   );
 };

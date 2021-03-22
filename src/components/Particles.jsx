@@ -1,5 +1,18 @@
 import React from 'react';
+import styled from 'styled-components';
 import { Particles as ReactParticles } from 'react-tsparticles';
+
+const P = {
+  Container: styled.div`
+    transition: background-color 0.5s linear;
+    position: absolute;
+    background-color: ${(props) => (props.isDark ? '#000' : '#fff')};
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    z-index: 0;
+  `,
+};
 
 export const Particles = ({ isDark }) => {
   const OPTIONS = {
@@ -55,7 +68,7 @@ export const Particles = ({ isDark }) => {
       links: {
         enable: true,
         distance: 75,
-        color: isDark ? 'bbb' : '444',
+        color: '888',
         opacity: 0.9,
         width: 1,
         consent: false,
@@ -125,8 +138,8 @@ export const Particles = ({ isDark }) => {
   };
 
   return (
-    <div className='particles'>
+    <P.Container isDark={isDark}>
       <ReactParticles width='100vw' height='100vh' options={OPTIONS} />
-    </div>
+    </P.Container>
   );
 };

@@ -1,7 +1,7 @@
 {
   "homepage": "https://www.adamalston.com/",
   "name": "v2",
-  "version": "1.7.0",
+  "version": "2.0.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
@@ -12,7 +12,8 @@
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-scripts": "^3.4.4",
-    "react-tsparticles": "^1.22.1"
+    "react-tsparticles": "^1.22.1",
+    "styled-components": "^5.2.1"
   },
   "scripts": {
     "start": "react-scripts start",
