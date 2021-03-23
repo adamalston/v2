@@ -1,15 +1,15 @@
-import React from 'react';
+import { useEffect, useState } from 'react';
 
 const usePersistentState = (key, defaultValue) => {
-  const [state, setState] = React.useState(() => {
+  const [state, setState] = useState(() => {
     const persistentState = localStorage.getItem(key);
-
     return persistentState ? JSON.parse(persistentState) : defaultValue;
   });
 
-  React.useEffect(() => {
+  useEffect(() => {
     window.localStorage.setItem(key, JSON.stringify(state));
   }, [state, key]);
+
   return [state, setState];
 };
 

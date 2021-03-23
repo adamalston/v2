@@ -1,25 +1,50 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { configure, render, screen } from '@testing-library/react';
+
 import './__mocks__/matchMedia';
-import { Content, Footer } from './components/';
+import App from './App/App';
 
-test('renders name: Adam Alston', () => {
-  const { getByText } = render(<Content />);
-  const linkElement = getByText('Adam Alston');
+configure({ testIdAttribute: 'data-v2' });
 
-  expect(linkElement).toBeInTheDocument();
-});
+describe('application tests', () => {
+  beforeEach(() => {
+    render(<App />);
+  });
 
-test('renders title: Software Engineer', () => {
-  const { getByText } = render(<Content />);
-  const linkElement = getByText('Software Engineer');
+  test('renders name: Adam Alston', () => {
+    const element = screen.getByTestId('name');
+    expect(element).toHaveTextContent(/Adam Alston/i);
+  });
 
-  expect(linkElement).toBeInTheDocument();
-});
+  test('renders title: Software Engineer', () => {
+    const element = screen.getByTestId('title');
+    expect(element).toHaveTextContent(/Software Engineer/i);
+  });
 
-test('renders creator: Adam Alston', () => {
-  const { getByText } = render(<Footer />);
-  const linkElement = getByText(/Adam Alston/i);
+  test('renders creator: Adam Alston', () => {
+    const element = screen.getByTestId('creator');
+    expect(element).toHaveTextContent(/Adam Alston/i);
+  });
 
-  expect(linkElement).toBeInTheDocument();
+  test('renders hyperlink to source code', () => {
+    const element = screen.getByTestId('source');
+    expect(element).toHaveAttribute('href', 'https://github.com/adamalston/v2');
+  });
+
+  const buttons = {
+    GitHub: 'https://github.com/adamalston/',
+    LinkedIn: 'https://www.linkedin.com/in/adam-alston/',
+    Resume: 'https://drive.google.com/drive/folders/10k8NWflSYQ5laPzuWtK3bzUKzuOeas8i/',
+    Email: 'mailto:aalston9@gmail.com',
+  };
+
+  test('renders 4 buttons with links', () => {
+    Object.entries(buttons).forEach(([k, v]) => {
+      const element = screen.getByTestId(`${k}`);
+      expect(element).toHaveTextContent(k);
+
+      const parent = element.parentElement;
+      expect(parent).toHaveAttribute('href', v);
+    });
+  });
 });

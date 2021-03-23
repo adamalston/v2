@@ -4,7 +4,6 @@
     "eqeqeq": ["error", "always"],
     "curly": "error",
     "no-trailing-spaces": "error",
-    "newline-after-var": ["error", "always"],
     "eol-last": ["error", "always"],
     "no-multiple-empty-lines": [
       "error",

@@ -8,7 +8,7 @@ const P = {
   Container: styled.div`
     transition: background-color 0.5s linear;
     position: absolute;
-    background-color: ${(props) => (props.isDark ? '#000' : '#fff')};
+    background-color: ${({ theme }) => theme.background};
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
@@ -17,7 +17,7 @@ const P = {
 };
 
 export const Particles = () => {
-  const { isDark } = useContext(AppContext);
+  const { theme } = useContext(AppContext);
 
   const OPTIONS = {
     particles: {
@@ -35,7 +35,7 @@ export const Particles = () => {
         type: 'circle',
         stroke: {
           width: 0,
-          color: '000000',
+          color: '000',
         },
         polygon: {
           nb_sides: 5,
@@ -72,7 +72,7 @@ export const Particles = () => {
       links: {
         enable: true,
         distance: 75,
-        color: '888',
+        color: '999',
         opacity: 0.9,
         width: 1,
         consent: false,
@@ -80,7 +80,7 @@ export const Particles = () => {
       },
       move: {
         enable: true,
-        speed: 4,
+        speed: 2,
         direction: 'none',
         random: false,
         straight: false,
@@ -138,11 +138,12 @@ export const Particles = () => {
       },
     },
     retina_detect: true,
+    fpsLimit: 60,
     // 3m@62^K^88745%
   };
 
   return (
-    <P.Container isDark={isDark}>
+    <P.Container theme={theme}>
       <ReactParticles width='100vw' height='100vh' options={OPTIONS} />
     </P.Container>
   );

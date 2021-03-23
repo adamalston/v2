@@ -22,7 +22,7 @@ const Container = styled.div`
     transition: color 0.5s linear;
     height: 6rem;
     width: 6rem;
-    color: ${(props) => (props.isDark ? '#fff' : '#000')};
+    color: ${({ theme }) => theme.primaryTextColor};
     display: table-cell;
     vertical-align: middle;
     text-align: center;
@@ -43,8 +43,8 @@ const Container = styled.div`
   }
 
   .button:hover {
-    background-color: ${(props) => (props.isDark ? 'rgba(0, 0, 0, 0.5)' : 'rgba(255, 255, 255, 0.5)')};
-    box-shadow: 0 0 0.75rem 0.75rem rgba(128, 128, 128, 0.2);
+    background-color: ${({ theme }) => theme.shadowColor};
+    box-shadow: 0 0 0.75rem 0.75rem rgba(128, 128, 128, 0.25);
   }
 
   .button:active {
@@ -89,14 +89,14 @@ const Container = styled.div`
 `;
 
 export const Buttons = () => {
-  const { isDark } = useContext(AppContext);
+  const { theme } = useContext(AppContext);
 
   const DATA = [
     {
       href: 'https://github.com/adamalston/',
       aria: 'Visit my GitHub profile',
       icon: <GitHub />,
-      label: 'Github',
+      label: 'GitHub',
     },
     {
       href: 'https://www.linkedin.com/in/adam-alston/',
@@ -119,12 +119,12 @@ export const Buttons = () => {
   ];
 
   return (
-    <Container isDark={isDark}>
+    <Container theme={theme}>
       {DATA.map(({ href, aria, icon, label }, i) => (
         <span className='button-container' key={i}>
           <a className='button' href={href} target='_self' aria-label={aria} rel='noopener noreferrer'>
             <div className='icon'>{icon}</div>
-            <span className='icon_title'>{label}</span>
+            <span className='icon_title' data-v2={label}>{label}</span>
           </a>
         </span>
       ))}
