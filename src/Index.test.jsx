@@ -11,22 +11,22 @@ describe('application tests', () => {
     render(<App />);
   });
 
-  test('renders name: Adam Alston', () => {
+  test('should render name', () => {
     const element = screen.getByTestId('name');
     expect(element).toHaveTextContent(/Adam Alston/i);
   });
 
-  test('renders title: Software Engineer', () => {
+  test('should render title', () => {
     const element = screen.getByTestId('title');
     expect(element).toHaveTextContent(/Software Engineer/i);
   });
 
-  test('renders creator: Adam Alston', () => {
+  test('should render creator', () => {
     const element = screen.getByTestId('creator');
     expect(element).toHaveTextContent(/Adam Alston/i);
   });
 
-  test('renders hyperlink to source code', () => {
+  test('should render link to source code', () => {
     const element = screen.getByTestId('source');
     expect(element).toHaveAttribute('href', 'https://github.com/adamalston/v2');
   });
@@ -38,7 +38,7 @@ describe('application tests', () => {
     Email: 'mailto:aalston9@gmail.com',
   };
 
-  test('renders 4 buttons with links', () => {
+  test('should render buttons with links', () => {
     Object.entries(buttons).forEach(([k, v]) => {
       const element = screen.getByTestId(`${k}`);
       expect(element).toHaveTextContent(k);
