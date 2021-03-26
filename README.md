@@ -37,10 +37,10 @@ Font Awesome Icons
 | ---------- | :------------------------------------------: | ----------------- |
 | Dark Mode  | <img src="https://git.io/JYkZg" height="20"> | `far moon`        |
 | Light Mode | <img src="https://git.io/JYkZF" height="20"> | `far sun`         |
-| GitHub     | <img src="https://git.io/JYk3q" height="20"> | `fab github`      |
-| LinkedIn   | <img src="https://git.io/JYk3b" height="20"> | `fab linkedin`    |
-| Resume     | <img src="https://git.io/JYk3V" height="20"> | `far file-alt`    |
-| Email      | <img src="https://git.io/JYkOV" height="20"> | `far paper-plane` |
+| GitHub     | <img src="https://git.io/JYOvL" height="20"> | `fab github`      |
+| LinkedIn   | <img src="https://git.io/JYOex" height="20"> | `fab linkedin`    |
+| Resume     | <img src="https://git.io/JYOeu" height="20"> | `fal file-alt`    |
+| Email      | <img src="https://git.io/JYOei" height="20"> | `fal paper-plane` |
 
 ## <img src="https://git.io/JUnT0" height="18"> Color Reference
 
