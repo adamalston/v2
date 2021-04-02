@@ -1,34 +1,53 @@
-import React, { Component, useEffect } from 'react';
-import usePersistentState from './../hooks/PersistentState';
-import { Moon, Sun } from './../icons'
+import React, { useContext } from 'react';
+import styled from 'styled-components';
 
-const Theme = () => {
-    const [isDark, setIsDark] = usePersistentState('theme', true); // default to dark mode
+import { AppContext } from './../App/AppContext';
+import { Moon, Sun } from './../icons';
 
-    useEffect(() => {
-        isDark ?
-            document.documentElement.classList.add('other') :
-            document.documentElement.classList.remove('other')
-    });
+const T = {
+  Container: styled.main`
+    position: fixed;
+    z-index: 1;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
 
-    return (
-        <div>
-            <main>
-                <input id='toggle' name='toggle' type='checkbox' checked={isDark} onChange={event => setIsDark(event.target.checked)} />
-                <label htmlFor='toggle' className='switch' id='switch'>
-                    {isDark ? <Moon /> : <Sun />}
-                </label>
-            </main>
-        </div>
-    )
-}
-
-class Toggle extends Component {
-    render() {
-        return (
-            <Theme />
-        );
+    :active {
+      -webkit-transform: scale(0.9);
+      transform: scale(0.9);
     }
-}
+  `,
+  Toggle: styled.input`
+    display: none;
+  `,
+  Switch: styled.label`
+    cursor: pointer;
+    display: flex;
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 0.75rem;
+    background-color: ${({ theme }) => theme.shadowColor};
+    border-radius: 25%;
+    box-shadow: 0 0 0.25rem 0.25rem rgba(128, 128, 128, 0.25);
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.5s linear;
+    font-size: 0.5rem;
+  `,
+};
 
-export default Toggle;
+export const Toggle = () => {
+  const { isDark, setIsDark, theme } = useContext(AppContext);
+
+  return (
+    <T.Container>
+      <T.Toggle id='toggle' name='toggle' type='checkbox' checked={isDark} onChange={(e) => setIsDark(e.target.checked)} />
+      <T.Switch theme={theme} htmlFor='toggle'>
+        {isDark ? <Moon /> : <Sun />}
+      </T.Switch>
+    </T.Container>
+  );
+};

@@ -4,7 +4,7 @@ The second iteration of [adamalston.com](https://www.adamalston.com) built with 
 
 Previous iteration: [v1](https://github.com/adamalston/v1)
 
-<img float="left" height="370" src="src/assets/desktop.png" alt="Desktop Preview" role="img" aria-label="desktop screenshot"> <img align="right" height="370" src="src/assets/mobile.png" alt="Mobile Preview" role="img" aria-label="mobile screenshot">
+<img float="left" height="370" src="images/desktop.png" alt="Desktop Preview" role="img" aria-label="desktop screenshot"> <img align="right" height="370" src="images/mobile.png" alt="Mobile Preview" role="img" aria-label="mobile screenshot">
 
 This website's design is both simple and accessible. Dynamic particles create an experience that is interactive and visually inviting. The site offers two themes via a toggle, dark mode (default) and light mode. Once toggled, the selected theme should persist between tabs, windows, and page reloads.
 
@@ -35,12 +35,12 @@ Font Awesome Icons
 
 | Use        |                     Icon                     | Short-Code        |
 | ---------- | :------------------------------------------: | ----------------- |
-| Dark Mode  | <img src="https://git.io/JUcJr" height="20"> | `fas moon`        |
-| Light Mode | <img src="https://git.io/JUcJB" height="20"> | `fas sun`         |
-| GitHub     | <img src="https://git.io/JLu7a" height="20"> | `fab github`      |
-| LinkedIn   | <img src="https://git.io/JLu7m" height="20"> | `fab linkedin`    |
-| Resume     | <img src="https://git.io/JLuQD" height="20"> | `fas file-alt`    |
-| Email      | <img src="https://git.io/JLu7u" height="20"> | `fas paper-plane` |
+| Dark Mode  | <img src="https://git.io/JYkZg" height="20"> | `far moon`        |
+| Light Mode | <img src="https://git.io/JYkZF" height="20"> | `far sun`         |
+| GitHub     | <img src="https://git.io/JYOvL" height="20"> | `fab github`      |
+| LinkedIn   | <img src="https://git.io/JYOex" height="20"> | `fab linkedin`    |
+| Resume     | <img src="https://git.io/JYOeu" height="20"> | `fal file-alt`    |
+| Email      | <img src="https://git.io/JYOei" height="20"> | `fal paper-plane` |
 
 ## <img src="https://git.io/JUnT0" height="18"> Color Reference
 
