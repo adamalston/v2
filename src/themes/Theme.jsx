@@ -1,4 +1,5 @@
 export const dark = {
+  key: 'dark',
   primaryTextColor: '#FFF',
   secondaryTextColor: '#CCC',
   tertiaryTextColor: '#999',
@@ -7,6 +8,7 @@ export const dark = {
 };
 
 export const light = {
+  key: 'light',
   primaryTextColor: '#000',
   secondaryTextColor: '#333',
   tertiaryTextColor: '#777',

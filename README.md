@@ -1,4 +1,4 @@
-# <img src="public/favicon.svg" alt="atom" height="24"> adamalston<span></span>.com &middot; [![Build Status](https://img.shields.io/circleci/build/gh/adamalston/v2?label=build)](https://app.circleci.com/pipelines/github/adamalston/v2) [![Netlify status](https://img.shields.io/netlify/332bbd91-59b7-4091-8781-6f41330399b4)](https://app.netlify.com/sites/adamalston/deploys)
+# <img src="public/favicon.svg" alt="atom" height="24"> adamalston<span></span>.com &middot; [![Netlify status](https://img.shields.io/netlify/332bbd91-59b7-4091-8781-6f41330399b4)](https://app.netlify.com/sites/adamalston/deploys)
 
 The second iteration of [adamalston.com](https://www.adamalston.com) built with [React](https://reactjs.org/) and hosted with [Netlify](https://www.netlify.com/).
 
@@ -57,12 +57,6 @@ Text and icons have a color contrast ratio greater than 7:1 satisfying [WCAG 2.1
 | Purple | ![C912ED](https://via.placeholder.com/16/C912ED?text=+) | `C912ED` |
 | Silver | ![CCCCCC](https://via.placeholder.com/16/CCCCCC?text=+) | `CCCCCC` |
 | White  | ![FFFFFF](https://via.placeholder.com/16/FFFFFF?text=+) | `FFFFFF` |
-
-## <img src="https://git.io/JLX8B" height="18"> Themes
-
-Themes have their own [branch](https://github.com/adamalston/v2/branches)
-
-Current themes include [fireworks](https://github.com/adamalston/v2/tree/fireworks), [snow](https://github.com/adamalston/v2/tree/snow), and [holidays](https://github.com/adamalston/v2/tree/holidays) - more will be added soon
 
 ---
 
