@@ -1,0 +1,21 @@
+language: node_js
+node_js:
+  - lts/*
+
+notifications:
+  email:
+    recipients:
+      - $EMAIL
+    on_success: change
+    on_failure: always
+
+cache:
+  npm: true
+  directories:
+    - npm
+    - node_modules
+
+script:
+  - npm ci
+  - npm run build
+  - npm test
