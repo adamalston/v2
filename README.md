@@ -59,12 +59,6 @@ Text and icons have a color contrast ratio greater than 7:1 satisfying [WCAG 2.1
 | Silver | ![CCCCCC](https://via.placeholder.com/16/CCCCCC?text=+) | `CCCCCC` |
 | White  | ![FFFFFF](https://via.placeholder.com/16/FFFFFF?text=+) | `FFFFFF` |
 
-## <img src="https://git.io/JLX8B" height="18"> Themes
-
-Themes have their own [branch](https://github.com/adamalston/v2/branches)
-
-Current themes include [`fireworks`](https://github.com/adamalston/v2/tree/fireworks), [`snow`](https://github.com/adamalston/v2/tree/snow), and [`holidays`](https://github.com/adamalston/v2/tree/holidays) - more will be added soon
-
 ---
 
 If you found this project useful, please consider giving it a <img src="https://git.io/JUn8T" height="14">! If you have any questions or feedback, open an issue and I will get back to you :&#8203;)
