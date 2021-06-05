@@ -9,13 +9,17 @@ notifications:
     on_success: change
     on_failure: always
 
+install:
+  - npm ci
+
+script:
+  # Build
+  - npm run build
+  # Test
+  - npm test
+
 cache:
   npm: true
   directories:
     - npm
     - node_modules
-
-script:
-  - npm ci
-  - npm run build
-  - npm test
