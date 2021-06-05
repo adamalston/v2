@@ -15,16 +15,15 @@ Mobile support for the site ranges from 4 in. displays through 6.7 in. all the w
 I made this website open source under the assumption that others would use the code to create their own websites. I only ask that this code be used with attribution as a significant amount of time was spent writing and optimizing it. Please give proper credit by linking back to [adamalston.com](https://www.adamalston.com/). Thanks!
 
 <details>
-    <summary><b>Installation &amp; Setup</b></summary>
+  <summary><b>Install &amp; Setup</b></summary>
 
 1. Clone this repository
-2. Install packages/dependencies: `npm install`
+2. Install dependencies: `npm install`
 3. Start the development server: `npm start`
-4. Feel free to change anything like icons or particle colors
 
-**Building &amp; Deployment**
+<b>Build &amp; Deploy</b>
 
-1. Create a production build of the website: `npm run build`
+1. Create a production build: `npm run build`
 2. The [React/Deployment](https://create-react-app.dev/docs/deployment/) docs detail how to deploy to `gh-pages`, Netlify, and many other services
 
 </details>
