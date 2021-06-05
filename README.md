@@ -1,4 +1,4 @@
-# <img src="public/favicon.svg" alt="atom" height="24"> adamalston<span></span>.com &middot; [![Netlify status](https://img.shields.io/netlify/332bbd91-59b7-4091-8781-6f41330399b4)](https://app.netlify.com/sites/adamalston/deploys)
+# <img src="public/favicon.svg" alt="atom" height="24"> adamalston<span></span>.com &middot; [![Build Status](https://travis-ci.com/adamalston/v2.svg?branch=master)](https://travis-ci.com/adamalston/v2) [![Netlify status](https://img.shields.io/netlify/332bbd91-59b7-4091-8781-6f41330399b4)](https://app.netlify.com/sites/adamalston/deploys)
 
 The second iteration of [adamalston.com](https://www.adamalston.com) built with [React](https://reactjs.org/) and hosted with [Netlify](https://www.netlify.com/).
 
