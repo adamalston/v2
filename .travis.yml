@@ -4,6 +4,7 @@ node_js:
 
 notifications:
   email:
+    if: branch = master AND type != pull_request
     recipients:
       - $EMAIL
     on_success: change
