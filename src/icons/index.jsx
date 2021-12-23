@@ -1,8 +1,8 @@
-export { default as Moon } from './Moon';
-export { default as Sun } from './Sun';
-export { default as Tree } from './Tree';
-export { default as CandyCane } from './CandyCane';
-export { default as GitHub } from './GitHub';
-export { default as LinkedIn } from './LinkedIn';
-export { default as Resume } from './Resume';
-export { default as Email } from './Email';
+export * from './Moon';
+export * from './Sun';
+export * from './GitHub';
+export * from './LinkedIn';
+export * from './Resume';
+export * from './Email';
+export * from './Tree';
+export * from './CandyCane';
