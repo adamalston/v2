@@ -1,0 +1,26 @@
+language: node_js
+node_js:
+  - lts/*
+
+notifications:
+  email:
+    if: branch = master AND type != pull_request
+    recipients:
+      - $EMAIL
+    on_success: change
+    on_failure: always
+
+install:
+  - npm ci
+
+script:
+  # Build
+  - npm run build
+  # Test
+  - npm test
+
+cache:
+  npm: true
+  directories:
+    - npm
+    - node_modules
