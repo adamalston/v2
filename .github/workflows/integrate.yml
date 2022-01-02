@@ -6,7 +6,7 @@ jobs:
     strategy:
       matrix:
         node: [12, 14, 16, lts/*]
-    name: Node ${{ matrix.node_version }} - ${{ matrix.architecture }}
+    name: Node ${{ matrix.node }}
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
