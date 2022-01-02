@@ -28,13 +28,28 @@ export const Footer = () => {
 
   return (
     <F.Container isMobile={isMobile}>
-      <F.Text theme={theme} aria-label='Designed and built by Adam Alston'>Designed and built by&nbsp;
-        <F.Link theme={theme} data-v2='creator' href='https://www.adamalston.com/'>Adam Alston</F.Link>
+      <F.Text theme={theme} aria-label="Designed and built by Adam Alston">
+        Designed and built by&nbsp;
+        <F.Link
+          theme={theme}
+          data-v2="creator"
+          href="https://www.adamalston.com/"
+        >
+          Adam Alston
+        </F.Link>
         {isMobile ? (
           <></>
         ) : (
           <>
-            &nbsp;|&nbsp;<F.Link theme={theme} data-v2='source' aria-label='Source code' href='https://github.com/adamalston/v2'>Source</F.Link>
+            &nbsp;|&nbsp;
+            <F.Link
+              theme={theme}
+              data-v2="source"
+              aria-label="Source code"
+              href="https://github.com/adamalston/v2"
+            >
+              Source
+            </F.Link>
           </>
         )}
       </F.Text>

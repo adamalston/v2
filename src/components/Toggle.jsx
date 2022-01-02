@@ -44,8 +44,14 @@ export const Toggle = () => {
 
   return (
     <T.Container>
-      <T.Toggle id='toggle' name='toggle' type='checkbox' checked={isDark} onChange={(e) => setIsDark(e.target.checked)} />
-      <T.Switch theme={theme} htmlFor='toggle'>
+      <T.Toggle
+        id="toggle"
+        name="toggle"
+        type="checkbox"
+        checked={isDark}
+        onChange={(e) => setIsDark(e.target.checked)}
+      />
+      <T.Switch theme={theme} htmlFor="toggle">
         {isDark ? <Moon /> : <Sun />}
       </T.Switch>
     </T.Container>

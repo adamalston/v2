@@ -25,11 +25,11 @@ export const Particles = () => {
     },
     detectRetina: true,
     background: {
-      color: "#000",
+      color: '#000',
     },
     fpsLimit: 90,
     emitters: {
-      direction: "top",
+      direction: 'top',
       life: {
         count: 0,
         duration: 0.1,
@@ -53,7 +53,7 @@ export const Particles = () => {
         value: 0,
       },
       destroy: {
-        mode: "split",
+        mode: 'split',
         split: {
           count: 1,
           factor: {
@@ -68,12 +68,12 @@ export const Particles = () => {
             },
             color: {
               value: [
-                "C912ED",
-                "00BFFF",
-                "22DD22",
-                "FFD500",
-                "FF8000",
-                "FF2600",
+                'C912ED',
+                '00BFFF',
+                '22DD22',
+                'FFD500',
+                'FF8000',
+                'FF2600',
               ],
             },
             number: {
@@ -91,12 +91,12 @@ export const Particles = () => {
                 enable: true,
                 speed: 0.5,
                 sync: false,
-                startValue: "max",
-                destroy: "min",
+                startValue: 'max',
+                destroy: 'min',
               },
             },
             shape: {
-              type: "circle",
+              type: 'circle',
             },
             size: {
               value: 3,
@@ -119,10 +119,10 @@ export const Particles = () => {
                 enable: false,
               },
               speed: 2,
-              direction: "none",
+              direction: 'none',
               random: true,
               straight: false,
-              outMode: "destroy",
+              outMode: 'destroy',
             },
           },
         },
@@ -131,7 +131,7 @@ export const Particles = () => {
         count: 1,
       },
       shape: {
-        type: "line",
+        type: 'line',
       },
       size: {
         value: {
@@ -142,13 +142,13 @@ export const Particles = () => {
           enable: true,
           sync: true,
           speed: 90,
-          startValue: "max",
-          destroy: "min",
+          startValue: 'max',
+          destroy: 'min',
         },
       },
       stroke: {
         color: {
-          value: "#ffffff",
+          value: '#ffffff',
         },
         width: 1,
       },
@@ -168,11 +168,11 @@ export const Particles = () => {
           max: 20,
         },
         outModes: {
-          default: "destroy",
-          top: "none",
+          default: 'destroy',
+          top: 'none',
         },
         trail: {
-          fillColor: "#000",
+          fillColor: '#000',
           enable: true,
           length: 10,
         },
@@ -184,7 +184,7 @@ export const Particles = () => {
   const STARS = {
     particles: {
       color: {
-        value: "#fff",
+        value: '#fff',
       },
       number: {
         density: {
@@ -208,7 +208,7 @@ export const Particles = () => {
         value: 1,
       },
       shape: {
-        type: "circle",
+        type: 'circle',
       },
       links: {
         enable: false,
@@ -226,10 +226,10 @@ export const Particles = () => {
           enable: false,
         },
         speed: 0.5,
-        direction: "none",
+        direction: 'none',
         random: false,
         straight: false,
-        outMode: "destroy",
+        outMode: 'destroy',
       },
     },
     detectRetina: true,
@@ -238,12 +238,12 @@ export const Particles = () => {
   return (
     <P.Container theme={theme}>
       <ReactParticles
-        width='100vw'
-        height='100vh'
-        id='fireworks'
+        width="100vw"
+        height="100vh"
+        id="fireworks"
         options={FIREWORKS}
       />
-      <ReactParticles width='100vw' height='100vh' id='stars' options={STARS} />
+      <ReactParticles width="100vw" height="100vh" id="stars" options={STARS} />
     </P.Container>
   );
 };

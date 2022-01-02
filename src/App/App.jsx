@@ -7,7 +7,7 @@ import './app.scss';
 const App = () => {
   return (
     <ThemeProvider>
-      <div className='app'>
+      <div className="app">
         <Content />
         <Buttons />
         <Footer />
