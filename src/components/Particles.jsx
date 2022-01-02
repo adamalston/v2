@@ -19,187 +19,231 @@ const P = {
 export const Particles = () => {
   const { theme } = useContext(AppContext);
 
-  const OPTIONS = {
+  const FIREWORKS = {
+    fullScreen: {
+      zIndex: -1,
+    },
+    detectRetina: true,
+    background: {
+      color: "#000",
+    },
+    fpsLimit: 90,
+    emitters: {
+      direction: "top",
+      life: {
+        count: 0,
+        duration: 0.1,
+        delay: 0.1,
+      },
+      rate: {
+        delay: 0.5,
+        quantity: 1,
+      },
+      size: {
+        width: 100,
+        height: 0,
+      },
+      position: {
+        y: 100,
+        x: 50,
+      },
+    },
+    particles: {
+      number: {
+        value: 0,
+      },
+      destroy: {
+        mode: "split",
+        split: {
+          count: 1,
+          factor: {
+            value: 0.333333,
+          },
+          rate: {
+            value: 100,
+          },
+          particles: {
+            stroke: {
+              width: 0,
+            },
+            color: {
+              value: [
+                "C912ED",
+                "00BFFF",
+                "22DD22",
+                "FFD500",
+                "FF8000",
+                "FF2600",
+              ],
+            },
+            number: {
+              value: 0,
+            },
+            collisions: {
+              enable: false,
+            },
+            opacity: {
+              value: {
+                min: 0.1,
+                max: 1,
+              },
+              animation: {
+                enable: true,
+                speed: 0.5,
+                sync: false,
+                startValue: "max",
+                destroy: "min",
+              },
+            },
+            shape: {
+              type: "circle",
+            },
+            size: {
+              value: 3,
+              animation: {
+                enable: false,
+              },
+            },
+            life: {
+              count: 1,
+              duration: {
+                value: {
+                  min: 1,
+                  max: 10,
+                },
+              },
+            },
+            move: {
+              enable: true,
+              gravity: {
+                enable: false,
+              },
+              speed: 2,
+              direction: "none",
+              random: true,
+              straight: false,
+              outMode: "destroy",
+            },
+          },
+        },
+      },
+      life: {
+        count: 1,
+      },
+      shape: {
+        type: "line",
+      },
+      size: {
+        value: {
+          min: 0.1,
+          max: 50,
+        },
+        animation: {
+          enable: true,
+          sync: true,
+          speed: 90,
+          startValue: "max",
+          destroy: "min",
+        },
+      },
+      stroke: {
+        color: {
+          value: "#ffffff",
+        },
+        width: 1,
+      },
+      rotate: {
+        path: true,
+      },
+      move: {
+        enable: true,
+        gravity: {
+          acceleration: 15,
+          enable: true,
+          inverse: true,
+          maxSpeed: 100,
+        },
+        speed: {
+          min: 10,
+          max: 20,
+        },
+        outModes: {
+          default: "destroy",
+          top: "none",
+        },
+        trail: {
+          fillColor: "#000",
+          enable: true,
+          length: 10,
+        },
+      },
+    },
+    // 3m@62^K^88745%
+  };
+
+  const STARS = {
     particles: {
       color: {
-        value: "#fff"
+        value: "#fff",
       },
       number: {
         density: {
           enable: true,
-          area: 1080
+          area: 1080,
         },
         limit: 0,
-        value: 400
+        value: 400,
       },
       opacity: {
         animation: {
           enable: true,
           minimumValue: 0.05,
           speed: 0.25,
-          sync: false
+          sync: false,
         },
         random: {
           enable: true,
-          minimumValue: 0.05
+          minimumValue: 0.05,
         },
-        value: 1
+        value: 1,
       },
       shape: {
-        type: "circle"
+        type: "circle",
       },
       links: {
-        enable: false
+        enable: false,
       },
       size: {
         random: {
           enable: true,
-          minimumValue: 0.5
+          minimumValue: 0.5,
         },
-        value: 1
+        value: 1,
       },
       move: {
         enable: true,
         gravity: {
-          enable: false
+          enable: false,
         },
-        speed: .5,
+        speed: 0.5,
         direction: "none",
         random: false,
         straight: false,
-        outMode: "destroy"
-      }
-    },
-    interactivity: {
-      detect_on: "canvas",
-      events: {
-        onHover: {
-          enable: false,
-          mode: "repulse",
-          parallax: {
-            enable: false,
-            force: 60,
-            smooth: 10
-          }
-        },
-        onClick: {
-          enable: true,
-          mode: "push"
-        },
-        resize: true
+        outMode: "destroy",
       },
-      modes: {
-        grab: {
-          distance: 400,
-          line_linked: {
-            opacity: 1
-          }
-        },
-        bubble: {
-          distance: 400,
-          size: 40,
-          duration: 2,
-          opacity: 0.8
-        },
-        repulse: {
-          distance: 200
-        },
-        push: {
-          particles_nb: 4
-        },
-        remove: {
-          particles_nb: 2
-        }
-      }
     },
     detectRetina: true,
-    emitters: {
-      direction: "none",
-      life: {
-        count: 0,
-        duration: 0.1,
-        delay: 0.1
-      },
-      rate: {
-        delay: 0.1,
-        quantity: 100
-      },
-      size: {
-        width: 0,
-        height: 0
-      },
-      particles: {
-        color: {
-          value: [
-            "C912ED",
-            "00BFFF",
-            "22DD22",
-            "FFD500",
-            "FF8000",
-            "FF2600",
-          ]
-        },
-        number: {
-          value: 0
-        },
-        collisions: {
-          enable: false
-        },
-        shape: {
-          type: "circle"
-        },
-        opacity: {
-          value: .75,
-          random: false,
-          animation: {
-            enable: true,
-            speed: 1,
-            minimumValue: 0.1,
-            sync: true
-          }
-        },
-        size: {
-          value: 5,
-          random: {
-            enable: true,
-            minimumValue: 3
-          },
-          animation: {
-            enable: false,
-            speed: 10,
-            minimumValue: 0.1,
-            sync: true
-          }
-        },
-        links: {
-          enable: false
-        },
-        life: {
-          duration: {
-            sync: true,
-            value: 0.5
-          },
-          count: 1
-        },
-        move: {
-          enable: true,
-          gravity: {
-            enable: false
-          },
-          speed: 25,
-          direction: "none",
-          random: false,
-          straight: false,
-          outMode: "destroy"
-        }
-      }
-    }
-    // 3m@62^K^88745%
   };
 
   return (
     <P.Container theme={theme}>
-      <ReactParticles width='100vw' height='100vh' options={OPTIONS} />
+      <ReactParticles
+        width='100vw'
+        height='100vh'
+        id='fireworks'
+        options={FIREWORKS}
+      />
+      <ReactParticles width='100vw' height='100vh' id='stars' options={STARS} />
     </P.Container>
   );
 };
