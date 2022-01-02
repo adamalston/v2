@@ -14,7 +14,7 @@ export const ThemeProvider = ({ children }) => {
 
   const isMobile = window.matchMedia(
     '(max-device-width: 820px) and (-webkit-min-device-pixel-ratio: 2)'
-  ).matches;
+  )?.matches;
 
   return (
     <AppContext.Provider value={{ isDark, setIsDark, theme, isMobile }}>
