@@ -1,4 +1,4 @@
-name: Run Tests
+name: Integrate
 on: [push, pull_request]
 jobs:
   build:
@@ -6,12 +6,14 @@ jobs:
     strategy:
       matrix:
         node: [12, 14, 16, lts/*]
+        architecture: ['x86', 'arm64']
+    name: Node ${{ matrix.node_version }} - ${{ matrix.architecture }}
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         with:
-          node-version: 'lts/*'
+          node-version: ${{ matrix.node }}
+          architecture: ${{ matrix.architecture }}
           cache: 'npm'
       - run: npm install
-      - run: npm run build
       - run: npm test
