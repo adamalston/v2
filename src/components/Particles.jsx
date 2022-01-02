@@ -24,16 +24,16 @@ export const Particles = () => {
       zIndex: -1,
     },
     detectRetina: true,
+    fpsLimit: 90,
     background: {
       color: '#000',
     },
-    fpsLimit: 90,
     emitters: {
       direction: 'top',
       life: {
         count: 0,
         duration: 0.1,
-        delay: 0.1,
+        delay: 0.35,
       },
       rate: {
         delay: 0.5,
@@ -182,6 +182,8 @@ export const Particles = () => {
   };
 
   const STARS = {
+    detectRetina: true,
+    fpsLimit: 90,
     particles: {
       color: {
         value: '#fff',
@@ -232,7 +234,6 @@ export const Particles = () => {
         outMode: 'destroy',
       },
     },
-    detectRetina: true,
   };
 
   return (
