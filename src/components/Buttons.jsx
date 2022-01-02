@@ -121,10 +121,18 @@ export const Buttons = () => {
   return (
     <Container theme={theme}>
       {DATA.map(({ href, aria, icon, label }, i) => (
-        <span className='button-container' key={i}>
-          <a className='button' href={href} target='_self' aria-label={aria} rel='noopener noreferrer'>
-            <div className='icon'>{icon}</div>
-            <span className='icon_title' data-v2={label}>{label}</span>
+        <span className="button-container" key={i}>
+          <a
+            className="button"
+            href={href}
+            target="_self"
+            aria-label={aria}
+            rel="noopener noreferrer"
+          >
+            <div className="icon">{icon}</div>
+            <span className="icon_title" data-v2={label}>
+              {label}
+            </span>
           </a>
         </span>
       ))}

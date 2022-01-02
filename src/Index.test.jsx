@@ -34,7 +34,8 @@ describe('application tests', () => {
   const buttons = {
     GitHub: 'https://github.com/adamalston/',
     LinkedIn: 'https://www.linkedin.com/in/adam-alston/',
-    Resume: 'https://drive.google.com/drive/folders/10k8NWflSYQ5laPzuWtK3bzUKzuOeas8i/',
+    Resume:
+      'https://drive.google.com/drive/folders/10k8NWflSYQ5laPzuWtK3bzUKzuOeas8i/',
     Email: 'mailto:aalston9@gmail.com',
   };
 

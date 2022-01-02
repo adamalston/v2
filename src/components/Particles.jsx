@@ -139,12 +139,15 @@ export const Particles = () => {
     },
     retina_detect: true,
     fpsLimit: 60,
+    fullScreen: {
+      enable: false,
+    },
     // 3m@62^K^88745%
   };
 
   return (
     <P.Container theme={theme}>
-      <ReactParticles width='100vw' height='100vh' options={OPTIONS} />
+      <ReactParticles width="100vw" height="100vh" options={OPTIONS} />
     </P.Container>
   );
 };
