@@ -48,8 +48,11 @@ export const Toggle = () => {
         id="toggle"
         name="toggle"
         type="checkbox"
+        data-v2="toggle"
         checked={isDark}
         onChange={(e) => setIsDark(e.target.checked)}
+        aria-label="Theme toggle"
+        title="Theme toggle"
       />
       <T.Switch theme={theme} htmlFor="toggle">
         {isDark ? <Moon /> : <Sun />}

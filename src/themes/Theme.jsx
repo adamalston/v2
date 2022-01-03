@@ -1,7 +1,7 @@
 export const dark = {
   key: 'dark',
-  primaryTextColor: '#FFF',
-  secondaryTextColor: '#CCC',
+  primaryTextColor: '#fff',
+  secondaryTextColor: '#ccc',
   tertiaryTextColor: '#999',
   background: '#000',
   shadowColor: 'rgba(0, 0, 0, 0.5)',
@@ -12,6 +12,6 @@ export const light = {
   primaryTextColor: '#000',
   secondaryTextColor: '#333',
   tertiaryTextColor: '#777',
-  background: '#FFF',
+  background: '#fff',
   shadowColor: 'rgba(255, 255, 255, 0.5)',
 };

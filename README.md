@@ -49,14 +49,14 @@ Text and icons have a color contrast ratio greater than 7:1 satisfying [WCAG 2.1
 | ------ | :-----------------------------------------------------: | -------- |
 | Black  | ![000000](https://via.placeholder.com/16/000000?text=+) | `000000` |
 | Slate  | ![333333](https://via.placeholder.com/16/333333?text=+) | `333333` |
-| Red    | ![FF2600](https://via.placeholder.com/16/FF2600?text=+) | `FF2600` |
-| Orange | ![FF8000](https://via.placeholder.com/16/FF8000?text=+) | `FF8000` |
-| Yellow | ![FFD500](https://via.placeholder.com/16/FFD500?text=+) | `FFD500` |
-| Green  | ![22DD22](https://via.placeholder.com/16/22DD22?text=+) | `22DD22` |
-| Blue   | ![00BFFF](https://via.placeholder.com/16/00BFFF?text=+) | `00BFFF` |
-| Purple | ![C912ED](https://via.placeholder.com/16/C912ED?text=+) | `C912ED` |
-| Silver | ![CCCCCC](https://via.placeholder.com/16/CCCCCC?text=+) | `CCCCCC` |
-| White  | ![FFFFFF](https://via.placeholder.com/16/FFFFFF?text=+) | `FFFFFF` |
+| Red    | ![ff2600](https://via.placeholder.com/16/ff2600?text=+) | `ff2600` |
+| Orange | ![ff8000](https://via.placeholder.com/16/ff8000?text=+) | `ff8000` |
+| Yellow | ![ffd500](https://via.placeholder.com/16/ffd500?text=+) | `ffd500` |
+| Green  | ![22dd22](https://via.placeholder.com/16/22dd22?text=+) | `22dd22` |
+| Blue   | ![00bfff](https://via.placeholder.com/16/00bfff?text=+) | `00bfff` |
+| Purple | ![c912ed](https://via.placeholder.com/16/c912ed?text=+) | `c912ed` |
+| Silver | ![cccccc](https://via.placeholder.com/16/cccccc?text=+) | `cccccc` |
+| White  | ![ffffff](https://via.placeholder.com/16/ffffff?text=+) | `ffffff` |
 
 ---
 
