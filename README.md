@@ -1,6 +1,6 @@
-# <img src="public/favicon.svg" alt="atom" height="24"> adamalston<span></span>.com &middot; [![Integration Workflow](https://github.com/adamalston/v2/actions/workflows/ci.yml/badge.svg)](https://github.com/adamalston/v2/actions/workflows/ci.yml) [![Netlify status](https://img.shields.io/netlify/332bbd91-59b7-4091-8781-6f41330399b4)](https://app.netlify.com/sites/adamalston/deploys)
+# <img src="public/favicon.svg" alt="atom" height="24"> adamalston<span></span>.com &middot; ![CI Workflow](https://github.com/adamalston/v2/actions/workflows/ci.yml/badge.svg) [![Netlify status](https://img.shields.io/netlify/332bbd91-59b7-4091-8781-6f41330399b4)](https://app.netlify.com/sites/adamalston/deploys)
 
-The second iteration of [adamalston.com](https://www.adamalston.com) built with [React](https://reactjs.org/) and hosted with [Netlify](https://www.netlify.com/).
+The second iteration of [adamalston.com](https://www.adamalston.com) built using [React](https://reactjs.org) and hosted on [Netlify](https://www.netlify.com).
 
 Previous iteration: [v1](https://github.com/adamalston/v1)
 
@@ -24,7 +24,7 @@ I made this website open source under the assumption that others would use the c
 <b>Build &amp; Deploy</b>
 
 1. Create a production build: `npm run build`
-2. The [React/Deployment](https://create-react-app.dev/docs/deployment/) docs detail how to deploy to `gh-pages`, Netlify, and many other services
+2. The [React Deployment](https://create-react-app.dev/docs/deployment) docs detail how to deploy to `gh-pages`, Netlify, and many other services
 
 </details>
 

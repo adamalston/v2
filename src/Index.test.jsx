@@ -64,7 +64,7 @@ describe('application tests', () => {
     });
   });
 
-  it('should toggle between the dark and light theme', () => {
+  it('should toggle between dark and light themes', () => {
     const toggle = screen.getByTestId('toggle');
     const particles = screen.getByTestId('particles');
 
