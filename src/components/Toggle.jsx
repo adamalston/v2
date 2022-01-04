@@ -20,8 +20,16 @@ const T = {
       transform: scale(0.9);
     }
   `,
+  /* Toggle CSS changes for accessibility: https://stackoverflow.com/a/20130500 */
   Toggle: styled.input`
-    display: none;
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
   `,
   Switch: styled.label`
     cursor: pointer;

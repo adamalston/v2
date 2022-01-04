@@ -68,7 +68,7 @@ describe('application tests', () => {
     const toggle = screen.getByTestId('toggle');
     const particles = screen.getByTestId('particles');
 
-    // expect(toggle).toHaveAccessibleName();
+    expect(toggle).toHaveAccessibleName();
     expect(toggle).toHaveAccessibleDescription();
 
     expect(particles).toHaveAccessibleName();
