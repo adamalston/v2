@@ -237,7 +237,12 @@ export const Particles = () => {
   };
 
   return (
-    <P.Container theme={theme}>
+    <P.Container
+      theme={theme}
+      data-v2="particles"
+      aria-label="Particles"
+      title="The site's background is filled with particles"
+    >
       <ReactParticles
         width="100vw"
         height="100vh"
