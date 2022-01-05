@@ -34,8 +34,10 @@ export const Footer = () => {
           theme={theme}
           data-v2="creator"
           href="https://www.adamalston.com/"
+          aria-label="Adam's website"
+          title="A link to Adam's personal website"
         >
-          Adam Alston
+          {'Adam Alston'}
         </F.Link>
         {isMobile ? (
           <></>
@@ -45,10 +47,11 @@ export const Footer = () => {
             <F.Link
               theme={theme}
               data-v2="source"
-              aria-label="Source code"
               href="https://github.com/adamalston/v2"
+              aria-label="Source code"
+              title="A link to the source code in GitHub"
             >
-              Source
+              {'Source'}
             </F.Link>
           </>
         )}

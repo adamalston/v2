@@ -126,8 +126,9 @@ export const Buttons = () => {
             className="button"
             href={href}
             target="_self"
-            aria-label={aria}
             rel="noopener noreferrer"
+            aria-label={aria}
+            title={aria}
           >
             <div className="icon">{icon}</div>
             <span className="icon_title" data-v2={label}>

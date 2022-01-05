@@ -1,6 +1,6 @@
-# <img src="public/favicon.svg" alt="atom" height="24"> adamalston<span></span>.com &middot; [![Integration Workflow](https://github.com/adamalston/v2/actions/workflows/integrate.yml/badge.svg)](https://github.com/adamalston/v2/actions/workflows/test.yml) [![Netlify status](https://img.shields.io/netlify/332bbd91-59b7-4091-8781-6f41330399b4)](https://app.netlify.com/sites/adamalston/deploys)
+# <img src="public/favicon.svg" alt="atom" height="24"> adamalston<span></span>.com &middot; ![CI Workflow](https://github.com/adamalston/v2/actions/workflows/ci.yml/badge.svg) [![Netlify status](https://img.shields.io/netlify/332bbd91-59b7-4091-8781-6f41330399b4)](https://app.netlify.com/sites/adamalston/deploys)
 
-The second iteration of [adamalston.com](https://www.adamalston.com) built with [React](https://reactjs.org/) and hosted with [Netlify](https://www.netlify.com/).
+The second iteration of [adamalston.com](https://www.adamalston.com) built using [React](https://reactjs.org) and hosted on [Netlify](https://www.netlify.com).
 
 Previous iteration: [v1](https://github.com/adamalston/v1)
 
@@ -24,7 +24,7 @@ I made this website open source under the assumption that others would use the c
 <b>Build &amp; Deploy</b>
 
 1. Create a production build: `npm run build`
-2. The [React/Deployment](https://create-react-app.dev/docs/deployment/) docs detail how to deploy to `gh-pages`, Netlify, and many other services
+2. The [React Deployment](https://create-react-app.dev/docs/deployment) docs detail how to deploy to `gh-pages`, Netlify, and many other services
 
 </details>
 
@@ -49,14 +49,14 @@ Text and icons have a color contrast ratio greater than 7:1 satisfying [WCAG 2.1
 | ------ | :-----------------------------------------------------: | -------- |
 | Black  | ![000000](https://via.placeholder.com/16/000000?text=+) | `000000` |
 | Slate  | ![333333](https://via.placeholder.com/16/333333?text=+) | `333333` |
-| Red    | ![FF2600](https://via.placeholder.com/16/FF2600?text=+) | `FF2600` |
-| Orange | ![FF8000](https://via.placeholder.com/16/FF8000?text=+) | `FF8000` |
-| Yellow | ![FFD500](https://via.placeholder.com/16/FFD500?text=+) | `FFD500` |
-| Green  | ![22DD22](https://via.placeholder.com/16/22DD22?text=+) | `22DD22` |
-| Blue   | ![00BFFF](https://via.placeholder.com/16/00BFFF?text=+) | `00BFFF` |
-| Purple | ![C912ED](https://via.placeholder.com/16/C912ED?text=+) | `C912ED` |
-| Silver | ![CCCCCC](https://via.placeholder.com/16/CCCCCC?text=+) | `CCCCCC` |
-| White  | ![FFFFFF](https://via.placeholder.com/16/FFFFFF?text=+) | `FFFFFF` |
+| Red    | ![ff2600](https://via.placeholder.com/16/ff2600?text=+) | `ff2600` |
+| Orange | ![ff8000](https://via.placeholder.com/16/ff8000?text=+) | `ff8000` |
+| Yellow | ![ffd500](https://via.placeholder.com/16/ffd500?text=+) | `ffd500` |
+| Green  | ![22dd22](https://via.placeholder.com/16/22dd22?text=+) | `22dd22` |
+| Blue   | ![00bfff](https://via.placeholder.com/16/00bfff?text=+) | `00bfff` |
+| Purple | ![c912ed](https://via.placeholder.com/16/c912ed?text=+) | `c912ed` |
+| Silver | ![cccccc](https://via.placeholder.com/16/cccccc?text=+) | `cccccc` |
+| White  | ![ffffff](https://via.placeholder.com/16/ffffff?text=+) | `ffffff` |
 
 ---
 

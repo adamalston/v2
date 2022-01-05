@@ -35,15 +35,21 @@ export const Content = () => {
 
   return (
     <>
-      <C.Name theme={theme} data-v2="name" aria-label="My name is Adam Alston">
-        Adam Alston
+      <C.Name
+        theme={theme}
+        data-v2="name"
+        aria-label="My name is Adam Alston"
+        title="My name is Adam Alston"
+      >
+        {'Adam Alston'}
       </C.Name>
       <C.Title
         theme={theme}
         data-v2="title"
         aria-label="I am a software engineer"
+        title="I am a software engineer"
       >
-        Software Engineer
+        {'Software Engineer'}
       </C.Title>
     </>
   );
