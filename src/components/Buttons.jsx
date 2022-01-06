@@ -92,7 +92,7 @@ export const Buttons = () => {
 
   return (
     <Container theme={theme}>
-      {config.links.map(({ href, aria, icon, label }, i) => (
+      {config.buttons.map(({ href, aria, icon, label }, i) => (
         <span className="button-container" key={i}>
           <a
             className="button"
@@ -101,6 +101,7 @@ export const Buttons = () => {
             rel="noopener noreferrer"
             aria-label={aria}
             title={aria}
+            data-v2={`button-${label}`}
           >
             <div className="icon">{icon}</div>
             <span className="icon_title" data-v2={label}>

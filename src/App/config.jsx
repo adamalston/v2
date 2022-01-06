@@ -5,7 +5,7 @@ const config = {
     name: 'Adam Alston',
     title: 'Software Engineer',
   },
-  links: [
+  buttons: [
     {
       href: 'https://github.com/adamalston/',
       aria: 'Visit my GitHub profile',
