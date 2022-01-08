@@ -28,7 +28,11 @@ export const Footer = () => {
 
   return (
     <F.Container isMobile={isMobile}>
-      <F.Text theme={theme} aria-label="Designed and built by Adam Alston">
+      <F.Text
+        theme={theme}
+        aria-label="Designed and built by Adam Alston"
+        data-v2="footer"
+      >
         {'Designed and built by '}
         <F.Link
           theme={theme}

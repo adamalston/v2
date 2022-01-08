@@ -16,9 +16,7 @@ export const AppProvider = ({ children }) => {
     '(max-device-width: 820px) and (-webkit-min-device-pixel-ratio: 2)'
   )?.matches;
 
-  const providerValue = { config, isDark, setIsDark, theme, isMobile };
+  const value = { config, isDark, setIsDark, theme, isMobile };
 
-  return (
-    <AppContext.Provider value={providerValue}>{children}</AppContext.Provider>
-  );
+  return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 };

@@ -124,4 +124,41 @@ describe('application tests', () => {
     expect(toggle).not.toBeChecked();
     expect(particles).toHaveStyle({ backgroundColor: '#fff' });
   });
+
+  it('should render full footer on desktop', () => {
+    const footer = screen.getByTestId('footer');
+
+    expect(footer).toHaveTextContent(
+      /^Designed and built by Adam Alston | Source$/
+    );
+  });
+
+  it.skip('should render partial footer on mobile', () => {
+    // resize the screen to a mobile resolution
+    Object.defineProperty(window, 'innerWidth', {
+      writable: true,
+      configurable: true,
+      value: 1170,
+    });
+    Object.defineProperty(window, 'innerHeight', {
+      writable: true,
+      configurable: true,
+      value: 2532,
+    });
+    Object.defineProperty(window, 'devicePixelRatio', {
+      writable: true,
+      configurable: true,
+      value: 4,
+    });
+
+    window.dispatchEvent(new Event('resize'));
+
+    expect(window.innerWidth).toBe(1170);
+    expect(window.innerHeight).toBe(2532);
+    expect(window.devicePixelRatio).toBe(4);
+
+    // partial footer should now be visible
+    const footer = screen.getByTestId('footer');
+    expect(footer).toHaveTextContent(/^Designed and built by Adam Alston$/);
+  });
 });
