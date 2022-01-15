@@ -23,7 +23,7 @@ const F = {
   `,
 };
 
-export const Footer = () => {
+const Footer = () => {
   const { theme, isMobile } = useContext(AppContext);
 
   return (
@@ -63,3 +63,5 @@ export const Footer = () => {
     </F.Container>
   );
 };
+
+export default Footer;

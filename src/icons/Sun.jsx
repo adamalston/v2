@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Sun = () => (
+const Sun = () => (
   <svg
     role="img"
     viewBox="0 0 512 512"
@@ -15,3 +15,5 @@ export const Sun = () => (
     />
   </svg>
 );
+
+export default Sun;

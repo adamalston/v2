@@ -87,7 +87,7 @@ const Container = styled.div`
   }
 `;
 
-export const Buttons = () => {
+const Buttons = () => {
   const { config, theme } = useContext(AppContext);
 
   return (
@@ -113,3 +113,5 @@ export const Buttons = () => {
     </Container>
   );
 };
+
+export default Buttons;

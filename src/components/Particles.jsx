@@ -17,7 +17,7 @@ const P = {
   `,
 };
 
-export const Particles = () => {
+const Particles = () => {
   const { theme } = useContext(AppContext);
 
   return (
@@ -31,3 +31,5 @@ export const Particles = () => {
     </P.Container>
   );
 };
+
+export default Particles;

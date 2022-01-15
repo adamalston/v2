@@ -47,7 +47,7 @@ const T = {
   `,
 };
 
-export const Toggle = () => {
+const Toggle = () => {
   const { isDark, setIsDark, theme } = useContext(AppContext);
 
   return (
@@ -68,3 +68,5 @@ export const Toggle = () => {
     </T.Container>
   );
 };
+
+export default Toggle;

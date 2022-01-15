@@ -30,7 +30,7 @@ const C = {
   `,
 };
 
-export const Content = () => {
+const Content = () => {
   const { config, theme } = useContext(AppContext);
 
   return (
@@ -54,3 +54,5 @@ export const Content = () => {
     </>
   );
 };
+
+export default Content;

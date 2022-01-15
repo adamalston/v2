@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Moon = () => (
+const Moon = () => (
   <svg
     role="img"
     viewBox="0 0 512 512"
@@ -15,3 +15,5 @@ export const Moon = () => (
     />
   </svg>
 );
+
+export default Moon;
