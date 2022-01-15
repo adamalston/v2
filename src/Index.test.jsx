@@ -129,7 +129,7 @@ describe('application tests', () => {
     const footer = screen.getByTestId('footer');
 
     expect(footer).toHaveTextContent(
-      /^Designed and built by Adam Alston | Source$/
+      /^Designed and built by Adam Alston \| Source$/
     );
   });
 
