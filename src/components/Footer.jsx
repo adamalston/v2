@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
 
-import { AppContext } from './../App/AppContext';
+import { AppContext } from 'App/AppContext';
 
 const F = {
   Container: styled.div`

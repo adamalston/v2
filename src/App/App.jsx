@@ -1,8 +1,8 @@
 import React from 'react';
 
 import { AppProvider } from './AppContext';
-import { Toggle, Content, Buttons, Footer, Particles } from './../components';
-import './app.scss';
+import { Toggle, Content, Buttons, Footer, Particles } from 'components';
+import './App.scss';
 
 const App = () => {
   return (

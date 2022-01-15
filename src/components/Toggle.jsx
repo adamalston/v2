@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
 
-import { AppContext } from './../App/AppContext';
-import { Moon, Sun } from './../icons';
+import { AppContext } from 'App/AppContext';
+import { Moon, Sun } from 'icons';
 
 const T = {
   Container: styled.main`

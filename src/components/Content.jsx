@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import styled, { css } from 'styled-components';
 
-import { AppContext } from './../App/AppContext';
+import { AppContext } from 'App/AppContext';
 
 const sharedStyles = css`
   transition: color 0.5s linear;

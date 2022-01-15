@@ -1,8 +1,8 @@
 import React from 'react';
 import { configure, fireEvent, render, screen } from '@testing-library/react';
 
-import './__mocks__/matchMedia';
-import App from './App/App';
+import '__mocks__/matchMedia';
+import App from 'App/App';
 
 configure({ testIdAttribute: 'data-v2' });
 

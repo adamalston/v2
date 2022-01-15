@@ -1,4 +1,4 @@
-import { GitHub, LinkedIn, Resume, Email } from './../icons';
+import { GitHub, LinkedIn, Resume, Email } from 'icons';
 
 const config = {
   info: {
