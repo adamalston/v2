@@ -31,25 +31,25 @@ const C = {
 };
 
 export const Content = () => {
-  const { theme } = useContext(AppContext);
+  const { config, theme } = useContext(AppContext);
 
   return (
     <>
       <C.Name
         theme={theme}
         data-v2="name"
-        aria-label="My name is Adam Alston"
-        title="My name is Adam Alston"
+        aria-label={`My name is ${config.info.name}`}
+        title={`My name is ${config.info.name}`}
       >
-        {'Adam Alston'}
+        {config.info.name}
       </C.Name>
       <C.Title
         theme={theme}
         data-v2="title"
-        aria-label="I am a software engineer"
-        title="I am a software engineer"
+        aria-label={`I am a ${config.info.title}`}
+        title={`I am a ${config.info.title}`}
       >
-        {'Software Engineer'}
+        {config.info.title}
       </C.Title>
     </>
   );

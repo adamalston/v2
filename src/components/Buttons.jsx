@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import styled from 'styled-components';
 
 import { AppContext } from './../App/AppContext';
-import { GitHub, LinkedIn, Resume, Email } from './../icons';
 
 const Container = styled.div`
   a,
@@ -89,38 +88,11 @@ const Container = styled.div`
 `;
 
 export const Buttons = () => {
-  const { theme } = useContext(AppContext);
-
-  const DATA = [
-    {
-      href: 'https://github.com/adamalston/',
-      aria: 'Visit my GitHub profile',
-      icon: <GitHub />,
-      label: 'GitHub',
-    },
-    {
-      href: 'https://www.linkedin.com/in/adam-alston/',
-      aria: 'Visit my LinkedIn profile',
-      icon: <LinkedIn />,
-      label: 'LinkedIn',
-    },
-    {
-      href: 'https://drive.google.com/drive/folders/10k8NWflSYQ5laPzuWtK3bzUKzuOeas8i/',
-      aria: 'Visit Google Drive to view and download my resume',
-      icon: <Resume />,
-      label: 'Resume',
-    },
-    {
-      href: 'mailto:aalston9@gmail.com',
-      aria: 'Send me an email with this template',
-      icon: <Email />,
-      label: 'Email',
-    },
-  ];
+  const { config, theme } = useContext(AppContext);
 
   return (
     <Container theme={theme}>
-      {DATA.map(({ href, aria, icon, label }, i) => (
+      {config.buttons.map(({ href, aria, icon, label }, i) => (
         <span className="button-container" key={i}>
           <a
             className="button"
@@ -129,6 +101,7 @@ export const Buttons = () => {
             rel="noopener noreferrer"
             aria-label={aria}
             title={aria}
+            data-v2={`button-${label}`}
           >
             <div className="icon">{icon}</div>
             <span className="icon_title" data-v2={label}>

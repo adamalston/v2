@@ -1,12 +1,12 @@
 import React from 'react';
 
-import { ThemeProvider } from './AppContext';
+import { AppProvider } from './AppContext';
 import { Toggle, Content, Buttons, Footer, Particles } from './../components';
 import './app.scss';
 
 const App = () => {
   return (
-    <ThemeProvider>
+    <AppProvider>
       <div className="app">
         <Toggle />
         <Content />
@@ -14,7 +14,7 @@ const App = () => {
         <Footer />
         <Particles />
       </div>
-    </ThemeProvider>
+    </AppProvider>
   );
 };
 
