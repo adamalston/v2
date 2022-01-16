@@ -5,11 +5,8 @@ import usePersistentState from 'hooks/PersistentState';
 import { dark, light } from 'themes/Theme';
 
 const AppContext = createContext({
-  config: Object,
-  theme: Object,
   isDark: Boolean,
   setIsDark: () => {},
-  isMobile: Boolean,
 });
 
 const AppProvider = ({ children }) => {
