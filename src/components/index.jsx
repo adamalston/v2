@@ -1,5 +1,7 @@
-export * from './Toggle';
-export * from './Content';
-export * from './Buttons';
-export * from './Footer';
-export * from './Particles';
+import Toggle from './Toggle';
+import Content from './Content';
+import Buttons from './Buttons';
+import Footer from './Footer';
+import Particles from './Particles';
+
+export { Toggle, Content, Buttons, Footer, Particles };

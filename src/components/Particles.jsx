@@ -2,8 +2,8 @@ import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { Particles as ReactParticles } from 'react-tsparticles';
 
-import { AppContext } from './../App/AppContext';
-import { options } from './../themes/Theme';
+import { AppContext } from 'App/AppContext';
+import { options } from 'themes/Theme';
 
 const P = {
   Container: styled.div`
@@ -17,7 +17,7 @@ const P = {
   `,
 };
 
-export const Particles = () => {
+const Particles = () => {
   const { theme } = useContext(AppContext);
 
   return (
@@ -31,3 +31,5 @@ export const Particles = () => {
     </P.Container>
   );
 };
+
+export default Particles;

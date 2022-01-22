@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
 
-import { AppContext } from './../App/AppContext';
+import { AppContext } from 'App/AppContext';
 
 const F = {
   Container: styled.div`
@@ -23,7 +23,7 @@ const F = {
   `,
 };
 
-export const Footer = () => {
+const Footer = () => {
   const { theme, isMobile } = useContext(AppContext);
 
   return (
@@ -63,3 +63,5 @@ export const Footer = () => {
     </F.Container>
   );
 };
+
+export default Footer;

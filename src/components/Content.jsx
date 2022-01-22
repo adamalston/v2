@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import styled, { css } from 'styled-components';
 
-import { AppContext } from './../App/AppContext';
+import { AppContext } from 'App/AppContext';
 
 const sharedStyles = css`
   transition: color 0.5s linear;
@@ -30,7 +30,7 @@ const C = {
   `,
 };
 
-export const Content = () => {
+const Content = () => {
   const { config, theme } = useContext(AppContext);
 
   return (
@@ -54,3 +54,5 @@ export const Content = () => {
     </>
   );
 };
+
+export default Content;

@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
 
-import { AppContext } from './../App/AppContext';
+import { AppContext } from 'App/AppContext';
 
 const Container = styled.div`
   a,
@@ -87,7 +87,7 @@ const Container = styled.div`
   }
 `;
 
-export const Buttons = () => {
+const Buttons = () => {
   const { config, theme } = useContext(AppContext);
 
   return (
@@ -113,3 +113,5 @@ export const Buttons = () => {
     </Container>
   );
 };
+
+export default Buttons;
