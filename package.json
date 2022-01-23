@@ -1,7 +1,7 @@
 {
   "homepage": "https://www.adamalston.com/",
   "name": "v2",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "private": true,
   "dependencies": {
     "react": "^16.14.0",
@@ -14,9 +14,16 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test:coverage": "react-scripts test --coverage --watchAll",
     "eject": "react-scripts eject",
-    "lint": "eslint src --ext .js,.jsx --fix --max-warnings 0",
-    "format": "prettier --config ./.prettierrc --write \"./src/**/*.{js,jsx,css,scss,json}\" "
+    "lint": "eslint ./src --ext .js,.jsx --fix --max-warnings 0",
+    "format": "prettier --config ./.prettierrc --write \"./src/**/*.{js,jsx,css,scss,json}\""
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "**/*.{js,jsx}",
+      "!**/index.jsx"
+    ]
   },
   "browserslist": {
     "production": [
