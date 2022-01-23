@@ -111,7 +111,6 @@ describe('application tests', () => {
 
     expect(particles).toBeVisible();
     expect(particles).toHaveAccessibleName();
-    expect(particles).toHaveAccessibleDescription();
 
     // site should default to dark theme
     expect(toggle).toBeChecked();

@@ -1,6 +1,6 @@
 import React, { createContext, useReducer } from 'react';
 
-import themes from 'appearance/themes';
+import themes from 'appearance/themeOptions';
 
 const initialState = {
   config: {},

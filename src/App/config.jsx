@@ -1,9 +1,13 @@
 import { GitHub, LinkedIn, Resume, Email } from 'icons';
 
 const config = {
-  info: {
-    name: 'Adam Alston',
-    title: 'Software Engineer',
+  name: {
+    text: 'Adam Alston',
+    aria: 'My name is Adam Alston',
+  },
+  title: {
+    text: 'Software Engineer',
+    aria: 'I am a software engineer',
   },
   buttons: [
     {
@@ -20,13 +24,13 @@ const config = {
     },
     {
       href: 'https://drive.google.com/drive/folders/10k8NWflSYQ5laPzuWtK3bzUKzuOeas8i/',
-      aria: 'Visit Google Drive to view and download my resume',
+      aria: 'View my resume in Google Drive',
       icon: <Resume />,
       label: 'Resume',
     },
     {
       href: 'mailto:aalston9@gmail.com',
-      aria: 'Send me an email with this template',
+      aria: 'Send me an email',
       icon: <Email />,
       label: 'Email',
     },

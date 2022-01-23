@@ -29,14 +29,14 @@ const Footer = () => {
   return (
     <F.Container isMobile={isMobile}>
       <F.Text
+        data-v2="footer"
         theme={theme}
         aria-label="Designed and built by Adam Alston"
-        data-v2="footer"
       >
         {'Designed and built by '}
         <F.Link
-          theme={theme}
           data-v2="creator"
+          theme={theme}
           href="https://www.adamalston.com/"
           aria-label="Adam's website"
           title="A link to Adam's personal website"
@@ -49,11 +49,11 @@ const Footer = () => {
           <>
             {' | '}
             <F.Link
-              theme={theme}
               data-v2="source"
+              theme={theme}
               href="https://github.com/adamalston/v2"
               aria-label="Source code"
-              title="A link to the source code in GitHub"
+              title="View this website's source code in GitHub"
             >
               {'Source'}
             </F.Link>

@@ -59,10 +59,10 @@ const Toggle = () => {
   return (
     <T.Container>
       <T.Toggle
+        data-v2="toggle"
         id="toggle"
         name="toggle"
         type="checkbox"
-        data-v2="toggle"
         checked={theme.key === 'dark'}
         onChange={(e) => handleToggle(e)}
         aria-label="Theme toggle"
