@@ -17,6 +17,15 @@ const App = () => {
     ) {
       setIsMobile(true);
     }
+
+    // before the state refactoring, 'theme' had a boolean-ish ('true', 'false')
+    // value in localStorage, now 'theme' has a theme value ('dark', 'light'),
+    // to prevent the site from breaking, older 'theme' entries should be removed
+    const localStorageTheme = localStorage.getItem('theme');
+    if (localStorageTheme === 'true' || localStorageTheme === 'false') {
+      localStorage.removeItem('theme');
+    }
+
     setIsReady(true);
   };
 
