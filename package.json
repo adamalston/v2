@@ -19,12 +19,6 @@
     "lint": "eslint ./src --ext .js,.jsx --fix --max-warnings 0",
     "format": "prettier --config ./.prettierrc --write \"./src/**/*.{js,jsx,css,scss,json}\""
   },
-  "jest": {
-    "collectCoverageFrom": [
-      "**/*.{js,jsx}",
-      "!**/index.jsx"
-    ]
-  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -51,5 +45,11 @@
     "hooks": {
       "pre-commit": "npm run format && npm run lint"
     }
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "**/*.{js,jsx}",
+      "!**/index.jsx"
+    ]
   }
 }

@@ -4,9 +4,9 @@ import themes from 'appearance/themeOptions';
 
 const initialState = {
   config: {},
+  isMobile: false,
   theme: themes.dark,
   setTheme: () => {},
-  isMobile: false,
 };
 
 const actions = { SET_THEME: 'SET_THEME' };
@@ -37,11 +37,11 @@ const AppProvider = ({ config, isMobile, children }) => {
 
   const value = {
     config: state.config,
+    isMobile: state.isMobile,
     theme: state.theme,
     setTheme: (value) => {
       dispatch({ type: actions.SET_THEME, value });
     },
-    isMobile: state.isMobile,
   };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;

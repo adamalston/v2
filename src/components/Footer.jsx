@@ -24,7 +24,7 @@ const F = {
 };
 
 const Footer = () => {
-  const { theme, isMobile } = useContext(AppContext);
+  const { isMobile, theme } = useContext(AppContext);
 
   return (
     <F.Container isMobile={isMobile}>
