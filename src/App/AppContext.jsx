@@ -26,7 +26,7 @@ const AppProvider = ({ config, isMobile, children }) => {
   initialState.config = config;
   initialState.isMobile = isMobile;
 
-  const supportedThemes = ['dark', 'light'];
+  const supportedThemes = Object.keys(themes);
   const localStorageTheme = localStorage.getItem('theme');
 
   if (supportedThemes.includes(localStorageTheme)) {

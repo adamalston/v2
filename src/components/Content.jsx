@@ -41,7 +41,7 @@ const Content = () => {
         aria-label={config.name.aria}
         title={config.name.aria}
       >
-        {config.name.text}
+        {config.name.display}
       </C.Name>
       <C.Title
         data-v2="title"
@@ -49,7 +49,7 @@ const Content = () => {
         aria-label={config.title.aria}
         title={config.title.aria}
       >
-        {config.title.text}
+        {config.title.display}
       </C.Title>
     </>
   );

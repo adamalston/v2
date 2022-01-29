@@ -2,11 +2,11 @@ import { GitHub, LinkedIn, Resume, Email } from 'icons';
 
 const config = {
   name: {
-    text: 'Adam Alston',
+    display: 'Adam Alston',
     aria: 'My name is Adam Alston',
   },
   title: {
-    text: 'Software Engineer',
+    display: 'Software Engineer',
     aria: 'I am a software engineer',
   },
   buttons: [
