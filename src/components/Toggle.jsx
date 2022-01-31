@@ -49,6 +49,7 @@ const T = {
 
 const Toggle = () => {
   const { theme, setTheme } = useContext(AppContext);
+  const isDark = theme.key === 'dark';
 
   const handleToggle = (e) => {
     const key = e.target.checked ? 'dark' : 'light';
@@ -63,13 +64,13 @@ const Toggle = () => {
         id="toggle"
         name="toggle"
         type="checkbox"
-        checked={theme.key === 'dark'}
+        checked={isDark}
         onChange={(e) => handleToggle(e)}
         aria-label="Theme toggle"
         title="Theme toggle"
       />
       <T.Switch theme={theme} htmlFor="toggle">
-        {theme.key === 'dark' ? <Moon /> : <Sun />}
+        {isDark ? <Moon /> : <Sun />}
       </T.Switch>
     </T.Container>
   );
