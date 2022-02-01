@@ -36,20 +36,20 @@ const Content = () => {
   return (
     <>
       <C.Name
-        theme={theme}
         data-v2="name"
-        aria-label={`My name is ${config.info.name}`}
-        title={`My name is ${config.info.name}`}
+        theme={theme}
+        aria-label={config.name.aria}
+        title={config.name.aria}
       >
-        {config.info.name}
+        {config.name.display}
       </C.Name>
       <C.Title
-        theme={theme}
         data-v2="title"
-        aria-label={`I am a ${config.info.title}`}
-        title={`I am a ${config.info.title}`}
+        theme={theme}
+        aria-label={config.title.aria}
+        title={config.title.aria}
       >
-        {config.info.title}
+        {config.title.display}
       </C.Title>
     </>
   );

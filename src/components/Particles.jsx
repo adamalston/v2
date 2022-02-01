@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Particles as ReactParticles } from 'react-tsparticles';
 
 import { AppContext } from 'App/AppContext';
-import { options } from 'themes/Theme';
+import options from 'appearance/particleOptions';
 
 const P = {
   Container: styled.div`
@@ -21,12 +21,7 @@ const Particles = () => {
   const { theme } = useContext(AppContext);
 
   return (
-    <P.Container
-      theme={theme}
-      data-v2="particles"
-      aria-label="Particles"
-      title="The site's background is filled with particles"
-    >
+    <P.Container data-v2="particles" theme={theme} aria-label="Particles">
       <ReactParticles width="100vw" height="100vh" options={options} />
     </P.Container>
   );

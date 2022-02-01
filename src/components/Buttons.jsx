@@ -95,13 +95,13 @@ const Buttons = () => {
       {config.buttons.map(({ href, aria, icon, label }, i) => (
         <span className="button-container" key={i}>
           <a
+            data-v2={`button-${label}`}
             className="button"
             href={href}
             target="_self"
             rel="noopener noreferrer"
             aria-label={aria}
             title={aria}
-            data-v2={`button-${label}`}
           >
             <div className="icon">{icon}</div>
             <span className="icon_title" data-v2={label}>

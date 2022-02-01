@@ -101,7 +101,7 @@ describe('application tests', () => {
     expect(parent).toHaveAttribute('href', 'mailto:aalston9@gmail.com');
   });
 
-  it('should toggle between dark and light themes', () => {
+  it('should toggle between the dark and light themes', () => {
     const toggle = screen.getByTestId('toggle');
     const particles = screen.getByTestId('particles');
 
@@ -111,16 +111,15 @@ describe('application tests', () => {
 
     expect(particles).toBeVisible();
     expect(particles).toHaveAccessibleName();
-    expect(particles).toHaveAccessibleDescription();
 
-    // site should default to dark theme
+    // site should default to the dark theme
     expect(toggle).toBeChecked();
     expect(particles).toHaveStyle({ backgroundColor: '#000' });
 
     // click the toggle
     fireEvent.click(toggle);
 
-    // light theme should be visible
+    // the light theme should be visible
     expect(toggle).not.toBeChecked();
     expect(particles).toHaveStyle({ backgroundColor: '#fff' });
   });
@@ -160,5 +159,46 @@ describe('application tests', () => {
     // partial footer should now be visible
     const footer = screen.getByTestId('footer');
     expect(footer).toHaveTextContent(/^Designed and built by Adam Alston$/);
+  });
+});
+
+describe('local storage tests', () => {
+  beforeEach(() => {
+    localStorage.clear();
+  });
+
+  it("should show the dark theme when 'theme' is set to 'true' in local storage", () => {
+    // set local storage item and render the app
+    localStorage.setItem('theme', true);
+    render(<App />);
+
+    // check that the local storage item has been updated correctly
+    expect(localStorage.getItem('theme')).toEqual('dark');
+    const particles = screen.getByTestId('particles');
+    expect(particles).toHaveStyle({ backgroundColor: '#000' });
+  });
+
+  it("should show the light theme when 'theme' is set to 'false' in local storage", () => {
+    // set local storage item and render the app
+    localStorage.setItem('theme', false);
+    render(<App />);
+
+    // check that the local storage item has been updated correctly
+    expect(localStorage.getItem('theme')).toEqual('light');
+    const particles = screen.getByTestId('particles');
+    expect(particles).toHaveStyle({ backgroundColor: '#fff' });
+  });
+
+  // https://testing-library.com/docs/react-testing-library/api/#rerender
+  it('should persist the light theme through an app re-render', () => {
+    const { rerender } = render(<App />);
+    localStorage.setItem('theme', 'light');
+
+    // re-render the app and check the theme
+    rerender(<App />);
+    const particles2 = screen.getByTestId('particles');
+
+    expect(localStorage.getItem('theme')).toEqual('light');
+    expect(particles2).toHaveStyle({ backgroundColor: '#fff' });
   });
 });
