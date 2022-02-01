@@ -20,10 +20,12 @@ const App = () => {
 
     // before the state refactoring, 'theme' had a boolean-ish ('true', 'false')
     // value in localStorage, now 'theme' has a theme value ('dark', 'light'),
-    // to prevent the site from breaking, older 'theme' entries should be removed
+    // to prevent the site from breaking, older 'theme' entries should be updated
     const localStorageTheme = localStorage.getItem('theme');
-    if (localStorageTheme === 'true' || localStorageTheme === 'false') {
-      localStorage.removeItem('theme');
+    if (localStorageTheme === 'true') {
+      localStorage.setItem('theme', 'dark');
+    } else if (localStorageTheme === 'false') {
+      localStorage.setItem('theme', 'light');
     }
 
     setIsReady(true);
