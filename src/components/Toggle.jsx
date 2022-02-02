@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
 
-import { AppContext } from './../App/AppContext';
-import { Moon, Sun } from './../icons';
+import { AppContext } from 'App/AppContext';
+import { Moon, Sun } from 'icons';
 
 const T = {
   Container: styled.main`
@@ -20,8 +20,16 @@ const T = {
       transform: scale(0.9);
     }
   `,
+  /* Toggle CSS changes for accessibility: https://stackoverflow.com/a/20130500 */
   Toggle: styled.input`
-    display: none;
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
   `,
   Switch: styled.label`
     cursor: pointer;
@@ -39,15 +47,33 @@ const T = {
   `,
 };
 
-export const Toggle = () => {
-  const { isDark, setIsDark, theme } = useContext(AppContext);
+const Toggle = () => {
+  const { theme, setTheme } = useContext(AppContext);
+  const isDark = theme.key === 'dark';
+
+  const handleToggle = (e) => {
+    const key = e.target.checked ? 'dark' : 'light';
+    localStorage.setItem('theme', key);
+    setTheme(key);
+  };
 
   return (
     <T.Container>
-      <T.Toggle id='toggle' name='toggle' type='checkbox' checked={isDark} onChange={(e) => setIsDark(e.target.checked)} />
-      <T.Switch theme={theme} htmlFor='toggle'>
+      <T.Toggle
+        data-v2="toggle"
+        id="toggle"
+        name="toggle"
+        type="checkbox"
+        checked={isDark}
+        onChange={(e) => handleToggle(e)}
+        aria-label="Theme toggle"
+        title="Theme toggle"
+      />
+      <T.Switch theme={theme} htmlFor="toggle">
         {isDark ? <Moon /> : <Sun />}
       </T.Switch>
     </T.Container>
   );
 };
+
+export default Toggle;

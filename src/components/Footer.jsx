@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
 
-import { AppContext } from './../App/AppContext';
+import { AppContext } from 'App/AppContext';
 
 const F = {
   Container: styled.div`
@@ -23,21 +23,45 @@ const F = {
   `,
 };
 
-export const Footer = () => {
-  const { theme, isMobile } = useContext(AppContext);
+const Footer = () => {
+  const { isMobile, theme } = useContext(AppContext);
 
   return (
     <F.Container isMobile={isMobile}>
-      <F.Text theme={theme} aria-label='Designed and built by Adam Alston'>Designed and built by&nbsp;
-        <F.Link theme={theme} data-v2='creator' href='https://www.adamalston.com/'>Adam Alston</F.Link>
+      <F.Text
+        data-v2="footer"
+        theme={theme}
+        aria-label="Designed and built by Adam Alston"
+      >
+        {'Designed and built by '}
+        <F.Link
+          data-v2="creator"
+          theme={theme}
+          href="https://www.adamalston.com/"
+          aria-label="Adam's website"
+          title="A link to Adam's personal website"
+        >
+          {'Adam Alston'}
+        </F.Link>
         {isMobile ? (
           <></>
         ) : (
           <>
-            &nbsp;|&nbsp;<F.Link theme={theme} data-v2='source' aria-label='Source code' href='https://github.com/adamalston/v2'>Source</F.Link>
+            {' | '}
+            <F.Link
+              data-v2="source"
+              theme={theme}
+              href="https://github.com/adamalston/v2"
+              aria-label="Source code"
+              title="View this website's source code in GitHub"
+            >
+              {'Source'}
+            </F.Link>
           </>
         )}
       </F.Text>
     </F.Container>
   );
 };
+
+export default Footer;

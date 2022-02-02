@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import styled, { css } from 'styled-components';
 
-import { AppContext } from './../App/AppContext';
+import { AppContext } from 'App/AppContext';
 
 const sharedStyles = css`
   transition: color 0.5s linear;
@@ -11,16 +11,15 @@ const sharedStyles = css`
 `;
 
 const C = {
-  Name: styled.h1`
+  Name: styled.div`
     ${sharedStyles};
     font-size: 6rem;
-    margin: 0 0 3.5rem;
     color: ${({ theme }) => theme.primaryTextColor};
     @media only screen and (max-device-width: 820px) and (-webkit-min-device-pixel-ratio: 2) {
       font-size: 4.5rem;
     }
   `,
-  Title: styled.h2`
+  Title: styled.div`
     ${sharedStyles};
     font-size: 3.5rem;
     margin: 4rem 0;
@@ -31,13 +30,29 @@ const C = {
   `,
 };
 
-export const Content = () => {
-  const { theme } = useContext(AppContext);
+const Content = () => {
+  const { config, theme } = useContext(AppContext);
 
   return (
-    <div>
-      <C.Name theme={theme} data-v2='name' aria-label='My name is Adam Alston'>Adam Alston</C.Name>
-      <C.Title theme={theme} data-v2='title' aria-label='Happy New Year!'>Happy New Year!</C.Title>
-    </div>
+    <>
+      <C.Name
+        data-v2="name"
+        theme={theme}
+        aria-label={config.name.aria}
+        title={config.name.aria}
+      >
+        {config.name.display}
+      </C.Name>
+      <C.Title
+        data-v2="title"
+        theme={theme}
+        aria-label={config.title.aria}
+        title={config.title.aria}
+      >
+        {config.title.display}
+      </C.Title>
+    </>
   );
 };
+
+export default Content;
