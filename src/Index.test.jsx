@@ -121,7 +121,7 @@ describe('application tests', () => {
 
     // the light theme should be visible
     expect(toggle).not.toBeChecked();
-    expect(particles).toHaveStyle({ backgroundColor: '#fff' });
+    expect(particles).toHaveStyle({ backgroundColor: '#aaa' });
   });
 
   it('should render full footer on desktop', () => {
@@ -186,7 +186,7 @@ describe('local storage tests', () => {
     // check that the local storage item has been updated correctly
     expect(localStorage.getItem('theme')).toEqual('light');
     const particles = screen.getByTestId('particles');
-    expect(particles).toHaveStyle({ backgroundColor: '#fff' });
+    expect(particles).toHaveStyle({ backgroundColor: '#aaa' });
   });
 
   // https://testing-library.com/docs/react-testing-library/api/#rerender
@@ -199,6 +199,6 @@ describe('local storage tests', () => {
     const particles2 = screen.getByTestId('particles');
 
     expect(localStorage.getItem('theme')).toEqual('light');
-    expect(particles2).toHaveStyle({ backgroundColor: '#fff' });
+    expect(particles2).toHaveStyle({ backgroundColor: '#aaa' });
   });
 });

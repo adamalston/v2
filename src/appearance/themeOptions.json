@@ -11,8 +11,8 @@
     "key": "light",
     "primaryTextColor": "#000",
     "secondaryTextColor": "#333",
-    "tertiaryTextColor": "#777",
-    "background": "#fff",
+    "tertiaryTextColor": "#555",
+    "background": "#aaa",
     "shadowColor": "rgba(255, 255, 255, 0.5)"
   }
 }

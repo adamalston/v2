@@ -22,7 +22,7 @@ const Particles = () => {
 
   return (
     <P.Container data-v2="particles" theme={theme} aria-label="Particles">
-      <ReactParticles width="100vw" height="100vh" options={options} />
+      <ReactParticles width="100vw" height="100vh" options={options.snow} />
     </P.Container>
   );
 };
