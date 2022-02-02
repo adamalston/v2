@@ -1,24 +1,50 @@
-import React, { createContext } from 'react';
+import React, { createContext, useReducer } from 'react';
 
-import usePersistentState from './../hooks/PersistentState';
-import { dark } from '../themes/Theme';
+import themes from 'appearance/themeOptions';
 
-export const AppContext = createContext({
-  isDark: Boolean,
-  setIsDark: () => {},
-});
-
-export const ThemeProvider = ({ children }) => {
-  const [isDark, setIsDark] = usePersistentState('theme', true); // default: dark mode
-  const theme = dark; // Fireworks are better in the dark
-
-  const isMobile = window.matchMedia(
-    '(max-device-width: 820px) and (-webkit-min-device-pixel-ratio: 2)'
-  )?.matches;
-
-  return (
-    <AppContext.Provider value={{ isDark, setIsDark, theme, isMobile }}>
-      {children}
-    </AppContext.Provider>
-  );
+const initialState = {
+  config: {},
+  isMobile: false,
+  theme: themes.dark,
+  setTheme: () => {},
 };
+
+const actions = { SET_THEME: 'SET_THEME' };
+
+const reducer = (state, action) => {
+  switch (action.type) {
+    case actions.SET_THEME:
+      return { ...state, theme: themes[action.value] };
+    default:
+      return state;
+  }
+};
+
+const AppContext = createContext(initialState);
+
+const AppProvider = ({ config, isMobile, children }) => {
+  initialState.config = config;
+  initialState.isMobile = isMobile;
+
+  // const supportedThemes = Object.keys(themes);
+  // const localStorageTheme = localStorage.getItem('theme');
+
+  // if (supportedThemes.includes(localStorageTheme)) {
+  //   initialState.theme = themes[localStorageTheme];
+  // }
+
+  const [state, dispatch] = useReducer(reducer, initialState);
+
+  const value = {
+    config: state.config,
+    isMobile: state.isMobile,
+    theme: state.theme,
+    setTheme: (value) => {
+      dispatch({ type: actions.SET_THEME, value });
+    },
+  };
+
+  return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
+};
+
+export { AppContext, AppProvider };

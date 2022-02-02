@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import styled, { css } from 'styled-components';
 
-import { AppContext } from './../App/AppContext';
+import { AppContext } from 'App/AppContext';
 
 const sharedStyles = css`
   transition: color 0.5s linear;
@@ -30,27 +30,29 @@ const C = {
   `,
 };
 
-export const Content = () => {
-  const { theme } = useContext(AppContext);
+const Content = () => {
+  const { config, theme } = useContext(AppContext);
 
   return (
     <>
       <C.Name
-        theme={theme}
         data-v2="name"
-        aria-label="My name is Adam Alston"
-        title="My name is Adam Alston"
+        theme={theme}
+        aria-label={config.name.aria}
+        title={config.name.aria}
       >
-        {'Adam Alston'}
+        {config.name.display}
       </C.Name>
       <C.Title
-        theme={theme}
         data-v2="title"
-        aria-label="Happy New Year!"
-        title="Happy New Year!"
+        theme={theme}
+        aria-label={config.title.aria}
+        title={config.title.aria}
       >
-        {'Happy New Year!'}
+        {config.title.display}
       </C.Title>
     </>
   );
 };
+
+export default Content;

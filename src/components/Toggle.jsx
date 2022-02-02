@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
 
-import { AppContext } from './../App/AppContext';
-import { Moon, Sun } from './../icons';
+import { AppContext } from 'App/AppContext';
+import { Moon, Sun } from 'icons';
 
 const T = {
   Container: styled.main`
@@ -47,18 +47,25 @@ const T = {
   `,
 };
 
-export const Toggle = () => {
-  const { isDark, setIsDark, theme } = useContext(AppContext);
+const Toggle = () => {
+  const { theme, setTheme } = useContext(AppContext);
+  const isDark = theme.key === 'dark';
+
+  const handleToggle = (e) => {
+    const key = e.target.checked ? 'dark' : 'light';
+    localStorage.setItem('theme', key);
+    setTheme(key);
+  };
 
   return (
     <T.Container>
       <T.Toggle
+        data-v2="toggle"
         id="toggle"
         name="toggle"
         type="checkbox"
-        data-v2="toggle"
         checked={isDark}
-        onChange={(e) => setIsDark(e.target.checked)}
+        onChange={(e) => handleToggle(e)}
         aria-label="Theme toggle"
         title="Theme toggle"
       />
@@ -68,3 +75,5 @@ export const Toggle = () => {
     </T.Container>
   );
 };
+
+export default Toggle;
