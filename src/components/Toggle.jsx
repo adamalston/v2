@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import styled from 'styled-components';
 
 import { AppContext } from 'App/AppContext';
-import { Moon, Sun } from 'icons';
+import { TempUp, TempDown } from 'icons';
 
 const T = {
   Container: styled.main`
@@ -70,7 +70,7 @@ const Toggle = () => {
         title="Theme toggle"
       />
       <T.Switch theme={theme} htmlFor="toggle">
-        {isDark ? <Moon /> : <Sun />}
+        {isDark ? <TempDown /> : <TempUp />}
       </T.Switch>
     </T.Container>
   );
