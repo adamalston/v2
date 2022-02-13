@@ -14,6 +14,14 @@ describe('application tests', () => {
     render(<App />);
   });
 
+  const checkContent = (element, display, link) => {
+    expect(element).toBeVisible();
+    expect(element).toHaveAccessibleName();
+    expect(element).toHaveAccessibleDescription();
+    expect(element).toHaveTextContent(display);
+    if (link) expect(element).toHaveAttribute('href', link);
+  };
+
   const checkButton = (parent, child, display, link) => {
     expect(child).toHaveTextContent(display);
 
@@ -26,39 +34,25 @@ describe('application tests', () => {
   it('should render name: Adam Alston', () => {
     const element = screen.getByTestId('name');
 
-    expect(element).toBeVisible();
-    expect(element).toHaveAccessibleName();
-    expect(element).toHaveAccessibleDescription();
-    expect(element).toHaveTextContent(/^Adam Alston$/);
+    checkContent(element, /^Adam Alston$/);
   });
 
   it('should render title: Software Engineer', () => {
     const element = screen.getByTestId('title');
 
-    expect(element).toBeVisible();
-    expect(element).toHaveAccessibleName();
-    expect(element).toHaveAccessibleDescription();
-    expect(element).toHaveTextContent(/^Software Engineer$/);
+    checkContent(element, /^Software Engineer$/);
   });
 
   it('should render creator', () => {
     const element = screen.getByTestId('creator');
 
-    expect(element).toBeVisible();
-    expect(element).toHaveAccessibleName();
-    expect(element).toHaveAccessibleDescription();
-    expect(element).toHaveTextContent(/^Adam Alston$/);
-    expect(element).toHaveAttribute('href', 'https://www.adamalston.com');
+    checkContent(element, /^Adam Alston$/, 'https://www.adamalston.com');
   });
 
   it('should render link to source code', () => {
     const element = screen.getByTestId('source');
 
-    expect(element).toBeVisible();
-    expect(element).toHaveAccessibleName();
-    expect(element).toHaveAccessibleDescription();
-    expect(element).toHaveTextContent(/^Source$/);
-    expect(element).toHaveAttribute('href', 'https://github.com/adamalston/v2');
+    checkContent(element, /^Source$/, 'https://github.com/adamalston/v2/');
   });
 
   it('should render GitHub button', () => {
