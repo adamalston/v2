@@ -47,4 +47,4 @@ const AppProvider = ({ config, isMobile, children }) => {
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 };
 
-export { AppContext, AppProvider };
+export { AppContext, AppProvider, reducer };

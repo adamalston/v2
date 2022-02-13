@@ -37,7 +37,7 @@ const Footer = () => {
         <F.Link
           data-v2="creator"
           theme={theme}
-          href="https://www.adamalston.com/"
+          href="https://www.adamalston.com"
           aria-label="Adam's website"
           title="A link to Adam's personal website"
         >
