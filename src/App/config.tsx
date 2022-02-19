@@ -1,6 +1,7 @@
+import { Config } from './types';
 import { GitHub, LinkedIn, Resume, Email } from 'icons';
 
-const config = {
+const config: Config = {
   name: {
     display: 'Adam Alston',
     aria: 'My name is Adam Alston',
@@ -11,28 +12,28 @@ const config = {
   },
   buttons: [
     {
-      href: 'https://github.com/adamalston/',
+      display: 'GitHub',
       aria: 'Visit my GitHub profile',
       icon: <GitHub />,
-      label: 'GitHub',
+      href: 'https://github.com/adamalston/',
     },
     {
-      href: 'https://www.linkedin.com/in/adam-alston/',
+      display: 'LinkedIn',
       aria: 'Visit my LinkedIn profile',
       icon: <LinkedIn />,
-      label: 'LinkedIn',
+      href: 'https://www.linkedin.com/in/adam-alston/',
     },
     {
-      href: 'https://drive.google.com/drive/folders/10k8NWflSYQ5laPzuWtK3bzUKzuOeas8i/',
+      display: 'Resume',
       aria: 'View my resume in Google Drive',
       icon: <Resume />,
-      label: 'Resume',
+      href: 'https://drive.google.com/drive/folders/10k8NWflSYQ5laPzuWtK3bzUKzuOeas8i/',
     },
     {
-      href: 'mailto:aalston9@gmail.com',
+      display: 'Email',
       aria: 'Send me an email',
       icon: <Email />,
-      label: 'Email',
+      href: 'mailto:aalston9@gmail.com',
     },
   ],
 };

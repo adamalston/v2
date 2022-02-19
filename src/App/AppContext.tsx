@@ -1,9 +1,10 @@
 import React, { createContext, useReducer } from 'react';
 
-import themes from 'appearance/themeOptions';
+import { AppContextInterface, Config } from './types';
+import themes from 'appearance/themeOptions.json';
 
-const initialState = {
-  config: {},
+const initialState: AppContextInterface = {
+  config: {} as Config,
   isMobile: false,
   theme: themes.dark,
   setTheme: () => {},

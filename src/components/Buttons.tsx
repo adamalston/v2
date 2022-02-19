@@ -92,10 +92,10 @@ const Buttons = () => {
 
   return (
     <Container theme={theme}>
-      {config.buttons.map(({ href, aria, icon, label }, i) => (
+      {config.buttons.map(({ href, aria, icon, display }, i) => (
         <span className="button-container" key={i}>
           <a
-            data-v2={`button-${label}`}
+            data-v2={`button-${display}`}
             className="button"
             href={href}
             target="_self"
@@ -104,8 +104,8 @@ const Buttons = () => {
             title={aria}
           >
             <div className="icon">{icon}</div>
-            <span className="icon_title" data-v2={label}>
-              {label}
+            <span className="icon_title" data-v2={display}>
+              {display}
             </span>
           </a>
         </span>

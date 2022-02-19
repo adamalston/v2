@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Particles as ReactParticles } from 'react-tsparticles';
 
 import { AppContext } from 'App/AppContext';
-import options from 'appearance/particleOptions';
+import options from 'appearance/particleOptions.json';
 
 const P = {
   Container: styled.div`

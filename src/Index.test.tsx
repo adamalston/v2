@@ -5,7 +5,7 @@ import '__mocks__/matchMedia';
 import App from 'App/App';
 import { AppProvider, reducer } from 'App/AppContext';
 import { Footer } from 'components';
-import themes from 'appearance/themeOptions';
+import themes from 'appearance/themeOptions.json';
 
 configure({ testIdAttribute: 'data-v2' });
 
@@ -14,7 +14,7 @@ describe('application tests', () => {
     render(<App />);
   });
 
-  const checkContent = (element, display, link) => {
+  const checkContent = (element, display, link?) => {
     expect(element).toBeVisible();
     expect(element).toHaveAccessibleName();
     expect(element).toHaveAccessibleDescription();
@@ -127,7 +127,7 @@ describe('application tests', () => {
 
 describe('app context tests', () => {
   it('should render partial footer on mobile', () => {
-    render(<AppProvider isMobile={true} children={<Footer />} />);
+    render(<AppProvider config={{}} isMobile={true} children={<Footer />} />);
 
     // partial footer should now be visible
     const footer = screen.getByTestId('footer');
@@ -160,7 +160,7 @@ describe('local storage tests', () => {
 
   it("should show the dark theme when 'theme' is set to 'true' in local storage", () => {
     // set local storage item and render the app
-    localStorage.setItem('theme', true);
+    localStorage.setItem('theme', 'true');
     render(<App />);
 
     // check that the local storage item has been updated correctly
@@ -171,7 +171,7 @@ describe('local storage tests', () => {
 
   it("should show the light theme when 'theme' is set to 'false' in local storage", () => {
     // set local storage item and render the app
-    localStorage.setItem('theme', false);
+    localStorage.setItem('theme', 'false');
     render(<App />);
 
     // check that the local storage item has been updated correctly
