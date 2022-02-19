@@ -3,6 +3,9 @@ import { configure, fireEvent, render, screen } from '@testing-library/react';
 
 import '__mocks__/matchMedia';
 import App from 'App/App';
+import { AppProvider, reducer } from 'App/AppContext';
+import { Footer } from 'components';
+import themes from 'appearance/themeOptions';
 
 configure({ testIdAttribute: 'data-v2' });
 
@@ -11,94 +14,83 @@ describe('application tests', () => {
     render(<App />);
   });
 
-  it('should render name: Adam Alston', () => {
-    const element = screen.getByTestId('name');
-
+  const checkContent = (element, display, link) => {
     expect(element).toBeVisible();
     expect(element).toHaveAccessibleName();
     expect(element).toHaveAccessibleDescription();
-    expect(element).toHaveTextContent(/^Adam Alston$/);
+    expect(element).toHaveTextContent(display);
+    if (link) expect(element).toHaveAttribute('href', link);
+  };
+
+  const checkButton = (parent, child, display, link) => {
+    expect(child).toHaveTextContent(display);
+
+    expect(parent).toBeVisible();
+    expect(parent).toHaveAccessibleName();
+    expect(parent).toHaveAccessibleDescription();
+    expect(parent).toHaveAttribute('href', link);
+  };
+
+  it('should render name: Adam Alston', () => {
+    const element = screen.getByTestId('name');
+
+    checkContent(element, /^Adam Alston$/);
   });
 
   it('should render title: Software Engineer', () => {
     const element = screen.getByTestId('title');
 
-    expect(element).toBeVisible();
-    expect(element).toHaveAccessibleName();
-    expect(element).toHaveAccessibleDescription();
-    expect(element).toHaveTextContent(/^Software Engineer$/);
+    checkContent(element, /^Software Engineer$/);
   });
 
   it('should render creator', () => {
     const element = screen.getByTestId('creator');
 
-    expect(element).toBeVisible();
-    expect(element).toHaveAccessibleName();
-    expect(element).toHaveAccessibleDescription();
-    expect(element).toHaveTextContent(/^Adam Alston$/);
+    checkContent(element, /^Adam Alston$/, 'https://www.adamalston.com');
   });
 
   it('should render link to source code', () => {
     const element = screen.getByTestId('source');
 
-    expect(element).toBeVisible();
-    expect(element).toHaveAccessibleName();
-    expect(element).toHaveAccessibleDescription();
-    expect(element).toHaveAttribute('href', 'https://github.com/adamalston/v2');
+    checkContent(element, /^Source$/, 'https://github.com/adamalston/v2/');
   });
 
   it('should render GitHub button', () => {
-    const child = screen.getByTestId('GitHub');
     const parent = screen.getByTestId('button-GitHub');
+    const child = screen.getByTestId('GitHub');
 
-    expect(child).toHaveTextContent(/^GitHub$/);
-
-    expect(parent).toBeVisible();
-    expect(parent).toHaveAccessibleName();
-    expect(parent).toHaveAccessibleDescription();
-    expect(parent).toHaveAttribute('href', 'https://github.com/adamalston/');
+    checkButton(parent, child, /^GitHub$/, 'https://github.com/adamalston/');
   });
 
   it('should render LinkedIn button', () => {
-    const child = screen.getByTestId('LinkedIn');
     const parent = screen.getByTestId('button-LinkedIn');
+    const child = screen.getByTestId('LinkedIn');
 
-    expect(child).toHaveTextContent(/^LinkedIn$/);
-
-    expect(parent).toBeVisible();
-    expect(parent).toHaveAccessibleName();
-    expect(parent).toHaveAccessibleDescription();
-    expect(parent).toHaveAttribute(
-      'href',
+    checkButton(
+      parent,
+      child,
+      /^LinkedIn$/,
       'https://www.linkedin.com/in/adam-alston/'
     );
   });
 
   it('should render Resume button', () => {
-    const child = screen.getByTestId('Resume');
     const parent = screen.getByTestId('button-Resume');
+    const child = screen.getByTestId('Resume');
 
-    expect(child).toHaveTextContent(/^Resume$/);
-
-    expect(parent).toBeVisible();
-    expect(parent).toHaveAccessibleName();
-    expect(parent).toHaveAccessibleDescription();
-    expect(parent).toHaveAttribute(
-      'href',
+    checkButton(
+      parent,
+      child,
+      /^Resume$/,
       'https://drive.google.com/drive/folders/10k8NWflSYQ5laPzuWtK3bzUKzuOeas8i/'
     );
   });
 
   it('should render Email button', () => {
-    const child = screen.getByTestId('Email');
     const parent = screen.getByTestId('button-Email');
+    const child = screen.getByTestId('Email');
 
-    expect(child).toHaveTextContent(/^Email$/);
-
-    expect(parent).toBeVisible();
-    expect(parent).toHaveAccessibleName();
-    expect(parent).toHaveAccessibleDescription();
-    expect(parent).toHaveAttribute('href', 'mailto:aalston9@gmail.com');
+    checkButton(parent, child, /^Email$/, 'mailto:aalston9@gmail.com');
   });
 
   it('should toggle between the dark and light themes', () => {
@@ -131,34 +123,33 @@ describe('application tests', () => {
       /^Designed and built by Adam Alston \| Source$/
     );
   });
+});
 
-  it.skip('should render partial footer on mobile', () => {
-    // resize the screen to a mobile resolution
-    Object.defineProperty(window, 'innerWidth', {
-      writable: true,
-      configurable: true,
-      value: 1170,
-    });
-    Object.defineProperty(window, 'innerHeight', {
-      writable: true,
-      configurable: true,
-      value: 2532,
-    });
-    Object.defineProperty(window, 'devicePixelRatio', {
-      writable: true,
-      configurable: true,
-      value: 4,
-    });
-
-    window.dispatchEvent(new Event('resize'));
-
-    expect(window.innerWidth).toBe(1170);
-    expect(window.innerHeight).toBe(2532);
-    expect(window.devicePixelRatio).toBe(4);
+describe('app context tests', () => {
+  it('should render partial footer on mobile', () => {
+    render(<AppProvider isMobile={true} children={<Footer />} />);
 
     // partial footer should now be visible
     const footer = screen.getByTestId('footer');
     expect(footer).toHaveTextContent(/^Designed and built by Adam Alston$/);
+    expect(footer).not.toHaveTextContent(/Source/);
+  });
+
+  describe('reducer tests', () => {
+    it('should return the initial state', () => {
+      const state = reducer(undefined, {});
+      expect(state).toEqual(undefined);
+    });
+
+    it('should return the dark theme', () => {
+      const state = reducer(undefined, { type: 'SET_THEME', value: 'dark' });
+      expect(state).toEqual({ theme: themes.dark });
+    });
+
+    it('should return the light theme', () => {
+      const state = reducer(undefined, { type: 'SET_THEME', value: 'light' });
+      expect(state).toEqual({ theme: themes.light });
+    });
   });
 });
 
@@ -192,13 +183,28 @@ describe('local storage tests', () => {
   // https://testing-library.com/docs/react-testing-library/api/#rerender
   it('should persist the light theme through an app re-render', () => {
     const { rerender } = render(<App />);
+
+    expect(localStorage.getItem('theme')).toBeNull();
     localStorage.setItem('theme', 'light');
 
     // re-render the app and check the theme
     rerender(<App />);
-    const particles2 = screen.getByTestId('particles');
+    const particles = screen.getByTestId('particles');
 
     expect(localStorage.getItem('theme')).toEqual('light');
-    expect(particles2).toHaveStyle({ backgroundColor: '#fff' });
+    expect(particles).toHaveStyle({ backgroundColor: '#fff' });
+  });
+
+  it('should change local storage value when toggle is clicked', () => {
+    // set local storage item and render the app
+    localStorage.setItem('theme', 'light');
+    render(<App />);
+
+    // click the toggle
+    const toggle = screen.getByTestId('toggle');
+    fireEvent.click(toggle);
+
+    // check that the local storage item has been changed
+    expect(localStorage.getItem('theme')).not.toEqual('light');
   });
 });
