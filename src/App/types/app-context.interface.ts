@@ -1,10 +1,14 @@
-import Config from './config.interface';
+import { Config } from '.';
+import { Theme } from 'appearance/types/theme.interface';
 
-interface AppContextInterface {
+interface AppProviderInterface {
   config: Config;
   isMobile: boolean;
-  theme: any;
+}
+
+interface AppContextInterface extends AppProviderInterface {
+  theme: Theme;
   setTheme: Function;
 }
 
-export default AppContextInterface;
+export { AppProviderInterface, AppContextInterface };

@@ -1,4 +1,2 @@
-import AppContextInterface from './app-context.interface';
-import Config from './config.interface';
-
-export { AppContextInterface, Config };
+export * from './app-context.interface';
+export * from './config.interface';

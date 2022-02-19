@@ -1,6 +1,6 @@
 import React, { createContext, useReducer } from 'react';
 
-import { AppContextInterface, Config } from './types';
+import { AppProviderInterface, AppContextInterface, Config } from './types';
 import themes from 'appearance/themeOptions.json';
 
 const initialState: AppContextInterface = {
@@ -23,7 +23,11 @@ const reducer = (state, action) => {
 
 const AppContext = createContext(initialState);
 
-const AppProvider = ({ config, isMobile, children }) => {
+const AppProvider: React.FC<AppProviderInterface> = ({
+  config,
+  isMobile,
+  children,
+}) => {
   initialState.config = config;
   initialState.isMobile = isMobile;
 

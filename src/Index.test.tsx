@@ -127,7 +127,9 @@ describe('application tests', () => {
 
 describe('app context tests', () => {
   it('should render partial footer on mobile', () => {
-    render(<AppProvider config={{}} isMobile={true} children={<Footer />} />);
+    render(
+      <AppProvider config={{} as any} isMobile={true} children={<Footer />} />
+    );
 
     // partial footer should now be visible
     const footer = screen.getByTestId('footer');

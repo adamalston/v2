@@ -14,4 +14,4 @@ interface Config {
   buttons: Button[];
 }
 
-export default Config;
+export { Content, Button, Config };
