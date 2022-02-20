@@ -53,8 +53,11 @@
   },
   "jest": {
     "collectCoverageFrom": [
-      "**/*.{js,jsx}",
-      "!**/index.jsx"
+      "**/*.{js,jsx,ts,tsx}",
+      "!**/index.{js,jsx,ts,tsx}"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/types/"
     ]
   }
 }

@@ -41,10 +41,10 @@ const AppProvider: React.FC<AppProviderInterface> = ({
   initialState.config = config;
   initialState.isMobile = isMobile;
 
-  const supportedThemes = Object.keys(themes);
-  const localStorageTheme = localStorage.getItem('theme');
+  const supportedThemes: string[] = Object.keys(themes);
+  const localStorageTheme: string | null = localStorage.getItem('theme');
 
-  if (supportedThemes.includes(localStorageTheme)) {
+  if (localStorageTheme && supportedThemes.includes(localStorageTheme)) {
     initialState.theme = themes[localStorageTheme];
   }
 

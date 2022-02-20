@@ -49,10 +49,11 @@ const T = {
 
 const Toggle: React.FC = () => {
   const { theme, setTheme } = useContext(AppContext);
-  const isDark = theme.key === 'dark';
+  const isDark: boolean = theme.key === 'dark';
 
-  const handleToggle = (e) => {
-    const key = e.target.checked ? 'dark' : 'light';
+  const handleToggle = (checked: boolean) => {
+    const key: string = checked ? 'dark' : 'light';
+
     localStorage.setItem('theme', key);
     setTheme(key);
   };
@@ -65,7 +66,9 @@ const Toggle: React.FC = () => {
         name="toggle"
         type="checkbox"
         checked={isDark}
-        onChange={(e) => handleToggle(e)}
+        onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+          handleToggle(e.target.checked)
+        }
         aria-label="Theme toggle"
         title="Theme toggle"
       />

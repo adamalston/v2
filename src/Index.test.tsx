@@ -14,7 +14,17 @@ describe('application tests', () => {
     render(<App />);
   });
 
-  const checkContent = (element, display, link?) => {
+  /**
+   * Check content element
+   * @param {HTMLElement} element Element for the content
+   * @param {RegExp} display Display value for the content
+   * @param {string} [link] Optional link within the content
+   */
+  const checkContent = (
+    element: HTMLElement,
+    display: RegExp,
+    link?: string
+  ) => {
     expect(element).toBeVisible();
     expect(element).toHaveAccessibleName();
     expect(element).toHaveAccessibleDescription();
@@ -22,7 +32,19 @@ describe('application tests', () => {
     if (link) expect(element).toHaveAttribute('href', link);
   };
 
-  const checkButton = (parent, child, display, link) => {
+  /**
+   * Check button element
+   * @param {HTMLElement} parent Parent element for the button
+   * @param {HTMLElement} child Child element for the button
+   * @param {RegExp} display Display value for the button
+   * @param {string} link Link within the button
+   */
+  const checkButton = (
+    parent: HTMLElement,
+    child: HTMLElement,
+    display: RegExp,
+    link: string
+  ) => {
     expect(child).toHaveTextContent(display);
 
     expect(parent).toBeVisible();
@@ -133,6 +155,7 @@ describe('app context tests', () => {
 
     // partial footer should now be visible
     const footer = screen.getByTestId('footer');
+
     expect(footer).toHaveTextContent(/^Designed and built by Adam Alston$/);
     expect(footer).not.toHaveTextContent(/Source/);
   });
@@ -140,16 +163,19 @@ describe('app context tests', () => {
   describe('reducer tests', () => {
     it('should return the initial state', () => {
       const state = reducer(undefined, {});
+
       expect(state).toEqual(undefined);
     });
 
     it('should return the dark theme', () => {
       const state = reducer(undefined, { type: 'SET_THEME', value: 'dark' });
+
       expect(state).toEqual({ theme: themes.dark });
     });
 
     it('should return the light theme', () => {
       const state = reducer(undefined, { type: 'SET_THEME', value: 'light' });
+
       expect(state).toEqual({ theme: themes.light });
     });
   });
@@ -178,6 +204,7 @@ describe('local storage tests', () => {
 
     // check that the local storage item has been updated correctly
     expect(localStorage.getItem('theme')).toEqual('light');
+
     const particles = screen.getByTestId('particles');
     expect(particles).toHaveStyle({ backgroundColor: '#fff' });
   });

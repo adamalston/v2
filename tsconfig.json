@@ -7,7 +7,8 @@
     "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
     "forceConsistentCasingInFileNames": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "strict": true
   },
   "include": ["src/**/*"]
 }

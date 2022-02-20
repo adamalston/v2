@@ -1,7 +1,7 @@
-import Toggle from './Toggle';
-import Content from './Content';
 import Buttons from './Buttons';
+import Content from './Content';
 import Footer from './Footer';
 import Particles from './Particles';
+import Toggle from './Toggle';
 
-export { Toggle, Content, Buttons, Footer, Particles };
+export { Buttons, Content, Footer, Particles, Toggle };

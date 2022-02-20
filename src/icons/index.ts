@@ -1,8 +1,8 @@
-import Moon from './Moon';
-import Sun from './Sun';
+import Email from './Email';
 import GitHub from './GitHub';
 import LinkedIn from './LinkedIn';
+import Moon from './Moon';
 import Resume from './Resume';
-import Email from './Email';
+import Sun from './Sun';
 
-export { Moon, Sun, GitHub, LinkedIn, Resume, Email };
+export { Email, GitHub, LinkedIn, Moon, Resume, Sun };

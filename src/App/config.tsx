@@ -1,6 +1,6 @@
 import React from 'react';
 import { Config } from 'types';
-import { GitHub, LinkedIn, Resume, Email } from 'icons';
+import { Email, GitHub, LinkedIn, Resume } from 'icons';
 
 const config: Config = {
   name: {
