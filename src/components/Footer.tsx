@@ -23,7 +23,7 @@ const F = {
   `,
 };
 
-const Footer = () => {
+const Footer: React.FC = () => {
   const { isMobile, theme } = useContext(AppContext);
 
   return (

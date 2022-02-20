@@ -87,12 +87,12 @@ const Container = styled.div`
   }
 `;
 
-const Buttons = () => {
+const Buttons: React.FC = () => {
   const { config, theme } = useContext(AppContext);
 
   return (
     <Container theme={theme}>
-      {config.buttons.map(({ href, aria, icon, display }, i) => (
+      {config.buttons.map(({ display, aria, icon, href }, i) => (
         <span className="button-container" key={i}>
           <a
             data-v2={`button-${display}`}

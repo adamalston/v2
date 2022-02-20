@@ -5,7 +5,7 @@ import '__mocks__/matchMedia';
 import App from 'App/App';
 import { AppProvider, reducer } from 'App/AppContext';
 import { Footer } from 'components';
-import themes from 'appearance/themeOptions.json';
+import { themes } from 'appearance';
 
 configure({ testIdAttribute: 'data-v2' });
 

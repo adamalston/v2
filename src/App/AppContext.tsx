@@ -1,7 +1,17 @@
-import React, { createContext, useReducer } from 'react';
+import React, { createContext, Dispatch, useReducer } from 'react';
 
-import { AppProviderInterface, AppContextInterface, Config } from './types';
-import themes from 'appearance/themeOptions.json';
+import { themes } from 'appearance';
+import { Config, Theme } from 'types';
+
+interface AppProviderInterface {
+  config: Config;
+  isMobile: boolean;
+}
+
+interface AppContextInterface extends AppProviderInterface {
+  theme: Theme;
+  setTheme: Dispatch<string>;
+}
 
 const initialState: AppContextInterface = {
   config: {} as Config,
@@ -12,7 +22,7 @@ const initialState: AppContextInterface = {
 
 const actions = { SET_THEME: 'SET_THEME' };
 
-const reducer = (state, action) => {
+const reducer = (state: any, action: any) => {
   switch (action.type) {
     case actions.SET_THEME:
       return { ...state, theme: themes[action.value] };
@@ -44,7 +54,7 @@ const AppProvider: React.FC<AppProviderInterface> = ({
     config: state.config,
     isMobile: state.isMobile,
     theme: state.theme,
-    setTheme: (value) => {
+    setTheme: (value: string) => {
       dispatch({ type: actions.SET_THEME, value });
     },
   };

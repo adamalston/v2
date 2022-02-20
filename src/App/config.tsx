@@ -1,5 +1,5 @@
 import React from 'react';
-import { Config } from './types';
+import { Config } from 'types';
 import { GitHub, LinkedIn, Resume, Email } from 'icons';
 
 const config: Config = {

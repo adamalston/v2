@@ -15,8 +15,8 @@
     "test": "react-scripts test",
     "test:coverage": "react-scripts test --coverage --watchAll",
     "eject": "react-scripts eject",
-    "lint": "eslint ./src --ext .js,.jsx --fix --max-warnings 0",
-    "format": "prettier --config ./.prettierrc --write \"./src/**/*.{js,jsx,css,scss,json}\""
+    "lint": "eslint ./src --ext .js,.jsx,.ts,.tsx --fix --max-warnings 0",
+    "format": "prettier --config ./.prettierrc --write \"./src/**/*.{js,jsx,ts,tsx,css,scss,json}\""
   },
   "browserslist": {
     "production": [
@@ -38,6 +38,7 @@
     "@types/node": "^17.0.18",
     "@types/react": "^17.0.39",
     "@types/react-dom": "^17.0.11",
+    "@types/styled-components": "^5.1.23",
     "husky": "^7.0.4",
     "jest-canvas-mock": "^2.3.1",
     "prettier": "^2.5.1",

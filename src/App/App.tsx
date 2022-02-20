@@ -5,7 +5,7 @@ import { AppProvider } from './AppContext';
 import { Toggle, Content, Buttons, Footer, Particles } from 'components';
 import config from './config';
 
-const App = () => {
+const App: React.FC = () => {
   const [isReady, setIsReady] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 

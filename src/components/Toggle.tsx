@@ -47,7 +47,7 @@ const T = {
   `,
 };
 
-const Toggle = () => {
+const Toggle: React.FC = () => {
   const { theme, setTheme } = useContext(AppContext);
   const isDark = theme.key === 'dark';
 

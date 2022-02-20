@@ -30,7 +30,7 @@ const C = {
   `,
 };
 
-const Content = () => {
+const Content: React.FC = () => {
   const { config, theme } = useContext(AppContext);
 
   return (
