@@ -43,9 +43,7 @@ const Footer: React.FC = () => {
         >
           {'Adam Alston'}
         </F.Link>
-        {isMobile ? (
-          <></>
-        ) : (
+        {!isMobile && (
           <>
             {' | '}
             <F.Link

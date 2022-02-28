@@ -43,7 +43,6 @@ const AppProvider: React.FC<AppProviderInterface> = ({
 
   const supportedThemes: string[] = Object.keys(themes);
   const localStorageTheme: string | null = localStorage.getItem('theme');
-
   if (localStorageTheme && supportedThemes.includes(localStorageTheme)) {
     initialState.theme = themes[localStorageTheme];
   }

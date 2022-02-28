@@ -2,6 +2,11 @@ import type { ISourceOptions } from 'tsparticles';
 
 // https://github.com/matteobruni/tsparticles/issues/2771
 const options: ISourceOptions = {
+  retinaDetect: true,
+  fpsLimit: 90,
+  fullScreen: {
+    enable: false,
+  },
   particles: {
     number: {
       value: 100,
@@ -20,7 +25,7 @@ const options: ISourceOptions = {
         color: '000',
       },
       polygon: {
-        nb_sides: 5,
+        sides: 5,
       },
       image: {
         src: 'img/github.svg',
@@ -34,7 +39,7 @@ const options: ISourceOptions = {
       anim: {
         enable: false,
         speed: 1,
-        opacity_min: 0.5,
+        minimumValue: 0.5,
         sync: false,
       },
     },
@@ -47,7 +52,7 @@ const options: ISourceOptions = {
       anim: {
         enable: false,
         speed: 30,
-        size_min: 0.1,
+        minimumValue: 0.1,
         sync: true,
       },
     },
@@ -66,7 +71,7 @@ const options: ISourceOptions = {
       direction: 'none',
       random: false,
       straight: false,
-      out_mode: 'bounce',
+      outMode: 'bounce',
       bounce: false,
       attract: {
         enable: false,
@@ -76,7 +81,7 @@ const options: ISourceOptions = {
     },
   },
   interactivity: {
-    detect_on: 'canvas',
+    detectsOn: 'canvas',
     events: {
       onhover: {
         enable: true,
@@ -102,26 +107,21 @@ const options: ISourceOptions = {
       },
       grab: {
         distance: 400,
-        line_linked: {
+        links: {
           opacity: 1,
         },
       },
       push: {
-        particles_nb: 3,
+        quantity: 3,
       },
       remove: {
-        particles_nb: 2,
+        quantity: 2,
       },
       repulse: {
         distance: 100,
         duration: 1,
       },
     },
-  },
-  retina_detect: true,
-  fpsLimit: 60,
-  fullScreen: {
-    enable: false,
   },
   key: '3m@62^K^88745%',
 };
