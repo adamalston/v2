@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
-import { Particles as ReactParticles } from 'react-tsparticles';
+import ReactParticles from 'react-tsparticles';
 
 import { AppContext } from 'App/AppContext';
-import options from 'appearance/particleOptions';
+import { options } from 'appearance';
 
 const P = {
   Container: styled.div`
@@ -17,7 +17,7 @@ const P = {
   `,
 };
 
-const Particles = () => {
+const Particles: React.FC = () => {
   const { theme } = useContext(AppContext);
 
   return (

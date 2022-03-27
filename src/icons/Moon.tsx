@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Moon = () => (
+const Moon: React.FC = () => (
   <svg
     role="img"
     viewBox="0 0 512 512"

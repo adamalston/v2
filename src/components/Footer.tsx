@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { AppContext } from 'App/AppContext';
 
 const F = {
-  Container: styled.div`
+  Container: styled.div<{ isMobile: boolean }>`
     position: absolute;
     bottom: 0;
     right: 0;
@@ -23,7 +23,7 @@ const F = {
   `,
 };
 
-const Footer = () => {
+const Footer: React.FC = () => {
   const { isMobile, theme } = useContext(AppContext);
 
   return (
@@ -43,9 +43,7 @@ const Footer = () => {
         >
           {'Adam Alston'}
         </F.Link>
-        {isMobile ? (
-          <></>
-        ) : (
+        {!isMobile && (
           <>
             {' | '}
             <F.Link

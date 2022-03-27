@@ -1,12 +1,12 @@
 {
   "homepage": "https://www.adamalston.com/",
   "name": "v2",
-  "version": "2.1.2",
+  "version": "3.0.0",
   "private": true,
   "dependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-tsparticles": "^1.39.3",
+    "react-tsparticles": "^1.41.2",
     "styled-components": "^5.3.3"
   },
   "scripts": {
@@ -15,8 +15,8 @@
     "test": "react-scripts test",
     "test:coverage": "react-scripts test --coverage --watchAll",
     "eject": "react-scripts eject",
-    "lint": "eslint ./src --ext .js,.jsx --fix --max-warnings 0",
-    "format": "prettier --config ./.prettierrc --write \"./src/**/*.{js,jsx,css,scss,json}\""
+    "lint": "eslint ./src --ext .js,.jsx,.ts,.tsx --fix --max-warnings 0",
+    "format": "prettier --config ./.prettierrc --write \"./src/**/*.{js,jsx,ts,tsx,css,scss,json}\""
   },
   "browserslist": {
     "production": [
@@ -34,6 +34,11 @@
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^7.2.1",
+    "@types/jest": "^27.4.0",
+    "@types/node": "^17.0.18",
+    "@types/react": "^17.0.39",
+    "@types/react-dom": "^17.0.11",
+    "@types/styled-components": "^5.1.23",
     "husky": "^7.0.4",
     "jest-canvas-mock": "^2.3.1",
     "prettier": "^2.5.1",
@@ -48,8 +53,11 @@
   },
   "jest": {
     "collectCoverageFrom": [
-      "**/*.{js,jsx}",
-      "!**/index.jsx"
+      "**/*.{js,jsx,ts,tsx}",
+      "!**/index.{js,jsx,ts,tsx}"
+    ],
+    "coveragePathIgnorePatterns": [
+      "/types/"
     ]
   }
 }
