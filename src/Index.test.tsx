@@ -18,7 +18,7 @@ describe('application tests', () => {
    * Check content element
    * @param {HTMLElement} element Element for the content
    * @param {RegExp} display Display value for the content
-   * @param {string} [link] Optional link within the content
+   * @param {string} link Optional link within the content
    */
   const checkContent = (
     element: HTMLElement,
