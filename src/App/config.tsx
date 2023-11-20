@@ -1,8 +1,7 @@
-import React from 'react';
 import { Config } from 'types';
 import { Email, GitHub, LinkedIn, Resume } from 'icons';
 
-const config: Config = {
+export const config: Config = {
   name: {
     display: 'Adam Alston',
     aria: 'My name is Adam Alston',
@@ -13,24 +12,28 @@ const config: Config = {
   },
   buttons: [
     {
+      name: 'github',
       display: 'GitHub',
       aria: 'Visit my GitHub profile',
       icon: <GitHub />,
       href: 'https://github.com/adamalston/',
     },
     {
+      name: 'linked-in',
       display: 'LinkedIn',
       aria: 'Visit my LinkedIn profile',
       icon: <LinkedIn />,
       href: 'https://www.linkedin.com/in/adam-alston/',
     },
     {
+      name: 'resume',
       display: 'Resume',
       aria: 'View my resume in Google Drive',
       icon: <Resume />,
-      href: 'https://drive.google.com/drive/folders/10k8NWflSYQ5laPzuWtK3bzUKzuOeas8i/',
+      href: 'https://drive.google.com/file/d/1VQ_Oeim_e92QEMi64ejGWY5Hf4RRxfeJ/view',
     },
     {
+      name: 'email',
       display: 'Email',
       aria: 'Send me an email',
       icon: <Email />,
@@ -38,5 +41,3 @@ const config: Config = {
     },
   ],
 };
-
-export default config;

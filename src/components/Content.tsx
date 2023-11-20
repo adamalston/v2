@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import styled, { css } from 'styled-components';
 
 import { AppContext } from 'App/AppContext';
@@ -30,7 +30,7 @@ const C = {
   `,
 };
 
-const Content: React.FC = () => {
+export const Content = () => {
   const { config, theme } = useContext(AppContext);
 
   return (
@@ -54,5 +54,3 @@ const Content: React.FC = () => {
     </>
   );
 };
-
-export default Content;

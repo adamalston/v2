@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { ChangeEvent, useContext } from 'react';
 import styled from 'styled-components';
 
 import { AppContext } from 'App/AppContext';
@@ -47,7 +47,7 @@ const T = {
   `,
 };
 
-const Toggle: React.FC = () => {
+export const Toggle = () => {
   const { theme, setTheme } = useContext(AppContext);
   const isDark: boolean = theme.key === 'dark';
 
@@ -66,8 +66,8 @@ const Toggle: React.FC = () => {
         name="toggle"
         type="checkbox"
         checked={isDark}
-        onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-          handleToggle(e.target.checked)
+        onChange={(event: ChangeEvent<HTMLInputElement>) =>
+          handleToggle(event.target.checked)
         }
         aria-label="Theme toggle"
         title="Theme toggle"
@@ -78,5 +78,3 @@ const Toggle: React.FC = () => {
     </T.Container>
   );
 };
-
-export default Toggle;
