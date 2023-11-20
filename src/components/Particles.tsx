@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import styled from 'styled-components';
 import ReactParticles from 'react-tsparticles';
 
@@ -17,7 +17,7 @@ const P = {
   `,
 };
 
-const Particles: React.FC = () => {
+export const Particles = () => {
   const { theme } = useContext(AppContext);
 
   return (
@@ -26,5 +26,3 @@ const Particles: React.FC = () => {
     </P.Container>
   );
 };
-
-export default Particles;

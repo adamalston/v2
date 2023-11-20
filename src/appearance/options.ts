@@ -1,7 +1,7 @@
 import type { ISourceOptions } from 'tsparticles';
 
 // https://github.com/matteobruni/tsparticles/issues/2771
-const options: ISourceOptions = {
+export const options: ISourceOptions = {
   retinaDetect: true,
   fpsLimit: 90,
   fullScreen: {
@@ -125,5 +125,3 @@ const options: ISourceOptions = {
   },
   key: '3m@62^K^88745%',
 };
-
-export default options;

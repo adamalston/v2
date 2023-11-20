@@ -1,6 +1,4 @@
-import React from 'react';
-
-const Moon: React.FC = () => (
+export const Moon = () => (
   <svg
     role="img"
     viewBox="0 0 512 512"
@@ -14,5 +12,3 @@ const Moon: React.FC = () => (
     />
   </svg>
 );
-
-export default Moon;

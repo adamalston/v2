@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import './App.scss';
 import { AppProvider } from './AppContext';
 import { Buttons, Content, Footer, Particles, Toggle } from 'components';
-import config from './config';
+import { config } from './config';
 
-const App: React.FC = () => {
+export const App = () => {
   const [isReady, setIsReady]: [boolean, Function] = useState(false);
   const [isMobile, setIsMobile]: [boolean, Function] = useState(false);
 
@@ -49,5 +49,3 @@ const App: React.FC = () => {
     <></>
   );
 };
-
-export default App;

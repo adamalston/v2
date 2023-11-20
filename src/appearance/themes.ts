@@ -1,6 +1,6 @@
 import { Themes } from 'types';
 
-const themes: Themes = {
+export const themes: Themes = {
   dark: {
     key: 'dark',
     primaryTextColor: '#fff',
@@ -18,5 +18,3 @@ const themes: Themes = {
     shadowColor: 'rgba(255, 255, 255, 0.5)',
   },
 };
-
-export default themes;

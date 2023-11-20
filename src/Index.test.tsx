@@ -1,8 +1,7 @@
-import React from 'react';
 import { configure, fireEvent, render, screen } from '@testing-library/react';
 
 import '__mocks__/matchMedia';
-import App from 'App/App';
+import { App } from 'App/App';
 import { AppProvider, reducer } from 'App/AppContext';
 import { Footer } from 'components';
 import { themes } from 'appearance';
@@ -104,7 +103,7 @@ describe('application tests', () => {
       parent,
       child,
       /^Resume$/,
-      'https://drive.google.com/drive/folders/10k8NWflSYQ5laPzuWtK3bzUKzuOeas8i/'
+      'https://drive.google.com/file/d/1VQ_Oeim_e92QEMi64ejGWY5Hf4RRxfeJ/view'
     );
   });
 

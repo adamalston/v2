@@ -1,6 +1,4 @@
-import React from 'react';
-
-const Resume: React.FC = () => (
+export const Resume = () => (
   <svg role="img" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
     <path
       fill="currentColor"
@@ -8,5 +6,3 @@ const Resume: React.FC = () => (
     />
   </svg>
 );
-
-export default Resume;

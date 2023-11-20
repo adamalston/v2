@@ -1,4 +1,4 @@
-import React, { createContext, Dispatch, useReducer } from 'react';
+import { createContext, Dispatch, ReactNode, useReducer } from 'react';
 
 import { themes } from 'appearance';
 import { Config, Theme } from 'types';
@@ -22,7 +22,7 @@ const initialState: AppContextInterface = {
 
 const actions = { SET_THEME: 'SET_THEME' };
 
-const reducer = (state: any, action: any) => {
+export const reducer = (state: any, action: any) => {
   switch (action.type) {
     case actions.SET_THEME:
       return { ...state, theme: themes[action.value] };
@@ -31,13 +31,13 @@ const reducer = (state: any, action: any) => {
   }
 };
 
-const AppContext = createContext(initialState);
+export const AppContext = createContext(initialState);
 
-const AppProvider: React.FC<AppProviderInterface> = ({
+export const AppProvider = ({
   config,
   isMobile,
   children,
-}) => {
+}: AppProviderInterface & { children: ReactNode }) => {
   initialState.config = config;
   initialState.isMobile = isMobile;
 
@@ -60,5 +60,3 @@ const AppProvider: React.FC<AppProviderInterface> = ({
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;
 };
-
-export { AppContext, AppProvider, reducer };

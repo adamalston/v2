@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import styled from 'styled-components';
 
 import { AppContext } from 'App/AppContext';
@@ -23,7 +23,7 @@ const F = {
   `,
 };
 
-const Footer: React.FC = () => {
+export const Footer = () => {
   const { isMobile, theme } = useContext(AppContext);
 
   return (
@@ -61,5 +61,3 @@ const Footer: React.FC = () => {
     </F.Container>
   );
 };
-
-export default Footer;

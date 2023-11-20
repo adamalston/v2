@@ -1,4 +1,2 @@
-import options from './options';
-import themes from './themes';
-
-export { options, themes };
+export * from './options';
+export * from './themes';

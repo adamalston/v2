@@ -1,6 +1,4 @@
-import React from 'react';
-
-const Sun: React.FC = () => (
+export const Sun = () => (
   <svg
     role="img"
     viewBox="0 0 512 512"
@@ -14,5 +12,3 @@ const Sun: React.FC = () => (
     />
   </svg>
 );
-
-export default Sun;

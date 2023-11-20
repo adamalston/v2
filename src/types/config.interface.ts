@@ -4,6 +4,7 @@ interface Content {
 }
 
 interface Button extends Content {
+  name: string;
   icon: JSX.Element;
   href: string;
 }

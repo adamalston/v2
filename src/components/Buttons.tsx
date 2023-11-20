@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import styled from 'styled-components';
 
 import { AppContext } from 'App/AppContext';
@@ -87,18 +87,18 @@ const Container = styled.div`
   }
 `;
 
-const Buttons: React.FC = () => {
+export const Buttons = () => {
   const { config, theme } = useContext(AppContext);
 
   return (
     <Container theme={theme}>
-      {config.buttons.map(({ display, aria, icon, href }, i) => (
-        <span className="button-container" key={i}>
+      {config.buttons.map(({ name, display, aria, icon, href }) => (
+        <span className="button-container" key={name}>
           <a
             data-v2={`button-${display}`}
             className="button"
             href={href}
-            target="_self"
+            target="_blank"
             rel="noopener noreferrer"
             aria-label={aria}
             title={aria}
@@ -113,5 +113,3 @@ const Buttons: React.FC = () => {
     </Container>
   );
 };
-
-export default Buttons;
