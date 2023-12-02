@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import styled, { css } from 'styled-components';
 
 import { AppContext } from 'App/AppContext';
+import { themes } from 'appearance';
 
 const sharedStyles = css`
   transition: color 0.5s linear;
@@ -33,11 +34,13 @@ const C = {
 export const Content = () => {
   const { config, theme } = useContext(AppContext);
 
+  const themeConfig = themes[theme];
+
   return (
     <>
       <C.Name
         data-v2="name"
-        theme={theme}
+        theme={themeConfig}
         aria-label={config.name.aria}
         title={config.name.aria}
       >
@@ -45,7 +48,7 @@ export const Content = () => {
       </C.Name>
       <C.Title
         data-v2="title"
-        theme={theme}
+        theme={themeConfig}
         aria-label={config.title.aria}
         title={config.title.aria}
       >

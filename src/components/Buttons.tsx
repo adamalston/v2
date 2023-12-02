@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import styled from 'styled-components';
 
 import { AppContext } from 'App/AppContext';
+import { themes } from 'appearance';
 
 const Container = styled.div`
   a,
@@ -89,9 +90,10 @@ const Container = styled.div`
 
 export const Buttons = () => {
   const { config, theme } = useContext(AppContext);
+  const themeConfig = themes[theme];
 
   return (
-    <Container theme={theme}>
+    <Container theme={themeConfig}>
       {config.buttons.map(({ name, display, aria, icon, href }) => (
         <span className="button-container" key={name}>
           <a

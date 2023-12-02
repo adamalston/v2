@@ -4,6 +4,7 @@ import './App.scss';
 import { AppProvider } from './AppContext';
 import { Buttons, Content, Footer, Particles, Toggle } from 'components';
 import { config } from './config';
+import { DARK, LIGHT, THEME } from './../constants';
 
 export const App = () => {
   const [isReady, setIsReady]: [boolean, Function] = useState(false);
@@ -21,11 +22,11 @@ export const App = () => {
     // before the state refactoring, 'theme' had a boolean-ish ('true', 'false')
     // value in localStorage, now 'theme' has a theme value ('dark', 'light'),
     // to prevent the site from breaking, older 'theme' entries should be updated
-    const localStorageTheme: string | null = localStorage.getItem('theme');
+    const localStorageTheme: string | null = localStorage.getItem(THEME);
     if (localStorageTheme === 'true') {
-      localStorage.setItem('theme', 'dark');
+      localStorage.setItem(THEME, DARK);
     } else if (localStorageTheme === 'false') {
-      localStorage.setItem('theme', 'light');
+      localStorage.setItem(THEME, LIGHT);
     }
 
     setIsReady(true);

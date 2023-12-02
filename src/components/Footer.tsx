@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import styled from 'styled-components';
 
 import { AppContext } from 'App/AppContext';
+import { themes } from 'appearance';
 
 const F = {
   Container: styled.div<{ isMobile: boolean }>`
@@ -26,17 +27,19 @@ const F = {
 export const Footer = () => {
   const { isMobile, theme } = useContext(AppContext);
 
+  const themeConfig = themes[theme];
+
   return (
     <F.Container isMobile={isMobile}>
       <F.Text
         data-v2="footer"
-        theme={theme}
+        theme={themeConfig}
         aria-label="Designed and built by Adam Alston"
       >
         {'Designed and built by '}
         <F.Link
           data-v2="creator"
-          theme={theme}
+          theme={themeConfig}
           href="https://www.adamalston.com"
           aria-label="Adam's website"
           title="A link to Adam's personal website"
@@ -48,7 +51,7 @@ export const Footer = () => {
             {' | '}
             <F.Link
               data-v2="source"
-              theme={theme}
+              theme={themeConfig}
               href="https://github.com/adamalston/v2/"
               aria-label="Source code"
               title="View this website's source code in GitHub"

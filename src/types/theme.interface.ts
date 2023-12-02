@@ -1,5 +1,9 @@
-interface Theme {
-  key: string;
+import { DARK, LIGHT } from './../constants';
+
+export type Theme = typeof DARK | typeof LIGHT;
+
+export interface ThemeConfig {
+  key: Theme;
   primaryTextColor: string;
   secondaryTextColor: string;
   tertiaryTextColor: string;
@@ -7,8 +11,6 @@ interface Theme {
   shadowColor: string;
 }
 
-interface Themes {
-  [key: string]: Theme;
-}
-
-export { Theme, Themes };
+export type Themes = {
+  [key in Theme]: ThemeConfig;
+};

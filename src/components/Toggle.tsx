@@ -3,6 +3,8 @@ import styled from 'styled-components';
 
 import { AppContext } from 'App/AppContext';
 import { Moon, Sun } from 'icons';
+import { DARK, LIGHT, THEME } from './../constants';
+import { themes } from 'appearance';
 
 const T = {
   Container: styled.main`
@@ -49,14 +51,8 @@ const T = {
 
 export const Toggle = () => {
   const { theme, setTheme } = useContext(AppContext);
-  const isDark: boolean = theme.key === 'dark';
-
-  const handleToggle = (checked: boolean) => {
-    const key: string = checked ? 'dark' : 'light';
-
-    localStorage.setItem('theme', key);
-    setTheme(key);
-  };
+  const isDark = theme === DARK;
+  const themeConfig = themes[theme];
 
   return (
     <T.Container>
@@ -66,13 +62,16 @@ export const Toggle = () => {
         name="toggle"
         type="checkbox"
         checked={isDark}
-        onChange={(event: ChangeEvent<HTMLInputElement>) =>
-          handleToggle(event.target.checked)
-        }
+        onChange={({ target: { checked } }: ChangeEvent<HTMLInputElement>) => {
+          const key = checked ? DARK : LIGHT;
+
+          localStorage.setItem(THEME, key);
+          setTheme(key);
+        }}
         aria-label="Theme toggle"
         title="Theme toggle"
       />
-      <T.Switch theme={theme} htmlFor="toggle">
+      <T.Switch theme={themeConfig} htmlFor="toggle">
         {isDark ? <Moon /> : <Sun />}
       </T.Switch>
     </T.Container>
