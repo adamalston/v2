@@ -18,6 +18,8 @@
     "styled-components": "^5.3.5"
   },
   "devDependencies": {
+    "@commitlint/cli": "^18.4.3",
+    "@commitlint/config-angular": "^18.4.3",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^12.1.5",
     "@testing-library/user-event": "^7.2.1",
