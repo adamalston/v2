@@ -12,7 +12,7 @@ export const App = () => {
   const init = () => {
     if (
       window.matchMedia(
-        '(max-device-width: 820px) and (-webkit-min-device-pixel-ratio: 2)'
+        '(max-device-width: 820px) and (-webkit-min-device-pixel-ratio: 2)',
       )?.matches
     ) {
       setIsMobile(true);

@@ -22,7 +22,7 @@ describe('application tests', () => {
   const checkContent = (
     element: HTMLElement,
     display: RegExp,
-    link?: string
+    link?: string,
   ) => {
     expect(element).toBeVisible();
     expect(element).toHaveAccessibleName();
@@ -42,7 +42,7 @@ describe('application tests', () => {
     parent: HTMLElement,
     child: HTMLElement,
     display: RegExp,
-    link: string
+    link: string,
   ) => {
     expect(child).toHaveTextContent(display);
 
@@ -91,7 +91,7 @@ describe('application tests', () => {
       parent,
       child,
       /^LinkedIn$/,
-      'https://www.linkedin.com/in/adam-alston/'
+      'https://www.linkedin.com/in/adam-alston/',
     );
   });
 
@@ -103,7 +103,7 @@ describe('application tests', () => {
       parent,
       child,
       /^Resume$/,
-      'https://drive.google.com/file/d/1VQ_Oeim_e92QEMi64ejGWY5Hf4RRxfeJ/view'
+      'https://drive.google.com/file/d/1VQ_Oeim_e92QEMi64ejGWY5Hf4RRxfeJ/view',
     );
   });
 
@@ -141,7 +141,7 @@ describe('application tests', () => {
     const footer = screen.getByTestId('footer');
 
     expect(footer).toHaveTextContent(
-      /^Designed and built by Adam Alston \| Source$/
+      /^Designed and built by Adam Alston \| Source$/,
     );
   });
 });
@@ -149,7 +149,7 @@ describe('application tests', () => {
 describe('app context tests', () => {
   it('should render partial footer on mobile', () => {
     render(
-      <AppProvider config={{} as any} isMobile={true} children={<Footer />} />
+      <AppProvider config={{} as any} isMobile={true} children={<Footer />} />,
     );
 
     // partial footer should now be visible
