@@ -3,5 +3,9 @@ module.exports = {
     'eslint --cache --fix --max-warnings 0',
     'prettier --cache --write',
   ],
-  '*.{json,md,scss,yml}': 'prettier --cache --write',
+  '*.scss': [
+    'stylelint --cache --fix --max-warnings 0',
+    'prettier --cache --write',
+  ],
+  '*.{json,md}': 'prettier --cache --write',
 };
