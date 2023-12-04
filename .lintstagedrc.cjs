@@ -7,5 +7,5 @@ module.exports = {
     'stylelint --cache --fix --max-warnings 0',
     'prettier --cache --write',
   ],
-  '*.{json,md}': 'prettier --cache --write',
+  '*.{html,json,md,yml}': 'prettier --cache --write',
 };
