@@ -18,6 +18,8 @@
     "styled-components": "^5.3.5"
   },
   "devDependencies": {
+    "@commitlint/cli": "^18.4.3",
+    "@commitlint/config-angular": "^18.4.3",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^12.1.5",
     "@testing-library/user-event": "^7.2.1",
@@ -33,6 +35,9 @@
     "prettier": "^2.7.1",
     "react-scripts": "^5.0.1",
     "sass": "^1.54.8",
+    "stylelint": "^15.11.0",
+    "stylelint-config-prettier-scss": "^1.0.0",
+    "stylelint-config-standard-scss": "^11.1.0",
     "typescript": "^4.8.2"
   },
   "jest": {
