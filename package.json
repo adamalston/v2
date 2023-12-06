@@ -8,7 +8,7 @@
     "test:coverage": "react-scripts test --coverage --watchAll=false",
     "eject": "react-scripts eject",
     "lint": "eslint --cache --fix --max-warnings 0 ./src/",
-    "format": "prettier --cache --write ./src/",
+    "format": "prettier --cache --write ./{.github,public,src}/",
     "prepare": "husky install"
   },
   "dependencies": {
