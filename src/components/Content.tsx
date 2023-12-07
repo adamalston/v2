@@ -2,6 +2,7 @@ import { useContext } from 'react';
 import styled, { css } from 'styled-components';
 
 import { AppContext } from 'App/AppContext';
+import { Theme } from 'types';
 
 const sharedStyles = css`
   transition: color 0.5s linear;
@@ -11,19 +12,19 @@ const sharedStyles = css`
 `;
 
 const C = {
-  Name: styled.div`
+  Name: styled.div<{ $theme: Theme }>`
     ${sharedStyles};
     font-size: 6rem;
-    color: ${({ theme }) => theme.primaryTextColor};
+    color: ${({ $theme }) => $theme.primaryTextColor};
     @media only screen and (max-device-width: 820px) and (-webkit-min-device-pixel-ratio: 2) {
       font-size: 4.5rem;
     }
   `,
-  Title: styled.div`
+  Title: styled.div<{ $theme: Theme }>`
     ${sharedStyles};
     font-size: 3.5rem;
     margin: 4rem 0;
-    color: ${({ theme }) => theme.secondaryTextColor};
+    color: ${({ $theme }) => $theme.secondaryTextColor};
     @media only screen and (max-device-width: 820px) and (-webkit-min-device-pixel-ratio: 2) {
       font-size: 2.5rem;
     }
@@ -37,17 +38,17 @@ export const Content = () => {
     <>
       <C.Name
         data-v2="name"
-        theme={theme}
         aria-label={config.name.aria}
         title={config.name.aria}
+        $theme={theme}
       >
         {config.name.display}
       </C.Name>
       <C.Title
         data-v2="title"
-        theme={theme}
         aria-label={config.title.aria}
         title={config.title.aria}
+        $theme={theme}
       >
         {config.title.display}
       </C.Title>

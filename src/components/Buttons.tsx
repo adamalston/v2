@@ -2,8 +2,9 @@ import { useContext } from 'react';
 import styled from 'styled-components';
 
 import { AppContext } from 'App/AppContext';
+import { Theme } from 'types';
 
-const Container = styled.div`
+const Container = styled.div<{ $theme: Theme }>`
   a,
   a:active,
   a:hover {
@@ -21,7 +22,7 @@ const Container = styled.div`
     transition: color 0.5s linear;
     height: 6rem;
     width: 6rem;
-    color: ${({ theme }) => theme.primaryTextColor};
+    color: ${({ $theme }) => $theme.primaryTextColor};
     display: table-cell;
     vertical-align: middle;
     text-align: center;
@@ -42,7 +43,7 @@ const Container = styled.div`
   }
 
   .button:hover {
-    background-color: ${({ theme }) => theme.shadowColor};
+    background-color: ${({ $theme }) => $theme.shadowColor};
     box-shadow: 0 0 0.75rem 0.75rem rgba(128, 128, 128, 0.25);
   }
 
@@ -91,7 +92,7 @@ export const Buttons = () => {
   const { config, theme } = useContext(AppContext);
 
   return (
-    <Container theme={theme}>
+    <Container $theme={theme}>
       {config.buttons.map(({ name, display, aria, icon, href }) => (
         <span className="button-container" key={name}>
           <a
