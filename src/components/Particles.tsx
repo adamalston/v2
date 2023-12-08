@@ -4,12 +4,13 @@ import ReactParticles from 'react-tsparticles';
 
 import { AppContext } from 'App/AppContext';
 import { options } from 'appearance';
+import { Theme } from 'types';
 
 const P = {
-  Container: styled.div`
+  Container: styled.div<{ $theme: Theme }>`
     transition: background-color 0.5s linear;
     position: absolute;
-    background-color: ${({ theme }) => theme.background};
+    background-color: ${({ $theme }) => $theme.background};
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
@@ -21,7 +22,7 @@ export const Particles = () => {
   const { theme } = useContext(AppContext);
 
   return (
-    <P.Container data-v2="particles" theme={theme} aria-label="Particles">
+    <P.Container data-v2="particles" aria-label="Particles" $theme={theme}>
       <ReactParticles width="100vw" height="100vh" options={options} />
     </P.Container>
   );
