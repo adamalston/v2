@@ -1,4 +1,4 @@
-interface Theme {
+export interface Theme {
   key: string;
   primaryTextColor: string;
   secondaryTextColor: string;
@@ -7,8 +7,6 @@ interface Theme {
   shadowColor: string;
 }
 
-interface Themes {
+export interface Themes {
   [key: string]: Theme;
 }
-
-export { Theme, Themes };

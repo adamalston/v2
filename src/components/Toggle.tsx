@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import { AppContext } from 'App/AppContext';
 import { Moon, Sun } from 'icons';
+import { Theme } from 'types';
 
 const T = {
   Container: styled.main`
@@ -31,13 +32,13 @@ const T = {
     position: absolute;
     width: 1px;
   `,
-  Switch: styled.label`
+  Switch: styled.label<{ $theme: Theme }>`
     cursor: pointer;
     display: flex;
     width: 1.5rem;
     height: 1.5rem;
     padding: 0.75rem;
-    background-color: ${({ theme }) => theme.shadowColor};
+    background-color: ${({ $theme }) => $theme.shadowColor};
     border-radius: 25%;
     box-shadow: 0 0 0.25rem 0.25rem rgba(128, 128, 128, 0.25);
     align-items: center;
@@ -72,7 +73,7 @@ export const Toggle = () => {
         aria-label="Theme toggle"
         title="Theme toggle"
       />
-      <T.Switch theme={theme} htmlFor="toggle">
+      <T.Switch htmlFor="toggle" $theme={theme}>
         {isDark ? <Moon /> : <Sun />}
       </T.Switch>
     </T.Container>
