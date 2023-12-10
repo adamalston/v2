@@ -98,14 +98,13 @@ export const Buttons = () => {
           <a
             data-v2={`button-${display}`}
             className="button"
-            href={href}
-            target="_blank"
-            rel="noopener noreferrer"
             aria-label={aria}
-            title={aria}
+            href={href}
+            rel="noopener noreferrer"
+            target="_blank"
           >
             <div className="icon">{icon}</div>
-            <span className="icon_title" data-v2={display}>
+            <span data-v2={display} className="icon_title">
               {display}
             </span>
           </a>

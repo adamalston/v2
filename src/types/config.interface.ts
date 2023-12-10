@@ -1,10 +1,10 @@
 export interface Content {
   display: string;
-  aria: string;
 }
 
 export interface Button extends Content {
   name: string;
+  aria: string;
   icon: JSX.Element;
   href: string;
 }

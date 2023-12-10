@@ -22,7 +22,7 @@ export const Particles = () => {
   const { theme } = useContext(AppContext);
 
   return (
-    <P.Container data-v2="particles" aria-label="Particles" $theme={theme}>
+    <P.Container data-v2="particles" $theme={theme}>
       <ReactParticles width="100vw" height="100vh" options={options} />
     </P.Container>
   );
