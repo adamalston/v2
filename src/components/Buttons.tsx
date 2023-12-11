@@ -93,12 +93,12 @@ export const Buttons = () => {
 
   return (
     <Container $theme={theme}>
-      {config.buttons.map(({ name, display, aria, icon, href }) => (
+      {config.buttons.map(({ name, display, ariaLabel, icon, href }) => (
         <span className="button-container" key={name}>
           <a
             data-v2={`button-${display}`}
             className="button"
-            aria-label={aria}
+            aria-label={ariaLabel}
             href={href}
             rel="noopener noreferrer"
             target="_blank"

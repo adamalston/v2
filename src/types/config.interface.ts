@@ -4,7 +4,7 @@ export interface Content {
 
 export interface Button extends Content {
   name: string;
-  aria: string;
+  ariaLabel: string;
   icon: JSX.Element;
   href: string;
 }
