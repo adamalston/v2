@@ -5,7 +5,7 @@ import { AppContext } from 'App/AppContext';
 import { Theme } from 'types';
 
 const F = {
-  Container: styled.div<{ $isMobile: boolean }>`
+  Container: styled.footer<{ $isMobile: boolean }>`
     position: absolute;
     bottom: 0;
     right: 0;
@@ -19,8 +19,11 @@ const F = {
   `,
   Link: styled.a<{ $theme: Theme }>`
     transition: color 0.5s linear;
-    text-decoration: none;
     color: ${({ $theme }) => $theme.secondaryTextColor};
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
   `,
 };
 
@@ -29,17 +32,14 @@ export const Footer = () => {
 
   return (
     <F.Container $isMobile={isMobile}>
-      <F.Text
-        data-v2="footer"
-        aria-label="Designed and built by Adam Alston"
-        $theme={theme}
-      >
+      <F.Text data-v2="footer" $theme={theme}>
         {'Designed and built by '}
         <F.Link
           data-v2="creator"
-          href="https://www.adamalston.com"
-          aria-label="Adam's website"
-          title="A link to Adam's personal website"
+          aria-label="Adam Alston's personal website (opens in new window)"
+          href="https://www.adamalston.com/"
+          rel="noopener noreferrer"
+          target="_blank"
           $theme={theme}
         >
           {'Adam Alston'}
@@ -49,9 +49,10 @@ export const Footer = () => {
             {' | '}
             <F.Link
               data-v2="source"
+              aria-label="Source code for this website (opens in new window)"
               href="https://github.com/adamalston/v2/"
-              aria-label="Source code"
-              title="View this website's source code in GitHub"
+              rel="noopener noreferrer"
+              target="_blank"
               $theme={theme}
             >
               {'Source'}

@@ -6,7 +6,7 @@ import { Moon, Sun } from 'icons';
 import { Theme } from 'types';
 
 const T = {
-  Container: styled.main`
+  Container: styled.div`
     position: fixed;
     z-index: 1;
     top: 1rem;
@@ -46,11 +46,26 @@ const T = {
     transition: background-color 0.5s linear;
     font-size: 0.5rem;
   `,
+  VisuallyHidden: styled.span`
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+    white-space: nowrap;
+  `,
 };
 
 export const Toggle = () => {
   const { theme, setTheme } = useContext(AppContext);
   const isDark: boolean = theme.key === 'dark';
+  const ariaLabel = `Currently in ${
+    isDark ? 'dark' : 'light'
+  } mode, switch to ${!isDark ? 'dark' : 'light'} mode`;
+  const toggleDescriptionId = 'toggle-description';
 
   const handleToggle = (checked: boolean) => {
     const key: string = checked ? 'dark' : 'light';
@@ -61,19 +76,23 @@ export const Toggle = () => {
 
   return (
     <T.Container>
+      <T.VisuallyHidden id={toggleDescriptionId}>
+        Switch between dark and light mode for visual comfort.
+      </T.VisuallyHidden>
       <T.Toggle
         data-v2="toggle"
         id="toggle"
         name="toggle"
         type="checkbox"
         checked={isDark}
-        onChange={(event: ChangeEvent<HTMLInputElement>) =>
-          handleToggle(event.target.checked)
-        }
-        aria-label="Theme toggle"
-        title="Theme toggle"
+        aria-label={ariaLabel}
+        aria-describedby={toggleDescriptionId}
+        onChange={({ target }: ChangeEvent<HTMLInputElement>) => {
+          handleToggle(target.checked);
+        }}
       />
       <T.Switch htmlFor="toggle" $theme={theme}>
+        <T.VisuallyHidden>{ariaLabel}</T.VisuallyHidden>
         {isDark ? <Moon /> : <Sun />}
       </T.Switch>
     </T.Container>

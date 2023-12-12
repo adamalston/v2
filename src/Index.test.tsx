@@ -29,10 +29,10 @@ describe('application tests', () => {
     element: HTMLElement,
     display: RegExp,
     link?: string,
+    skipA11yNameCheck?: boolean,
   ) => {
     expect(element).toBeVisible();
-    expect(element).toHaveAccessibleName();
-    expect(element).toHaveAccessibleDescription();
+    if (!skipA11yNameCheck) expect(element).toHaveAccessibleName();
     expect(element).toHaveTextContent(display);
     if (link) expect(element).toHaveAttribute('href', link);
   };
@@ -54,26 +54,25 @@ describe('application tests', () => {
 
     expect(parent).toBeVisible();
     expect(parent).toHaveAccessibleName();
-    expect(parent).toHaveAccessibleDescription();
     expect(parent).toHaveAttribute('href', link);
   };
 
   it('should render name: Adam Alston', () => {
     const element = screen.getByTestId('name');
 
-    checkContent(element, /^Adam Alston$/);
+    checkContent(element, /^Adam Alston$/, undefined, true);
   });
 
   it('should render title: Software Engineer', () => {
     const element = screen.getByTestId('title');
 
-    checkContent(element, /^Software Engineer$/);
+    checkContent(element, /^Software Engineer$/, undefined, true);
   });
 
   it('should render creator', () => {
     const element = screen.getByTestId('creator');
 
-    checkContent(element, /^Adam Alston$/, 'https://www.adamalston.com');
+    checkContent(element, /^Adam Alston$/, 'https://www.adamalston.com/');
   });
 
   it('should render link to source code', () => {
@@ -129,7 +128,6 @@ describe('application tests', () => {
     expect(toggle).toHaveAccessibleDescription();
 
     expect(particles).toBeVisible();
-    expect(particles).toHaveAccessibleName();
 
     // site should default to the dark theme
     expect(toggle).toBeChecked();

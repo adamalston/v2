@@ -16,7 +16,14 @@ export const options: ISourceOptions = {
       },
     },
     color: {
-      value: ['c912ed', '00bfff', '22dd22', 'ffd500', 'ff8000', 'ff2600'],
+      value: [
+        'ff2600', // Red
+        'ff8000', // Orange
+        'ffd500', // Yellow
+        '22dd22', // Green
+        '00bfff', // Blue
+        'c912ed', // Violet (Purple)
+      ],
     },
     shape: {
       type: 'circle',

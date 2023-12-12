@@ -37,13 +37,13 @@ export const App = () => {
 
   return isReady ? (
     <AppProvider config={config} isMobile={isMobile}>
-      <div className="app">
+      <main className="app">
         <Toggle />
         <Content />
         <Buttons />
         <Footer />
         <Particles />
-      </div>
+      </main>
     </AppProvider>
   ) : (
     <></>
