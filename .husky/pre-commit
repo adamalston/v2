@@ -1,4 +1,3 @@
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
+# shellcheck disable=SC2148
 
-npx lint-staged
+lint-staged
