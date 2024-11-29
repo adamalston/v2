@@ -13,21 +13,26 @@ interface AppContextInterface extends AppProviderInterface {
   setTheme: Dispatch<string>;
 }
 
-const initialState: AppContextInterface = {
+const actions = { SET_THEME: 'SET_THEME' } as const;
+
+interface AppAction {
+  type: 'SET_THEME';
+  value: string;
+}
+
+type AppState = AppContextInterface;
+
+const initialState: AppState = {
   config: {} as Config,
   isMobile: false,
   theme: themes.dark,
   setTheme: () => {},
 };
 
-const actions = { SET_THEME: 'SET_THEME' };
-
-export const reducer = (state: any, action: any) => {
+export const reducer = (state: AppState, action: AppAction): AppState => {
   switch (action.type) {
     case actions.SET_THEME:
       return { ...state, theme: themes[action.value] };
-    default:
-      return state;
   }
 };
 
@@ -41,21 +46,19 @@ export const AppProvider = ({
   initialState.config = config;
   initialState.isMobile = isMobile;
 
-  const supportedThemes: string[] = Object.keys(themes);
-  const localStorageTheme: string | null = localStorage.getItem('theme');
+  const supportedThemes = Object.keys(themes);
+  const localStorageTheme = localStorage.getItem('theme');
   if (localStorageTheme && supportedThemes.includes(localStorageTheme)) {
     initialState.theme = themes[localStorageTheme];
   }
 
   const [state, dispatch] = useReducer(reducer, initialState);
 
-  const value = {
+  const value: AppContextInterface = {
     config: state.config,
     isMobile: state.isMobile,
     theme: state.theme,
-    setTheme: (value: string) => {
-      dispatch({ type: actions.SET_THEME, value });
-    },
+    setTheme: (value) => dispatch({ type: actions.SET_THEME, value }),
   };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;

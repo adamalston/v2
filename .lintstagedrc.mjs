@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   '*.{cjs,js,jsx,ts,tsx}': [
     'eslint --cache --fix --max-warnings 0',
     'prettier --cache --write',

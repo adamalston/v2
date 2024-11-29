@@ -1,4 +1,4 @@
-import { ChangeEvent, useContext } from 'react';
+import { useContext } from 'react';
 import styled from 'styled-components';
 
 import { AppContext } from 'App/AppContext';
@@ -61,18 +61,11 @@ const T = {
 
 export const Toggle = () => {
   const { theme, setTheme } = useContext(AppContext);
-  const isDark: boolean = theme.key === 'dark';
+  const isDark = theme.key === 'dark';
   const ariaLabel = `Currently in ${
     isDark ? 'dark' : 'light'
   } mode, switch to ${!isDark ? 'dark' : 'light'} mode`;
   const toggleDescriptionId = 'toggle-description';
-
-  const handleToggle = (checked: boolean) => {
-    const key: string = checked ? 'dark' : 'light';
-
-    localStorage.setItem('theme', key);
-    setTheme(key);
-  };
 
   return (
     <T.Container>
@@ -87,8 +80,11 @@ export const Toggle = () => {
         checked={isDark}
         aria-label={ariaLabel}
         aria-describedby={toggleDescriptionId}
-        onChange={({ target }: ChangeEvent<HTMLInputElement>) => {
-          handleToggle(target.checked);
+        onChange={({ target: { checked } }) => {
+          const key = checked ? 'dark' : 'light';
+
+          localStorage.setItem('theme', key);
+          setTheme(key);
         }}
       />
       <T.Switch htmlFor="toggle" $theme={theme}>
