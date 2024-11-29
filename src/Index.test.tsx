@@ -1,10 +1,5 @@
-import {
-  act,
-  configure,
-  fireEvent,
-  render,
-  screen,
-} from '@testing-library/react';
+import { configure, fireEvent, render, screen } from '@testing-library/react';
+import { act } from 'react';
 
 import '__mocks__/matchMedia';
 import { App } from 'App/App';
