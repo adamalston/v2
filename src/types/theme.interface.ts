@@ -7,6 +7,4 @@ export interface Theme {
   shadowColor: string;
 }
 
-export interface Themes {
-  [key: string]: Theme;
-}
+export type Themes = Record<string, Theme>;

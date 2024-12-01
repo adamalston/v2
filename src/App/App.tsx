@@ -6,8 +6,8 @@ import { Buttons, Content, Footer, Particles, Toggle } from 'components';
 import { config } from './config';
 
 export const App = () => {
-  const [isReady, setIsReady]: [boolean, Function] = useState(false);
-  const [isMobile, setIsMobile]: [boolean, Function] = useState(false);
+  const [isReady, setIsReady] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   const init = () => {
     if (
@@ -21,7 +21,7 @@ export const App = () => {
     // before the state refactoring, 'theme' had a boolean-ish ('true', 'false')
     // value in localStorage, now 'theme' has a theme value ('dark', 'light'),
     // to prevent the site from breaking, older 'theme' entries should be updated
-    const localStorageTheme: string | null = localStorage.getItem('theme');
+    const localStorageTheme = localStorage.getItem('theme');
     if (localStorageTheme === 'true') {
       localStorage.setItem('theme', 'dark');
     } else if (localStorageTheme === 'false') {

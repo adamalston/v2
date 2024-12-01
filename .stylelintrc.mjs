@@ -1,3 +1,3 @@
-module.exports = {
+export default {
   extends: ['stylelint-config-standard-scss', 'stylelint-config-prettier-scss'],
 };

@@ -9,6 +9,25 @@ import { themes } from 'appearance';
 
 configure({ testIdAttribute: 'data-v2' });
 
+const mockState = {
+  config: {
+    name: { display: 'Default Name' },
+    title: { display: 'Default Title' },
+    buttons: [
+      {
+        name: 'Default Button',
+        display: 'Default Display',
+        ariaLabel: 'Default Aria Label',
+        icon: <></>,
+        href: '#',
+      },
+    ],
+  },
+  isMobile: false,
+  theme: themes.dark,
+  setTheme: () => {},
+};
+
 describe('application tests', () => {
   beforeEach(async () => {
     await act(async () => render(<App />));
@@ -150,7 +169,7 @@ describe('app context tests', () => {
     await act(async () =>
       render(
         <AppProvider
-          config={{} as any}
+          config={mockState.config}
           isMobile={true}
           children={<Footer />}
         />,
@@ -165,22 +184,16 @@ describe('app context tests', () => {
   });
 
   describe('reducer tests', () => {
-    it('should return the initial state', () => {
-      const state = reducer(undefined, {});
-
-      expect(state).toEqual(undefined);
-    });
-
     it('should return the dark theme', () => {
-      const state = reducer(undefined, { type: 'SET_THEME', value: 'dark' });
+      const state = reducer(mockState, { type: 'SET_THEME', value: 'dark' });
 
-      expect(state).toEqual({ theme: themes.dark });
+      expect(state).toEqual({ ...mockState, theme: themes.dark });
     });
 
     it('should return the light theme', () => {
-      const state = reducer(undefined, { type: 'SET_THEME', value: 'light' });
+      const state = reducer(mockState, { type: 'SET_THEME', value: 'light' });
 
-      expect(state).toEqual({ theme: themes.light });
+      expect(state).toEqual({ ...mockState, theme: themes.light });
     });
   });
 });

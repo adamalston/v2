@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   extends: ['@commitlint/config-conventional'],
   rules: {
     // Sets the maximum length for commit messages. It accounts for a 3-digit PR
