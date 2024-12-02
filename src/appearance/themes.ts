@@ -12,12 +12,4 @@ export const themes: Themes = {
     background: '#000',
     shadowColor: '#0000007f',
   },
-  light: {
-    key: 'light',
-    primaryTextColor: '#000',
-    secondaryTextColor: '#000000dd',
-    tertiaryTextColor: '#00000099',
-    background: '#fff',
-    shadowColor: '#ffffff7f',
-  },
 };

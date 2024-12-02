@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 import './App.scss';
 import { AppProvider } from './AppContext';
-import { Buttons, Content, Footer, Particles, Toggle } from 'components';
+import { Buttons, Content, Footer, Particles } from 'components';
 import { config } from './config';
 
 export const App = () => {
@@ -22,23 +22,18 @@ export const App = () => {
     // value in localStorage, now 'theme' has a theme value ('dark', 'light'),
     // to prevent the site from breaking, older 'theme' entries should be updated
     const localStorageTheme = localStorage.getItem('theme');
-    if (localStorageTheme === 'true') {
+    if (localStorageTheme === 'true' || localStorageTheme === 'false') {
       localStorage.setItem('theme', 'dark');
-    } else if (localStorageTheme === 'false') {
-      localStorage.setItem('theme', 'light');
     }
 
     setIsReady(true);
   };
 
-  useEffect(() => {
-    if (!isReady) init();
-  }, [isReady]);
+  useEffect(init, []);
 
   return isReady ? (
     <AppProvider config={config} isMobile={isMobile}>
       <main className="app">
-        <Toggle />
         <Content />
         <Buttons />
         <Footer />
