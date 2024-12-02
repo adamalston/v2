@@ -5,13 +5,24 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node: [12, 14, 16, lts/*]
-    name: Node ${{ matrix.node }}
+        node: [18, lts/*]
+    name: Node ${{ matrix.node }} build
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v3
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node }}
           cache: 'npm'
-      - run: npm ci
-      - run: npm test
+      - name: Install dependencies
+        run: npm ci
+      - name: Lint
+        run: npm run lint
+      - name: Check for vulnerabilities
+        run: npm audit --omit=dev
+      - name: Test development build
+        run: npm run test:coverage
+      - name: Create production build
+        run: npm run build
+      - name: Prune Development Dependencies
+        run: npm prune --omit=dev
