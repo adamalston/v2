@@ -1,9 +1,15 @@
 # shellcheck disable=SC2148
 
-[ "$3" -eq 0 ] && exit 0
+set -euo pipefail
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+main() {
+  [ "$3" -eq 0 ] && exit 0
 
-nvm i
-npm i
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+  nvm i
+
+  npm i
+}
+
+main "$@"

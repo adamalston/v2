@@ -51,11 +51,8 @@
     ]
   },
   "overrides": {
-    "svgo": {
-      "nth-check": ">=2.0.2"
-    },
-    "react-scripts": {
-      "postcss": ">=8.4.31"
-    }
+    "nth-check": "^2.0.1",
+    "postcss": "^8.4.31",
+    "resolve-url-loader": "^5.0.0"
   }
 }
