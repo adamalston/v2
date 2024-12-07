@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
 
+import { Buttons, Content, Footer, Particles, Toggle } from 'components';
+
 import './App.scss';
 import { AppProvider } from './AppContext';
-import { Buttons, Content, Footer, Particles, Toggle } from 'components';
 import { config } from './config';
 
 export const App = () => {
@@ -11,9 +12,9 @@ export const App = () => {
 
   const init = () => {
     if (
-      window.matchMedia(
+      matchMedia(
         '(max-device-width: 820px) and (-webkit-min-device-pixel-ratio: 2)',
-      )?.matches
+      ).matches
     ) {
       setIsMobile(true);
     }
