@@ -16,7 +16,7 @@ interface AppContextInterface extends AppProviderInterface {
 const actions = { SET_THEME: 'SET_THEME' } as const;
 
 interface AppAction {
-  type: 'SET_THEME';
+  type: typeof actions.SET_THEME;
   value: string;
 }
 
@@ -26,7 +26,7 @@ const initialState: AppState = {
   config: {} as Config,
   isMobile: false,
   theme: themes.dark,
-  setTheme: () => {},
+  setTheme: () => undefined,
 };
 
 export const reducer = (state: AppState, action: AppAction): AppState => {
@@ -58,7 +58,9 @@ export const AppProvider = ({
     config: state.config,
     isMobile: state.isMobile,
     theme: state.theme,
-    setTheme: (value) => dispatch({ type: actions.SET_THEME, value }),
+    setTheme: (value) => {
+      dispatch({ type: actions.SET_THEME, value });
+    },
   };
 
   return <AppContext.Provider value={value}>{children}</AppContext.Provider>;

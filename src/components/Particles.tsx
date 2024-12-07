@@ -1,6 +1,7 @@
 import { useContext } from 'react';
-import styled from 'styled-components';
 import ReactParticles from 'react-tsparticles';
+
+import styled from 'styled-components';
 
 import { AppContext } from 'App/AppContext';
 import { options } from 'appearance';
