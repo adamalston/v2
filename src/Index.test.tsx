@@ -1,11 +1,12 @@
-import { configure, fireEvent, render, screen } from '@testing-library/react';
 import { act } from 'react';
+
+import { configure, fireEvent, render, screen } from '@testing-library/react';
 
 import '__mocks__/matchMedia';
 import { App } from 'App/App';
 import { AppProvider, reducer } from 'App/AppContext';
-import { Footer } from 'components';
 import { themes } from 'appearance';
+import { Footer } from 'components';
 
 configure({ testIdAttribute: 'data-v2' });
 
@@ -25,12 +26,12 @@ const mockState = {
   },
   isMobile: false,
   theme: themes.dark,
-  setTheme: () => {},
+  setTheme: () => undefined,
 };
 
 describe('application tests', () => {
   beforeEach(async () => {
-    await act(async () => render(<App />));
+    await act(() => render(<App />));
   });
 
   /**
@@ -166,7 +167,7 @@ describe('application tests', () => {
 
 describe('app context tests', () => {
   it('should render partial footer on mobile', async () => {
-    await act(async () =>
+    await act(() =>
       render(
         <AppProvider
           config={mockState.config}
@@ -206,7 +207,7 @@ describe('local storage tests', () => {
   it("should show the dark theme when 'theme' is set to 'true' in local storage", async () => {
     // set local storage item and render the app
     localStorage.setItem('theme', 'true');
-    await act(async () => render(<App />));
+    await act(() => render(<App />));
 
     // check that the local storage item has been updated correctly
     expect(localStorage.getItem('theme')).toEqual('dark');
@@ -217,7 +218,7 @@ describe('local storage tests', () => {
   it("should show the light theme when 'theme' is set to 'false' in local storage", async () => {
     // set local storage item and render the app
     localStorage.setItem('theme', 'false');
-    await act(async () => render(<App />));
+    await act(() => render(<App />));
 
     // check that the local storage item has been updated correctly
     expect(localStorage.getItem('theme')).toEqual('light');
@@ -228,13 +229,15 @@ describe('local storage tests', () => {
 
   // https://testing-library.com/docs/react-testing-library/api/#rerender
   it('should persist the light theme through an app re-render', async () => {
-    const { rerender } = render(<App />);
+    const { rerender } = await act(() => render(<App />));
 
     expect(localStorage.getItem('theme')).toBeNull();
     localStorage.setItem('theme', 'light');
 
     // re-render the app and check the theme
-    await act(async () => rerender(<App />));
+    act(() => {
+      rerender(<App />);
+    });
     const particles = screen.getByTestId('particles');
 
     expect(localStorage.getItem('theme')).toEqual('light');
@@ -244,7 +247,7 @@ describe('local storage tests', () => {
   it('should change local storage value when toggle is clicked', async () => {
     // set local storage item and render the app
     localStorage.setItem('theme', 'light');
-    await act(async () => render(<App />));
+    await act(() => render(<App />));
 
     // click the toggle
     const toggle = screen.getByTestId('toggle');

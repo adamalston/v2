@@ -1,5 +1,5 @@
-import { Config } from 'types';
 import { Email, GitHub, LinkedIn, Resume } from 'icons';
+import { Config } from 'types';
 
 export const config: Config = {
   name: {
