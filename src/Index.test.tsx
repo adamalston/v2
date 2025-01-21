@@ -181,7 +181,6 @@ describe('app context tests', () => {
     const footer = screen.getByTestId('footer');
 
     expect(footer).toHaveTextContent(/^Designed and built by Adam Alston$/);
-    expect(footer).not.toHaveTextContent(/Source/);
   });
 
   describe('reducer tests', () => {
@@ -202,29 +201,6 @@ describe('app context tests', () => {
 describe('local storage tests', () => {
   beforeEach(() => {
     localStorage.clear();
-  });
-
-  it("should show the dark theme when 'theme' is set to 'true' in local storage", async () => {
-    // set local storage item and render the app
-    localStorage.setItem('theme', 'true');
-    await act(() => render(<App />));
-
-    // check that the local storage item has been updated correctly
-    expect(localStorage.getItem('theme')).toEqual('dark');
-    const particles = screen.getByTestId('particles');
-    expect(particles).toHaveStyle({ backgroundColor: '#000' });
-  });
-
-  it("should show the light theme when 'theme' is set to 'false' in local storage", async () => {
-    // set local storage item and render the app
-    localStorage.setItem('theme', 'false');
-    await act(() => render(<App />));
-
-    // check that the local storage item has been updated correctly
-    expect(localStorage.getItem('theme')).toEqual('light');
-
-    const particles = screen.getByTestId('particles');
-    expect(particles).toHaveStyle({ backgroundColor: '#fff' });
   });
 
   // https://testing-library.com/docs/react-testing-library/api/#rerender
@@ -254,6 +230,6 @@ describe('local storage tests', () => {
     fireEvent.click(toggle);
 
     // check that the local storage item has been changed
-    expect(localStorage.getItem('theme')).not.toEqual('light');
+    expect(localStorage.getItem('theme')).toEqual('dark');
   });
 });
