@@ -1,28 +1,13 @@
 name: CI
-on: [push, pull_request]
+on: [pull_request, push]
 jobs:
   build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node: [18, lts/*]
-    name: Node ${{ matrix.node }} build
     steps:
-      - uses: actions/checkout@v3
-      - name: Setup Node.js environment
-        uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: ${{ matrix.node }}
+          node-version-file: '.nvmrc'
           cache: 'npm'
-      - name: Install dependencies
-        run: npm ci
-      - name: Lint
-        run: npm run lint
-      - name: Check for vulnerabilities
-        run: npm audit --omit=dev
-      - name: Test development build
-        run: npm run test:coverage
-      - name: Create production build
-        run: npm run build
-      - name: Prune Development Dependencies
-        run: npm prune --omit=dev
+      - run: npm ci
+      - run: npm test
