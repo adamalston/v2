@@ -14,7 +14,7 @@ jobs:
         run: |
           npm dedupe
           git diff --exit-code package-lock.json || {
-            echo "::error file=package-lock.json::Lockfile changes detected after deduplication. Run `npm dedupe` and commit the result.";
+            echo "::error file=package-lock.json::Lockfile changes detected after deduplication. Run 'npm dedupe' and commit the result.";
             exit 1;
           }
       - run: npm test
