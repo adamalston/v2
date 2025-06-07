@@ -20,7 +20,9 @@ jobs:
 
             # Remove dedupe-added `name` inside `.packages[""]`. This deletion is
             # a workaround for https://github.com/npm/cli/issues/4608.
+            git diff package-lock.json
             jq 'del(.packages[""].name)' package-lock.json > cleaned && mv cleaned package-lock.json
+            git diff package-lock.json
 
             git diff --exit-code package-lock.json || {
               echo "::error file=package-lock.json::package-lock.json changes detected after deduplication. Run 'npm dedupe' and commit the result.";
