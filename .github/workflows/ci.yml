@@ -10,4 +10,11 @@ jobs:
           node-version-file: '.nvmrc'
           cache: 'npm'
       - run: npm ci
+      - name: Check for duplicate dependencies
+        run: |
+          npm dedupe
+          git diff --exit-code package-lock.json || {
+            echo "::error file=package-lock.json::Lockfile changes detected after deduplication. Run `npm dedupe` and commit the result.";
+            exit 1;
+          }
       - run: npm test
