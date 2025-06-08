@@ -5,9 +5,30 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version-file: '.nvmrc'
           cache: 'npm'
       - run: npm ci
+      - name: Check for duplicate dependencies
+        run: |
+          if git diff --name-only origin/${{ github.event.repository.default_branch }} | grep -q '^package-lock\.json$'; then
+            echo "package-lock.json changed, running deduplication check..."
+            npm dedupe
+
+            # Remove dedupe-added `name` inside `.packages[""]`. This deletion is
+            # a workaround for https://github.com/npm/cli/issues/4608.
+            git diff package-lock.json
+            jq 'del(.packages[""].name)' package-lock.json > cleaned && mv cleaned package-lock.json
+            git diff package-lock.json
+
+            git diff --exit-code package-lock.json || {
+              echo "::error file=package-lock.json::package-lock.json changes detected after deduplication. Run 'npm dedupe' and commit the result.";
+              exit 1;
+            }
+          else
+            echo "package-lock.json not changed. Skipping dedupe check."
+          fi
       - run: npm test
