@@ -1,28 +1,41 @@
-# <img alt="Atom icon" src="public/icons/favicon.svg" height="24"/> adamalston<span></span>.com &middot; [![CI](https://github.com/adamalston/v2/actions/workflows/ci.yml/badge.svg)](https://github.com/adamalston/v2/actions/workflows/ci.yml) [![Netlify status](https://api.netlify.com/api/v1/badges/332bbd91-59b7-4091-8781-6f41330399b4/deploy-status)](https://app.netlify.com/sites/adamalston/deploys)
+# <img alt="Atom icon" src="public/icons/favicon.svg" height="24"/> adamalston<span>.</span>com &middot; [![CI](https://github.com/adamalston/v2/actions/workflows/ci.yml/badge.svg)](https://github.com/adamalston/v2/actions/workflows/ci.yml)
 
-The [adamalston.com](https://www.adamalston.com) website is built using [React](https://react.dev) and hosted on [Netlify](https://www.netlify.com).
+The [adamalston.com](https://www.adamalston.com) website is built using [React](https://react.dev).
 
 <img alt="Desktop preview" src="images/desktop.png" float="left" height="370"/> <img alt="Mobile preview" src="images/mobile.png" align="right" height="370"/>
 
-This website is designed to be simple and accessible. Dynamic particles create an interactive experience for visitors. The site offers two themes via a toggle: a dark theme (default) and a light theme. The selected theme persists between tabs, windows, and page reloads.
-
-Optimized for mobile devices with screen sizes ranging from 4-inch smartphones to 13-inch tablets.
+This website is designed to be simple and accessible. Dynamic particles create an interactive experience for visitors. The site offers two themes via a toggle: a dark theme (default) and a light theme. The selected theme persists across tabs, windows, and page reloads.
 
 ## <img alt="Code logo" src="https://git.io/JUnUc" height="18"/> Open source
 
 This website is open source with the hope that others will use the code to create their own websites. I ask that this code be used with attribution, as a significant amount of time was spent on writing and optimizing it. Please give proper credit by linking back to [adamalston.com](https://www.adamalston.com). Thank you!
 
+### 🛠️ Set up
+
+> [!IMPORTANT] Requires [Node.js](https://nodejs.org/)
+
+1. Clone this repository:
+   ```sh
+   git clone https://github.com/adamalston/v2.git
+   cd v2
+   ```
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
+3. Start the app in development mode:
+   ```sh
+   npm start
+   ```
+
 <details>
-  <summary><b>Install and setup</b></summary>
+  <summary><b>Build and deploy</b></summary>
 
-1. Clone this repository.
-2. Install dependencies: `npm install`.
-3. Start the development server: `npm start`.
-
-<b>Build and deploy</b>
-
-1. Create a production build: `npm run build`.
-2. Refer to the [React Deployment](https://create-react-app.dev/docs/deployment) docs for deploying to `gh-pages`, Netlify, and other services.
+1. Create a production build:
+   ```sh
+   npm run build
+   ```
+2. Refer to the [React Deployment](https://create-react-app.dev/docs/deployment) docs to deploy to platforms like GitHub Pages, Netlify, or Vercel.
 
 </details>
 
@@ -43,22 +56,22 @@ The website uses Font Awesome icons for various interactive elements.
 
 Text and icons are designed with a color contrast ratio greater than 7:1, satisfying [WCAG 2.1 Section 1.4.6](https://www.w3.org/TR/WCAG21/#contrast-enhanced).
 
-| Name   | Color                                                   | Hex      |
-| ------ | ------------------------------------------------------- | -------- |
-| Black  | ![Black](https://via.placeholder.com/16/000000?text=+)  | `000000` |
-| Slate  | ![Slate](https://via.placeholder.com/16/333333?text=+)  | `333333` |
-| Red    | ![Red](https://via.placeholder.com/16/ff2600?text=+)    | `ff2600` |
-| Orange | ![Orange](https://via.placeholder.com/16/ff8000?text=+) | `ff8000` |
-| Yellow | ![Yellow](https://via.placeholder.com/16/ffd500?text=+) | `ffd500` |
-| Green  | ![Green](https://via.placeholder.com/16/22dd22?text=+)  | `22dd22` |
-| Blue   | ![Blue](https://via.placeholder.com/16/00bfff?text=+)   | `00bfff` |
-| Purple | ![Purple](https://via.placeholder.com/16/c912ed?text=+) | `c912ed` |
-| Silver | ![Silver](https://via.placeholder.com/16/cccccc?text=+) | `cccccc` |
-| White  | ![White](https://via.placeholder.com/16/ffffff?text=+)  | `ffffff` |
+| Name   | Color                                                                                                  | Hex      |
+| ------ | ------------------------------------------------------------------------------------------------------ | -------- |
+| Black  | <span style="display:inline-block;width:16px;height:16px;background:#000000;border:1px solid #ccc;" /> | `000000` |
+| Slate  | <span style="display:inline-block;width:16px;height:16px;background:#333333;border:1px solid #ccc;" /> | `333333` |
+| Red    | <span style="display:inline-block;width:16px;height:16px;background:#ff2600;border:1px solid #ccc;" /> | `ff2600` |
+| Orange | <span style="display:inline-block;width:16px;height:16px;background:#ff8000;border:1px solid #ccc;" /> | `ff8000` |
+| Yellow | <span style="display:inline-block;width:16px;height:16px;background:#ffd500;border:1px solid #ccc;" /> | `ffd500` |
+| Green  | <span style="display:inline-block;width:16px;height:16px;background:#22dd22;border:1px solid #ccc;" /> | `22dd22` |
+| Blue   | <span style="display:inline-block;width:16px;height:16px;background:#00bfff;border:1px solid #ccc;" /> | `00bfff` |
+| Purple | <span style="display:inline-block;width:16px;height:16px;background:#c912ed;border:1px solid #ccc;" /> | `c912ed` |
+| Silver | <span style="display:inline-block;width:16px;height:16px;background:#cccccc;border:1px solid #ccc;" /> | `cccccc` |
+| White  | <span style="display:inline-block;width:16px;height:16px;background:#ffffff;border:1px solid #ccc;" /> | `ffffff` |
 
 ## Previous version
 
-For a look at the first version of my website, and to see how it has evolved, visit [v1](https://github.com/adamalston/v1).
+For a look at the first version of my website and to see how it has evolved, visit [v1](https://github.com/adamalston/v1).
 
 ---
 
