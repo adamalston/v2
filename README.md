@@ -76,4 +76,4 @@ For a look at the first version of my website and to see how it has evolved, vis
 
 ---
 
-If you find this project useful, consider giving it a <img alt="Star" src="https://git.io/JUn8T" height="14">! For questions or feedback, feel free to open an issue and I'll respond as soon as possible.
+If you find this project useful, consider giving it a <img alt="Star" src="https://git.io/JUn8T" height="14">! Have a question or feedback? Open an issue or send me an email. I'll respond as soon as possible.
