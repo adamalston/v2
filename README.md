@@ -12,7 +12,8 @@ This website is open source with the hope that others will use the code to creat
 
 ### 🛠️ Set up
 
-> [!IMPORTANT] Requires [Node.js](https://nodejs.org/)
+> [!IMPORTANT]
+> This project requires [Node.js](https://nodejs.org/) to run.
 
 1. Clone this repository:
    ```sh
@@ -56,18 +57,18 @@ The website uses Font Awesome icons for various interactive elements.
 
 Text and icons are designed with a color contrast ratio greater than 7:1, satisfying [WCAG 2.1 Section 1.4.6](https://www.w3.org/TR/WCAG21/#contrast-enhanced).
 
-| Name   | Color                                                                                                  | Hex      |
-| ------ | ------------------------------------------------------------------------------------------------------ | -------- |
-| Black  | <span style="display:inline-block;width:16px;height:16px;background:#000000;border:1px solid #ccc;" /> | `000000` |
-| Slate  | <span style="display:inline-block;width:16px;height:16px;background:#333333;border:1px solid #ccc;" /> | `333333` |
-| Red    | <span style="display:inline-block;width:16px;height:16px;background:#ff2600;border:1px solid #ccc;" /> | `ff2600` |
-| Orange | <span style="display:inline-block;width:16px;height:16px;background:#ff8000;border:1px solid #ccc;" /> | `ff8000` |
-| Yellow | <span style="display:inline-block;width:16px;height:16px;background:#ffd500;border:1px solid #ccc;" /> | `ffd500` |
-| Green  | <span style="display:inline-block;width:16px;height:16px;background:#22dd22;border:1px solid #ccc;" /> | `22dd22` |
-| Blue   | <span style="display:inline-block;width:16px;height:16px;background:#00bfff;border:1px solid #ccc;" /> | `00bfff` |
-| Purple | <span style="display:inline-block;width:16px;height:16px;background:#c912ed;border:1px solid #ccc;" /> | `c912ed` |
-| Silver | <span style="display:inline-block;width:16px;height:16px;background:#cccccc;border:1px solid #ccc;" /> | `cccccc` |
-| White  | <span style="display:inline-block;width:16px;height:16px;background:#ffffff;border:1px solid #ccc;" /> | `ffffff` |
+| Name   | Color                                                 | Hex      |
+| ------ | ----------------------------------------------------- | -------- |
+| Black  | ![Black](https://dummyimage.com/16x16/000000/000000)  | `000000` |
+| Slate  | ![Slate](https://dummyimage.com/16x16/333333/333333)  | `333333` |
+| Red    | ![Red](https://dummyimage.com/16x16/ff2600/ff2600)    | `ff2600` |
+| Orange | ![Orange](https://dummyimage.com/16x16/ff8000/ff8000) | `ff8000` |
+| Yellow | ![Yellow](https://dummyimage.com/16x16/ffd500/ffd500) | `ffd500` |
+| Green  | ![Green](https://dummyimage.com/16x16/22dd22/22dd22)  | `22dd22` |
+| Blue   | ![Blue](https://dummyimage.com/16x16/00bfff/00bfff)   | `00bfff` |
+| Purple | ![Purple](https://dummyimage.com/16x16/c912ed/c912ed) | `c912ed` |
+| Silver | ![Silver](https://dummyimage.com/16x16/cccccc/cccccc) | `cccccc` |
+| White  | ![White](https://dummyimage.com/16x16/ffffff/ffffff)  | `ffffff` |
 
 ## Previous version
 
