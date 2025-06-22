@@ -60,18 +60,18 @@ The website uses Font Awesome icons for various interactive elements.
 
 Text and icons are designed with a color contrast ratio greater than 7:1, satisfying [WCAG 2.1 Section 1.4.6](https://www.w3.org/TR/WCAG21/#contrast-enhanced).
 
-| Name   | Color                                                 | Hex       |
-| ------ | ----------------------------------------------------- | --------- |
-| Black  | ![Black](https://dummyimage.com/16x16/000000/000000)  | `#000000` |
-| Slate  | ![Slate](https://dummyimage.com/16x16/333333/333333)  | `#333333` |
-| Red    | ![Red](https://dummyimage.com/16x16/ff2600/ff2600)    | `#ff2600` |
-| Orange | ![Orange](https://dummyimage.com/16x16/ff8000/ff8000) | `#ff8000` |
-| Yellow | ![Yellow](https://dummyimage.com/16x16/ffd500/ffd500) | `#ffd500` |
-| Green  | ![Green](https://dummyimage.com/16x16/22dd22/22dd22)  | `#22dd22` |
-| Blue   | ![Blue](https://dummyimage.com/16x16/00bfff/00bfff)   | `#00bfff` |
-| Purple | ![Purple](https://dummyimage.com/16x16/c912ed/c912ed) | `#c912ed` |
-| Silver | ![Silver](https://dummyimage.com/16x16/cccccc/cccccc) | `#cccccc` |
-| White  | ![White](https://dummyimage.com/16x16/ffffff/ffffff)  | `#ffffff` |
+| Name   | Color                                              | Hex       |
+| ------ | -------------------------------------------------- | --------- |
+| Black  | ![Black](https://dummyimage.com/16/000000/000000)  | `#000000` |
+| Slate  | ![Slate](https://dummyimage.com/16/333333/333333)  | `#333333` |
+| Red    | ![Red](https://dummyimage.com/16/ff2600/ff2600)    | `#ff2600` |
+| Orange | ![Orange](https://dummyimage.com/16/ff8000/ff8000) | `#ff8000` |
+| Yellow | ![Yellow](https://dummyimage.com/16/ffd500/ffd500) | `#ffd500` |
+| Green  | ![Green](https://dummyimage.com/16/22dd22/22dd22)  | `#22dd22` |
+| Blue   | ![Blue](https://dummyimage.com/16/00bfff/00bfff)   | `#00bfff` |
+| Purple | ![Purple](https://dummyimage.com/16/c912ed/c912ed) | `#c912ed` |
+| Silver | ![Silver](https://dummyimage.com/16/cccccc/cccccc) | `#cccccc` |
+| White  | ![White](https://dummyimage.com/16/ffffff/ffffff)  | `#ffffff` |
 
 ## Previous version
 
