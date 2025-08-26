@@ -1,16 +1,21 @@
-# <img alt="Atom icon" src="public/icons/favicon.svg" height="24"/> adamalston<span>.</span>com &middot; [![CI](https://github.com/adamalston/v2/actions/workflows/ci.yml/badge.svg)](https://github.com/adamalston/v2/actions/workflows/ci.yml)
+<div align="center">
+  <img alt="Atom icon" src="public/icons/favicon.svg" height="64" />
+  <h1>adamalston.com - v2</h1>
+</div>
 
-[adamalston.com](https://www.adamalston.com) is built using [React](https://react.dev).
+Version 2 of [adamalston.com](https://www.adamalston.com) built with [React](https://react.dev).
 
-<img alt="Desktop preview" src="images/desktop.png" float="left" height="370"/> <img alt="Mobile preview" src="images/mobile.png" align="right" height="370"/>
+| Desktop preview                                                     | Mobile preview                                                    |
+| ------------------------------------------------------------------- | ----------------------------------------------------------------- |
+| <img alt="Desktop preview" src="images/desktop.png" height="370" /> | <img alt="Mobile preview" src="images/mobile.png" height="370" /> |
 
 This website is designed to be simple and accessible. Dynamic particles create an interactive experience for visitors. The site offers two themes via a toggle: a dark theme (default) and a light theme. The selected theme persists across tabs, windows, and page reloads.
 
-## <img alt="Code logo" src="https://git.io/JUnUc" height="18"/> Open source
+## Open source
 
-This website is open source with the hope that others will use the code to create their own websites. I ask that this code be used with attribution, as a significant amount of time was spent on writing and optimizing it. Please give proper credit by linking back to [adamalston.com](https://www.adamalston.com). Thank you!
+This website is open source with the hope that others will use the code to create their own websites. If you do, please give proper credit by linking back to [adamalston.com](https://www.adamalston.com).
 
-### 🛠️ Set up
+## Getting started
 
 > [!IMPORTANT]
 > This project requires [Node.js](https://nodejs.org/) to run.
@@ -33,7 +38,7 @@ This website is open source with the hope that others will use the code to creat
    ```
 
 <details>
-  <summary><b>Build and deploy</b></summary>
+  <summary>Build and deploy</summary>
 
 1. Create a production build:
    ```sh
@@ -43,7 +48,7 @@ This website is open source with the hope that others will use the code to creat
 
 </details>
 
-## <img alt="Font Awesome logo" src="https://git.io/JUnJT" height="18"/> Icons
+## Icons
 
 The website uses Font Awesome icons for various interactive elements.
 
@@ -56,7 +61,7 @@ The website uses Font Awesome icons for various interactive elements.
 | Resume     | <img alt="File" src="https://git.io/JYOeu" height="20"/>     | `fal file-alt`    |
 | Email      | <img alt="Email" src="https://git.io/JYOei" height="20"/>    | `fal paper-plane` |
 
-## <img alt="Color diagram" src="https://git.io/JUnT0" height="18"> Color reference
+## Color reference
 
 Text and icons are designed with a color contrast ratio greater than 7:1, satisfying [WCAG 2.1 Section 1.4.6](https://www.w3.org/TR/WCAG21/#contrast-enhanced).
 
@@ -73,10 +78,8 @@ Text and icons are designed with a color contrast ratio greater than 7:1, satisf
 | Silver | ![Silver](https://dummyimage.com/16/cccccc/cccccc) | `#cccccc` |
 | White  | ![White](https://dummyimage.com/16/ffffff/ffffff)  | `#ffffff` |
 
-## Previous version
-
-For a look at the first version of my website and to see how it has evolved, visit [v1](https://github.com/adamalston/v1).
-
 ---
 
-If you find this project useful, consider giving it a <img alt="Star" src="https://git.io/JUn8T" height="14">! Have a question or feedback? Open an issue or send me an email. I'll respond as soon as possible.
+If you find this project useful, consider giving it a <img alt="Star" src="https://git.io/JUn8T" height="14">!
+
+Have a question or feedback? Open an issue or send me an email. I'll respond as soon as I can.
